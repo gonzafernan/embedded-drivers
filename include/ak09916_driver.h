@@ -41,6 +41,27 @@ int ak09916_init(ak09916_t* self, void* context, uint32_t timeout);
  */
 uint8_t ak09916_who_am_i(ak09916_t* self);
 
+/**
+ * @brief Read magnetometer data from the AK09916 magnetometer.
+ *
+ * This function reads the magnetometer data from the AK09916 magnetometer.
+ *
+ * @param self Pointer to the AK09916 structure.
+ * @param mag_x Pointer to store the X-axis magnetometer data.
+ * @param mag_y Pointer to store the Y-axis magnetometer data.
+ * @param mag_z Pointer to store the Z-axis magnetometer data.
+ * @return 0 on success, -1 on failure.
+ */
+int ak09916_read_magnetometer(ak09916_t* self, int16_t* mag_x, int16_t* mag_y,
+                              int16_t* mag_z);
+
+/**
+ * @brief Convert raw magnetometer data to float.
+ * @param raw_value The raw magnetometer data.
+ * @return The converted float value.
+ */
+float ak09916_raw_to_float(int16_t raw_value);
+
 #ifdef __cplusplus
 }
 #endif
