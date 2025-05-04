@@ -1,10 +1,8 @@
 /**
- * @file icm20948_port.h
- * @brief ICM20948 port header file
+ * @file i2c_port.h
+ * @brief I2C port header file
  *
- * This file defines the public interface for the ICM20948 driver porting layer.
- * It must be used in conjunction with the ICM20948 driver header file
- * icm20948_driver.h.
+ * This file defines the public interface for the I2C driver porting layer.
  *
  */
 
