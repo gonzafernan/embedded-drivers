@@ -8,6 +8,7 @@
  *
  */
 
+#include "mock_i2c_port.h"
 #include "i2c_port.h"
 
 int i2c_init(void *context, uint16_t device_address, uint32_t timeout) {
@@ -19,8 +20,9 @@ int i2c_blocking_read(void *context, uint16_t device_address,
                       uint16_t reg_addres, uint8_t *data, uint16_t length,
                       uint32_t timeout) {
     // Mock implementation: simulate reading data
+    mock_i2c_context_t *mock_context = (mock_i2c_context_t *)context;
     for (uint16_t i = 0; i < length; i++) {
-        data[i] = (uint8_t)(reg_addres + i);  // Simulate data read
+        data[i] = mock_context->memory[reg_addres + i];
     }
     return 0;  // Success
 }
@@ -28,6 +30,9 @@ int i2c_blocking_read(void *context, uint16_t device_address,
 int i2c_blocking_write(void *context, uint16_t device_address,
                        uint16_t reg_addres, uint8_t *data, uint16_t length,
                        uint32_t timeout) {
-    // Mock implementation: simulate writing data
+    mock_i2c_context_t *mock_context = (mock_i2c_context_t *)context;
+    for (uint16_t i = 0; i < length; i++) {
+        mock_context->memory[reg_addres + i] = data[i];
+    }
     return 0;  // Success
 }

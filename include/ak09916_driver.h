@@ -21,6 +21,17 @@ typedef struct {
     uint32_t timeout;  // Timeout for I2C operations
 } ak09916_t;
 
+// AK09916 Operation modes.
+typedef enum {
+    AK09916_MODE_POWER_DOWN = 0b00000,
+    AK09916_MODE_SINGLE_MEASUREMENT = 0b00001,
+    AK09916_MODE_CONTINUOUS_MEASUREMENT_1 = 0b00010,
+    AK09916_MODE_CONTINUOUS_MEASUREMENT_2 = 0b00100,
+    AK09916_MODE_CONTINUOUS_MEASUREMENT_3 = 0b00110,
+    AK09916_MODE_CONTINUOUS_MEASUREMENT_4 = 0b01000,
+    AK09916_MODE_SELF_TEST = 0b10000,
+} ak09916_mode_t;
+
 /**
  * @brief Initialize the AK09916 magnetometer.
  *
@@ -33,6 +44,17 @@ typedef struct {
  * @return 0 on success, -1 on failure.
  */
 int ak09916_init(ak09916_t* self, void* context, uint32_t timeout);
+
+/**
+ * @brief Set the operation mode of the AK09916 magnetometer.
+ *
+ * This function sets the operation mode of the AK09916 magnetometer.
+ *
+ * @param self Pointer to the AK09916 structure.
+ * @param mode The desired operation mode.
+ * @return 0 on success, -1 on failure.
+ */
+int ak09916_set_mode(ak09916_t* self, ak09916_mode_t mode);
 
 /**
  * @brief Read the WHO_AM_I register of the AK09916 magnetometer.

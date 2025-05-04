@@ -1,3 +1,9 @@
-# Adafruit TDK InvenSense ICM-20948 9-DoF IMU
+# Embedded drivers library
+## Sensors
+### ICM-20948
+- Description: 9-Axis MEMS Motion Tracking Device
+- Datasheet link: https://invensense.tdk.com/wp-content/uploads/2024/03/DS-000189-ICM-20948-v1.6.pdf
 
-Datasheet: https://invensense.tdk.com/wp-content/uploads/2024/03/DS-000189-ICM-20948-v1.6.pdf
+### AK09916
+- Description: 3-axis Electronic Compass (integrated in ICM20948).
+- Datasheet link: https://www.y-ic.es/datasheet/78/SMDSW.020-2OZ.pdf

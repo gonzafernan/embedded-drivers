@@ -25,12 +25,7 @@
 #define AK09916_CNTL2 0x31  // Control 2
 
 // AK09916 register addresses bits
-#define AK09916_ST1_DRDY 0     // Data ready
-#define AK09916_CNTL2_MODE0 0  // Mode 0
-#define AK09916_CNTL2_MODE1 1  // Mode 1
-#define AK09916_CNTL2_MODE2 2  // Mode 2
-#define AK09916_CNTL2_MODE3 3  // Mode 3
-#define AK09916_CNTL2_MODE4 4  // Mode 4
+#define AK09916_ST1_DRDY 0  // Data ready
 
 #define AK09916_MEASUREMENT_RANGE 4912
 #define AK09916_REPRESENTATION_RANGE 32752.0
@@ -41,15 +36,12 @@ int ak09916_init(ak09916_t* self, void* context, uint32_t timeout) {
     uint8_t slave_address = 0x00;
     slave_address |= (AK09916_I2C_ADDRESS << AK09916_I2C_ADDRESS_ADDR_BIT);
     slave_address |= (AK09916_I2C_RW_READ << AK09916_I2C_ADDRESS_RW_BIT);
-    if (i2c_init(context, slave_address, timeout) < 0) {
-        return -1;
-    }
-    uint8_t operation_mode = (1 << AK09916_CNTL2_MODE1);
-    if (i2c_blocking_write(context, slave_address, AK09916_CNTL2,
-                           &operation_mode, 1, timeout) < 0) {
-        return -1;
-    }
-    return 0;
+    return i2c_init(context, slave_address, timeout);
+}
+
+int ak09916_set_mode(ak09916_t* self, ak09916_mode_t mode) {
+    return i2c_blocking_write(self->context, AK09916_I2C_ADDRESS, AK09916_CNTL2,
+                              (uint8_t*)&mode, 1, self->timeout);
 }
 
 uint8_t ak09916_who_am_i(ak09916_t* self) {
