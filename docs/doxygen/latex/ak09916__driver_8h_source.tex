@@ -1,0 +1,48 @@
+\doxysection{ak09916\+\_\+driver.\+h}
+\hypertarget{ak09916__driver_8h_source}{}\label{ak09916__driver_8h_source}\index{include/ak09916\_driver.h@{include/ak09916\_driver.h}}
+\mbox{\hyperlink{ak09916__driver_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ AK09916\_DRIVER\_H}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ AK09916\_DRIVER\_H}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00014\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}*\ \mbox{\hyperlink{structak09916__t_a83ef6107cfa652806dfdbd4c583b8db9}{context}};\ \ \ \ \ \textcolor{comment}{//\ Context\ for\ the\ I2C\ port}}
+\DoxyCodeLine{00021\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structak09916__t_ad63dcf5b92c3eb004d4754321497f28b}{timeout}};\ \ \textcolor{comment}{//\ Timeout\ for\ I2C\ operations}}
+\DoxyCodeLine{00022\ \}\ \mbox{\hyperlink{structak09916__t}{ak09916\_t}};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ AK09916\ Operation\ modes.}}
+\DoxyCodeLine{00025\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{ak09916__driver_8h_a609ecb4972d90be882ff882f8f7d03cdacb43d34a27a4bd4987aaa140b5248356}{AK09916\_MODE\_POWER\_DOWN}}\ =\ 0b00000,}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{ak09916__driver_8h_a609ecb4972d90be882ff882f8f7d03cda6b94d22e06ecf607f9a30ad586df6847}{AK09916\_MODE\_SINGLE\_MEASUREMENT}}\ =\ 0b00001,}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{ak09916__driver_8h_a609ecb4972d90be882ff882f8f7d03cdab42078cfa3a680ebd85756c20852967f}{AK09916\_MODE\_CONTINUOUS\_MEASUREMENT\_1}}\ =\ 0b00010,}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{ak09916__driver_8h_a609ecb4972d90be882ff882f8f7d03cdad26aed447d042665fd7d1326cd01a6d9}{AK09916\_MODE\_CONTINUOUS\_MEASUREMENT\_2}}\ =\ 0b00100,}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{ak09916__driver_8h_a609ecb4972d90be882ff882f8f7d03cda1ed73737ab74678afc969b91b1ed5e9c}{AK09916\_MODE\_CONTINUOUS\_MEASUREMENT\_3}}\ =\ 0b00110,}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{ak09916__driver_8h_a609ecb4972d90be882ff882f8f7d03cdac1cd9aa30ec4cb9b35f8487cc1e78c4c}{AK09916\_MODE\_CONTINUOUS\_MEASUREMENT\_4}}\ =\ 0b01000,}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{ak09916__driver_8h_a609ecb4972d90be882ff882f8f7d03cda56ff0e744a05a2927aa0c83063b77c8d}{AK09916\_MODE\_SELF\_TEST}}\ =\ 0b10000,}
+\DoxyCodeLine{00033\ \}\ \mbox{\hyperlink{ak09916__driver_8h_a609ecb4972d90be882ff882f8f7d03cd}{ak09916\_mode\_t}};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00046\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{ak09916__driver_8h_a34428f4ae98aab4e25b812d56d36e7f8}{ak09916\_init}}(\mbox{\hyperlink{structak09916__t}{ak09916\_t}}*\ self,\ \textcolor{keywordtype}{void}*\ context,\ uint32\_t\ timeout);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00057\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{ak09916__driver_8h_a560c4ca238767729e64296b3453584ac}{ak09916\_set\_mode}}(\mbox{\hyperlink{structak09916__t}{ak09916\_t}}*\ self,\ \mbox{\hyperlink{ak09916__driver_8h_a609ecb4972d90be882ff882f8f7d03cd}{ak09916\_mode\_t}}\ mode);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00064\ uint8\_t\ \mbox{\hyperlink{ak09916__driver_8h_adc070bf486e819850f15d861aee5021f}{ak09916\_who\_am\_i}}(\mbox{\hyperlink{structak09916__t}{ak09916\_t}}*\ self);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00077\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{ak09916__driver_8h_aeb5dc98f401e48dfd95760b3c7822881}{ak09916\_read\_magnetometer}}(\mbox{\hyperlink{structak09916__t}{ak09916\_t}}*\ self,\ int16\_t*\ mag\_x,\ int16\_t*\ mag\_y,}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ int16\_t*\ mag\_z);}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00085\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{ak09916__driver_8h_a2708019969ddad75192d484e3b76f703}{ak09916\_raw\_to\_float}}(int16\_t\ raw\_value);}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00088\ \}}
+\DoxyCodeLine{00089\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ AK09916\_DRIVER\_H}}
+
+\end{DoxyCode}

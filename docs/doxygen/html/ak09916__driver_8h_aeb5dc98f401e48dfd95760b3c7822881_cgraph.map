@@ -1,0 +1,5 @@
+<map id="ak09916_read_magnetometer" name="ak09916_read_magnetometer">
+<area shape="rect" id="Node000001" title="Read magnetometer data from the AK09916 magnetometer." alt="" coords="5,5,224,31"/>
+<area shape="rect" id="Node000002" href="$stm32f4__i2c__port_8c.html#aaa6761a99112c87a8119dd2e35d752d2" title="Read data from the I2C device." alt="" coords="272,5,411,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="224,15,258,15,258,21,224,21"/>
+</map>

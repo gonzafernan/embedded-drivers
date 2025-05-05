@@ -1,0 +1,8 @@
+<map id="icm20948_i2c_slave0_read" name="icm20948_i2c_slave0_read">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,204,31"/>
+<area shape="rect" id="Node000002" href="$stm32f4__i2c__port_8c.html#aaea43c6887f46dc58d27ed30ac6d1cf3" title="Write data to the I2C device." alt="" coords="499,5,641,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="204,15,485,15,485,21,204,21"/>
+<area shape="rect" id="Node000003" href="$icm20948__driver_8c.html#a97831d6680168d5a8e85b240cef6a891" title="Select the register bank for the ICM&#45;20948." alt="" coords="252,31,451,56"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="204,26,239,29,238,34,204,31"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="451,29,484,25,485,31,451,34"/>
+</map>

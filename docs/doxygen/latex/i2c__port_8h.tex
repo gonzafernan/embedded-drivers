@@ -1,0 +1,144 @@
+\doxysection{include/i2c\+\_\+port.h File Reference}
+\hypertarget{i2c__port_8h}{}\label{i2c__port_8h}\index{include/i2c\_port.h@{include/i2c\_port.h}}
+
+
+I2C port header file.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include "{}icm20948\+\_\+driver.\+h"{}}\newline
+Include dependency graph for i2c\+\_\+port.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{i2c__port_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{i2c__port_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{i2c__port_8h_a07b475b0c3ab865ab405afc5482df20d}{i2c\+\_\+init}} (void \texorpdfstring{$\ast$}{*}context, uint16\+\_\+t device\+\_\+address, uint32\+\_\+t timeout)
+\begin{DoxyCompactList}\small\item\em Initialize the I2C port. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{i2c__port_8h_aaa6761a99112c87a8119dd2e35d752d2}{i2c\+\_\+blocking\+\_\+read}} (void \texorpdfstring{$\ast$}{*}context, uint16\+\_\+t device\+\_\+address, uint16\+\_\+t reg\+\_\+addres, uint8\+\_\+t \texorpdfstring{$\ast$}{*}data, uint16\+\_\+t length, uint32\+\_\+t timeout)
+\begin{DoxyCompactList}\small\item\em Read data from the I2C device. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{i2c__port_8h_aaea43c6887f46dc58d27ed30ac6d1cf3}{i2c\+\_\+blocking\+\_\+write}} (void \texorpdfstring{$\ast$}{*}context, uint16\+\_\+t device\+\_\+address, uint16\+\_\+t reg\+\_\+addres, uint8\+\_\+t \texorpdfstring{$\ast$}{*}data, uint16\+\_\+t length, uint32\+\_\+t timeout)
+\begin{DoxyCompactList}\small\item\em Write data to the I2C device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+I2C port header file. 
+
+This file defines the public interface for the I2C driver porting layer. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{i2c__port_8h_aaa6761a99112c87a8119dd2e35d752d2}\label{i2c__port_8h_aaa6761a99112c87a8119dd2e35d752d2} 
+\index{i2c\_port.h@{i2c\_port.h}!i2c\_blocking\_read@{i2c\_blocking\_read}}
+\index{i2c\_blocking\_read@{i2c\_blocking\_read}!i2c\_port.h@{i2c\_port.h}}
+\doxysubsubsection{\texorpdfstring{i2c\_blocking\_read()}{i2c\_blocking\_read()}}
+{\footnotesize\ttfamily int i2c\+\_\+blocking\+\_\+read (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{context,  }\item[{uint16\+\_\+t}]{device\+\_\+address,  }\item[{uint16\+\_\+t}]{reg\+\_\+addres,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{data,  }\item[{uint16\+\_\+t}]{length,  }\item[{uint32\+\_\+t}]{timeout }\end{DoxyParamCaption})}
+
+
+
+Read data from the I2C device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Pointer to the I2C port context. \\
+\hline
+{\em device\+\_\+address} & I2C device address. \\
+\hline
+{\em reg\+\_\+addres} & Register address to read from. \\
+\hline
+{\em data} & Pointer to the buffer to store the read data. \\
+\hline
+{\em length} & Number of bytes to read. \\
+\hline
+{\em timeout} & Timeout for I2C operations. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 on failure. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{i2c__port_8h_aaa6761a99112c87a8119dd2e35d752d2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{i2c__port_8h_aaea43c6887f46dc58d27ed30ac6d1cf3}\label{i2c__port_8h_aaea43c6887f46dc58d27ed30ac6d1cf3} 
+\index{i2c\_port.h@{i2c\_port.h}!i2c\_blocking\_write@{i2c\_blocking\_write}}
+\index{i2c\_blocking\_write@{i2c\_blocking\_write}!i2c\_port.h@{i2c\_port.h}}
+\doxysubsubsection{\texorpdfstring{i2c\_blocking\_write()}{i2c\_blocking\_write()}}
+{\footnotesize\ttfamily int i2c\+\_\+blocking\+\_\+write (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{context,  }\item[{uint16\+\_\+t}]{device\+\_\+address,  }\item[{uint16\+\_\+t}]{reg\+\_\+addres,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{data,  }\item[{uint16\+\_\+t}]{length,  }\item[{uint32\+\_\+t}]{timeout }\end{DoxyParamCaption})}
+
+
+
+Write data to the I2C device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Pointer to the I2C port context. \\
+\hline
+{\em device\+\_\+address} & I2C device address. \\
+\hline
+{\em reg\+\_\+addres} & Register address to write to. \\
+\hline
+{\em data} & Pointer to the buffer containing the data to write. \\
+\hline
+{\em length} & Number of bytes to write. \\
+\hline
+{\em timeout} & Timeout for I2C operations. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 on failure. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{i2c__port_8h_aaea43c6887f46dc58d27ed30ac6d1cf3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{i2c__port_8h_a07b475b0c3ab865ab405afc5482df20d}\label{i2c__port_8h_a07b475b0c3ab865ab405afc5482df20d} 
+\index{i2c\_port.h@{i2c\_port.h}!i2c\_init@{i2c\_init}}
+\index{i2c\_init@{i2c\_init}!i2c\_port.h@{i2c\_port.h}}
+\doxysubsubsection{\texorpdfstring{i2c\_init()}{i2c\_init()}}
+{\footnotesize\ttfamily int i2c\+\_\+init (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{context,  }\item[{uint16\+\_\+t}]{device\+\_\+address,  }\item[{uint32\+\_\+t}]{timeout }\end{DoxyParamCaption})}
+
+
+
+Initialize the I2C port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Pointer to the I2C port context. \\
+\hline
+{\em device\+\_\+address} & I2C device address. \\
+\hline
+{\em timeout} & Timeout for I2C operations. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 on failure. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{i2c__port_8h_a07b475b0c3ab865ab405afc5482df20d_icgraph}
+\end{center}
+\end{figure}

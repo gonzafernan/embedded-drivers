@@ -1,0 +1,7 @@
+<map id="include/ak09916_driver.h" name="include/ak09916_driver.h">
+<area shape="rect" id="Node000001" title="AK09916 driver header file." alt="" coords="83,5,268,31"/>
+<area shape="rect" id="Node000002" href="$ak09916__driver_8c.html" title="AK09916 driver implementation." alt="" coords="5,79,161,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="152,41,100,81,97,76,148,37"/>
+<area shape="rect" id="Node000003" href="$icm20948__driver_8c.html" title=" " alt="" coords="185,79,349,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="202,37,254,76,251,81,199,41"/>
+</map>

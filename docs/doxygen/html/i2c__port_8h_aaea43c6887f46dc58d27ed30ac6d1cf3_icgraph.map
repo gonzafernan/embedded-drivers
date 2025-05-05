@@ -1,0 +1,12 @@
+<map id="i2c_blocking_write" name="i2c_blocking_write">
+<area shape="rect" id="Node000001" title="Write data to the I2C device." alt="" coords="499,81,641,107"/>
+<area shape="rect" id="Node000002" href="$ak09916__driver_8c.html#a560c4ca238767729e64296b3453584ac" title="Set the operation mode of the AK09916 magnetometer." alt="" coords="277,5,426,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="522,79,450,53,392,33,394,28,452,47,524,74"/>
+<area shape="rect" id="Node000003" href="$icm20948__driver_8c.html#a309991f5f09a5deb1d4976711c5a9e97" title=" " alt="" coords="5,107,204,132"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="484,93,374,91,252,97,166,109,165,104,252,91,374,86,484,87"/>
+<area shape="rect" id="Node000004" href="$icm20948__driver_8c.html#a5722027bcf019cbc684330915e3271c0" title="Initialize the ICM&#45;20948 IMU." alt="" coords="294,107,409,132"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="485,106,409,115,408,110,485,101"/>
+<area shape="rect" id="Node000005" href="$icm20948__driver_8c.html#a97831d6680168d5a8e85b240cef6a891" title="Select the register bank for the ICM&#45;20948." alt="" coords="252,156,451,181"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="530,115,452,146,408,159,407,153,450,141,528,110"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="274,156,169,135,170,129,275,151"/>
+</map>

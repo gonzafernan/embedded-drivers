@@ -1,0 +1,243 @@
+\doxysection{include/ak09916\+\_\+driver.h File Reference}
+\hypertarget{ak09916__driver_8h}{}\label{ak09916__driver_8h}\index{include/ak09916\_driver.h@{include/ak09916\_driver.h}}
+
+
+AK09916 driver header file.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Include dependency graph for ak09916\+\_\+driver.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{ak09916__driver_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{ak09916__driver_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structak09916__t}{ak09916\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{ak09916__driver_8h_a609ecb4972d90be882ff882f8f7d03cd}{ak09916\+\_\+mode\+\_\+t}} \{ \newline
+\mbox{\hyperlink{ak09916__driver_8h_a609ecb4972d90be882ff882f8f7d03cdacb43d34a27a4bd4987aaa140b5248356}{AK09916\+\_\+\+MODE\+\_\+\+POWER\+\_\+\+DOWN}} = 0b00000
+, \mbox{\hyperlink{ak09916__driver_8h_a609ecb4972d90be882ff882f8f7d03cda6b94d22e06ecf607f9a30ad586df6847}{AK09916\+\_\+\+MODE\+\_\+\+SINGLE\+\_\+\+MEASUREMENT}} = 0b00001
+, \mbox{\hyperlink{ak09916__driver_8h_a609ecb4972d90be882ff882f8f7d03cdab42078cfa3a680ebd85756c20852967f}{AK09916\+\_\+\+MODE\+\_\+\+CONTINUOUS\+\_\+\+MEASUREMENT\+\_\+1}} = 0b00010
+, \mbox{\hyperlink{ak09916__driver_8h_a609ecb4972d90be882ff882f8f7d03cdad26aed447d042665fd7d1326cd01a6d9}{AK09916\+\_\+\+MODE\+\_\+\+CONTINUOUS\+\_\+\+MEASUREMENT\+\_\+2}} = 0b00100
+, \newline
+\mbox{\hyperlink{ak09916__driver_8h_a609ecb4972d90be882ff882f8f7d03cda1ed73737ab74678afc969b91b1ed5e9c}{AK09916\+\_\+\+MODE\+\_\+\+CONTINUOUS\+\_\+\+MEASUREMENT\+\_\+3}} = 0b00110
+, \mbox{\hyperlink{ak09916__driver_8h_a609ecb4972d90be882ff882f8f7d03cdac1cd9aa30ec4cb9b35f8487cc1e78c4c}{AK09916\+\_\+\+MODE\+\_\+\+CONTINUOUS\+\_\+\+MEASUREMENT\+\_\+4}} = 0b01000
+, \mbox{\hyperlink{ak09916__driver_8h_a609ecb4972d90be882ff882f8f7d03cda56ff0e744a05a2927aa0c83063b77c8d}{AK09916\+\_\+\+MODE\+\_\+\+SELF\+\_\+\+TEST}} = 0b10000
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{ak09916__driver_8h_a34428f4ae98aab4e25b812d56d36e7f8}{ak09916\+\_\+init}} (\mbox{\hyperlink{structak09916__t}{ak09916\+\_\+t}} \texorpdfstring{$\ast$}{*}self, void \texorpdfstring{$\ast$}{*}context, uint32\+\_\+t timeout)
+\begin{DoxyCompactList}\small\item\em Initialize the AK09916 magnetometer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{ak09916__driver_8h_a560c4ca238767729e64296b3453584ac}{ak09916\+\_\+set\+\_\+mode}} (\mbox{\hyperlink{structak09916__t}{ak09916\+\_\+t}} \texorpdfstring{$\ast$}{*}self, \mbox{\hyperlink{ak09916__driver_8h_a609ecb4972d90be882ff882f8f7d03cd}{ak09916\+\_\+mode\+\_\+t}} mode)
+\begin{DoxyCompactList}\small\item\em Set the operation mode of the AK09916 magnetometer. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{ak09916__driver_8h_adc070bf486e819850f15d861aee5021f}{ak09916\+\_\+who\+\_\+am\+\_\+i}} (\mbox{\hyperlink{structak09916__t}{ak09916\+\_\+t}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Read the WHO\+\_\+\+AM\+\_\+I register of the AK09916 magnetometer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{ak09916__driver_8h_aeb5dc98f401e48dfd95760b3c7822881}{ak09916\+\_\+read\+\_\+magnetometer}} (\mbox{\hyperlink{structak09916__t}{ak09916\+\_\+t}} \texorpdfstring{$\ast$}{*}self, int16\+\_\+t \texorpdfstring{$\ast$}{*}mag\+\_\+x, int16\+\_\+t \texorpdfstring{$\ast$}{*}mag\+\_\+y, int16\+\_\+t \texorpdfstring{$\ast$}{*}mag\+\_\+z)
+\begin{DoxyCompactList}\small\item\em Read magnetometer data from the AK09916 magnetometer. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{ak09916__driver_8h_a2708019969ddad75192d484e3b76f703}{ak09916\+\_\+raw\+\_\+to\+\_\+float}} (int16\+\_\+t raw\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Convert raw magnetometer data to float. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+AK09916 driver header file. 
+
+This file defines the public interface for interacting with the AK09916 magnetometer. 
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{ak09916__driver_8h_a609ecb4972d90be882ff882f8f7d03cd}\label{ak09916__driver_8h_a609ecb4972d90be882ff882f8f7d03cd} 
+\index{ak09916\_driver.h@{ak09916\_driver.h}!ak09916\_mode\_t@{ak09916\_mode\_t}}
+\index{ak09916\_mode\_t@{ak09916\_mode\_t}!ak09916\_driver.h@{ak09916\_driver.h}}
+\doxysubsubsection{\texorpdfstring{ak09916\_mode\_t}{ak09916\_mode\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ak09916__driver_8h_a609ecb4972d90be882ff882f8f7d03cd}{ak09916\+\_\+mode\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AK09916\_MODE\_POWER\_DOWN@{AK09916\_MODE\_POWER\_DOWN}!ak09916\_driver.h@{ak09916\_driver.h}}\index{ak09916\_driver.h@{ak09916\_driver.h}!AK09916\_MODE\_POWER\_DOWN@{AK09916\_MODE\_POWER\_DOWN}}}\Hypertarget{ak09916__driver_8h_a609ecb4972d90be882ff882f8f7d03cdacb43d34a27a4bd4987aaa140b5248356}\label{ak09916__driver_8h_a609ecb4972d90be882ff882f8f7d03cdacb43d34a27a4bd4987aaa140b5248356} 
+AK09916\+\_\+\+MODE\+\_\+\+POWER\+\_\+\+DOWN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AK09916\_MODE\_SINGLE\_MEASUREMENT@{AK09916\_MODE\_SINGLE\_MEASUREMENT}!ak09916\_driver.h@{ak09916\_driver.h}}\index{ak09916\_driver.h@{ak09916\_driver.h}!AK09916\_MODE\_SINGLE\_MEASUREMENT@{AK09916\_MODE\_SINGLE\_MEASUREMENT}}}\Hypertarget{ak09916__driver_8h_a609ecb4972d90be882ff882f8f7d03cda6b94d22e06ecf607f9a30ad586df6847}\label{ak09916__driver_8h_a609ecb4972d90be882ff882f8f7d03cda6b94d22e06ecf607f9a30ad586df6847} 
+AK09916\+\_\+\+MODE\+\_\+\+SINGLE\+\_\+\+MEASUREMENT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AK09916\_MODE\_CONTINUOUS\_MEASUREMENT\_1@{AK09916\_MODE\_CONTINUOUS\_MEASUREMENT\_1}!ak09916\_driver.h@{ak09916\_driver.h}}\index{ak09916\_driver.h@{ak09916\_driver.h}!AK09916\_MODE\_CONTINUOUS\_MEASUREMENT\_1@{AK09916\_MODE\_CONTINUOUS\_MEASUREMENT\_1}}}\Hypertarget{ak09916__driver_8h_a609ecb4972d90be882ff882f8f7d03cdab42078cfa3a680ebd85756c20852967f}\label{ak09916__driver_8h_a609ecb4972d90be882ff882f8f7d03cdab42078cfa3a680ebd85756c20852967f} 
+AK09916\+\_\+\+MODE\+\_\+\+CONTINUOUS\+\_\+\+MEASUREMENT\+\_\+1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AK09916\_MODE\_CONTINUOUS\_MEASUREMENT\_2@{AK09916\_MODE\_CONTINUOUS\_MEASUREMENT\_2}!ak09916\_driver.h@{ak09916\_driver.h}}\index{ak09916\_driver.h@{ak09916\_driver.h}!AK09916\_MODE\_CONTINUOUS\_MEASUREMENT\_2@{AK09916\_MODE\_CONTINUOUS\_MEASUREMENT\_2}}}\Hypertarget{ak09916__driver_8h_a609ecb4972d90be882ff882f8f7d03cdad26aed447d042665fd7d1326cd01a6d9}\label{ak09916__driver_8h_a609ecb4972d90be882ff882f8f7d03cdad26aed447d042665fd7d1326cd01a6d9} 
+AK09916\+\_\+\+MODE\+\_\+\+CONTINUOUS\+\_\+\+MEASUREMENT\+\_\+2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AK09916\_MODE\_CONTINUOUS\_MEASUREMENT\_3@{AK09916\_MODE\_CONTINUOUS\_MEASUREMENT\_3}!ak09916\_driver.h@{ak09916\_driver.h}}\index{ak09916\_driver.h@{ak09916\_driver.h}!AK09916\_MODE\_CONTINUOUS\_MEASUREMENT\_3@{AK09916\_MODE\_CONTINUOUS\_MEASUREMENT\_3}}}\Hypertarget{ak09916__driver_8h_a609ecb4972d90be882ff882f8f7d03cda1ed73737ab74678afc969b91b1ed5e9c}\label{ak09916__driver_8h_a609ecb4972d90be882ff882f8f7d03cda1ed73737ab74678afc969b91b1ed5e9c} 
+AK09916\+\_\+\+MODE\+\_\+\+CONTINUOUS\+\_\+\+MEASUREMENT\+\_\+3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AK09916\_MODE\_CONTINUOUS\_MEASUREMENT\_4@{AK09916\_MODE\_CONTINUOUS\_MEASUREMENT\_4}!ak09916\_driver.h@{ak09916\_driver.h}}\index{ak09916\_driver.h@{ak09916\_driver.h}!AK09916\_MODE\_CONTINUOUS\_MEASUREMENT\_4@{AK09916\_MODE\_CONTINUOUS\_MEASUREMENT\_4}}}\Hypertarget{ak09916__driver_8h_a609ecb4972d90be882ff882f8f7d03cdac1cd9aa30ec4cb9b35f8487cc1e78c4c}\label{ak09916__driver_8h_a609ecb4972d90be882ff882f8f7d03cdac1cd9aa30ec4cb9b35f8487cc1e78c4c} 
+AK09916\+\_\+\+MODE\+\_\+\+CONTINUOUS\+\_\+\+MEASUREMENT\+\_\+4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AK09916\_MODE\_SELF\_TEST@{AK09916\_MODE\_SELF\_TEST}!ak09916\_driver.h@{ak09916\_driver.h}}\index{ak09916\_driver.h@{ak09916\_driver.h}!AK09916\_MODE\_SELF\_TEST@{AK09916\_MODE\_SELF\_TEST}}}\Hypertarget{ak09916__driver_8h_a609ecb4972d90be882ff882f8f7d03cda56ff0e744a05a2927aa0c83063b77c8d}\label{ak09916__driver_8h_a609ecb4972d90be882ff882f8f7d03cda56ff0e744a05a2927aa0c83063b77c8d} 
+AK09916\+\_\+\+MODE\+\_\+\+SELF\+\_\+\+TEST&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{ak09916__driver_8h_a34428f4ae98aab4e25b812d56d36e7f8}\label{ak09916__driver_8h_a34428f4ae98aab4e25b812d56d36e7f8} 
+\index{ak09916\_driver.h@{ak09916\_driver.h}!ak09916\_init@{ak09916\_init}}
+\index{ak09916\_init@{ak09916\_init}!ak09916\_driver.h@{ak09916\_driver.h}}
+\doxysubsubsection{\texorpdfstring{ak09916\_init()}{ak09916\_init()}}
+{\footnotesize\ttfamily int ak09916\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structak09916__t}{ak09916\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{self,  }\item[{void \texorpdfstring{$\ast$}{*}}]{context,  }\item[{uint32\+\_\+t}]{timeout }\end{DoxyParamCaption})}
+
+
+
+Initialize the AK09916 magnetometer. 
+
+This function initializes the AK09916 magnetometer. It must be called before any other functions in this driver.
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & Pointer to the AK09916 structure. \\
+\hline
+{\em context} & Pointer to the I2C port context. \\
+\hline
+{\em timeout} & Timeout for I2C operations. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 on failure. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{ak09916__driver_8h_a34428f4ae98aab4e25b812d56d36e7f8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{ak09916__driver_8h_a2708019969ddad75192d484e3b76f703}\label{ak09916__driver_8h_a2708019969ddad75192d484e3b76f703} 
+\index{ak09916\_driver.h@{ak09916\_driver.h}!ak09916\_raw\_to\_float@{ak09916\_raw\_to\_float}}
+\index{ak09916\_raw\_to\_float@{ak09916\_raw\_to\_float}!ak09916\_driver.h@{ak09916\_driver.h}}
+\doxysubsubsection{\texorpdfstring{ak09916\_raw\_to\_float()}{ak09916\_raw\_to\_float()}}
+{\footnotesize\ttfamily float ak09916\+\_\+raw\+\_\+to\+\_\+float (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{raw\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Convert raw magnetometer data to float. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em raw\+\_\+value} & The raw magnetometer data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The converted float value. 
+\end{DoxyReturn}
+\Hypertarget{ak09916__driver_8h_aeb5dc98f401e48dfd95760b3c7822881}\label{ak09916__driver_8h_aeb5dc98f401e48dfd95760b3c7822881} 
+\index{ak09916\_driver.h@{ak09916\_driver.h}!ak09916\_read\_magnetometer@{ak09916\_read\_magnetometer}}
+\index{ak09916\_read\_magnetometer@{ak09916\_read\_magnetometer}!ak09916\_driver.h@{ak09916\_driver.h}}
+\doxysubsubsection{\texorpdfstring{ak09916\_read\_magnetometer()}{ak09916\_read\_magnetometer()}}
+{\footnotesize\ttfamily int ak09916\+\_\+read\+\_\+magnetometer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structak09916__t}{ak09916\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{self,  }\item[{int16\+\_\+t \texorpdfstring{$\ast$}{*}}]{mag\+\_\+x,  }\item[{int16\+\_\+t \texorpdfstring{$\ast$}{*}}]{mag\+\_\+y,  }\item[{int16\+\_\+t \texorpdfstring{$\ast$}{*}}]{mag\+\_\+z }\end{DoxyParamCaption})}
+
+
+
+Read magnetometer data from the AK09916 magnetometer. 
+
+This function reads the magnetometer data from the AK09916 magnetometer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & Pointer to the AK09916 structure. \\
+\hline
+{\em mag\+\_\+x} & Pointer to store the X-\/axis magnetometer data. \\
+\hline
+{\em mag\+\_\+y} & Pointer to store the Y-\/axis magnetometer data. \\
+\hline
+{\em mag\+\_\+z} & Pointer to store the Z-\/axis magnetometer data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 on failure. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ak09916__driver_8h_aeb5dc98f401e48dfd95760b3c7822881_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{ak09916__driver_8h_a560c4ca238767729e64296b3453584ac}\label{ak09916__driver_8h_a560c4ca238767729e64296b3453584ac} 
+\index{ak09916\_driver.h@{ak09916\_driver.h}!ak09916\_set\_mode@{ak09916\_set\_mode}}
+\index{ak09916\_set\_mode@{ak09916\_set\_mode}!ak09916\_driver.h@{ak09916\_driver.h}}
+\doxysubsubsection{\texorpdfstring{ak09916\_set\_mode()}{ak09916\_set\_mode()}}
+{\footnotesize\ttfamily int ak09916\+\_\+set\+\_\+mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structak09916__t}{ak09916\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{self,  }\item[{\mbox{\hyperlink{ak09916__driver_8h_a609ecb4972d90be882ff882f8f7d03cd}{ak09916\+\_\+mode\+\_\+t}}}]{mode }\end{DoxyParamCaption})}
+
+
+
+Set the operation mode of the AK09916 magnetometer. 
+
+This function sets the operation mode of the AK09916 magnetometer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & Pointer to the AK09916 structure. \\
+\hline
+{\em mode} & The desired operation mode. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 on failure. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{ak09916__driver_8h_a560c4ca238767729e64296b3453584ac_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{ak09916__driver_8h_adc070bf486e819850f15d861aee5021f}\label{ak09916__driver_8h_adc070bf486e819850f15d861aee5021f} 
+\index{ak09916\_driver.h@{ak09916\_driver.h}!ak09916\_who\_am\_i@{ak09916\_who\_am\_i}}
+\index{ak09916\_who\_am\_i@{ak09916\_who\_am\_i}!ak09916\_driver.h@{ak09916\_driver.h}}
+\doxysubsubsection{\texorpdfstring{ak09916\_who\_am\_i()}{ak09916\_who\_am\_i()}}
+{\footnotesize\ttfamily uint8\+\_\+t ak09916\+\_\+who\+\_\+am\+\_\+i (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structak09916__t}{ak09916\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{self }\end{DoxyParamCaption})}
+
+
+
+Read the WHO\+\_\+\+AM\+\_\+I register of the AK09916 magnetometer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & Pointer to the AK09916 structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value of the WHO\+\_\+\+AM\+\_\+I register. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{ak09916__driver_8h_adc070bf486e819850f15d861aee5021f_cgraph}
+\end{center}
+\end{figure}

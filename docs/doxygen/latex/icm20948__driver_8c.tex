@@ -1,0 +1,439 @@
+\doxysection{src/icm20948\+\_\+driver.c File Reference}
+\hypertarget{icm20948__driver_8c}{}\label{icm20948__driver_8c}\index{src/icm20948\_driver.c@{src/icm20948\_driver.c}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include "{}ak09916\+\_\+driver.\+h"{}}\newline
+{\ttfamily \#include "{}i2c\+\_\+port.\+h"{}}\newline
+{\ttfamily \#include "{}icm20948\+\_\+driver.\+h"{}}\newline
+Include dependency graph for icm20948\+\_\+driver.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{icm20948__driver_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{icm20948__driver_8c_a7d78df94ca33c0ce5467b26aff2b4866}{ICM20948\+\_\+\+USER\+\_\+\+BANK\+\_\+0\+\_\+\+WHO\+\_\+\+AM\+\_\+I}}~0x00
+\item 
+\#define \mbox{\hyperlink{icm20948__driver_8c_ad92245bae37e6400f28e982d84c84954}{ICM20948\+\_\+\+USER\+\_\+\+BANK\+\_\+0\+\_\+\+USER\+\_\+\+CTRL}}~0x03
+\item 
+\#define \mbox{\hyperlink{icm20948__driver_8c_ac3071860d251bf62d6b334beeac2dd12}{ICM20948\+\_\+\+USER\+\_\+\+BANK\+\_\+0\+\_\+\+LP\+\_\+\+CONFIG}}~0x05
+\item 
+\#define \mbox{\hyperlink{icm20948__driver_8c_ade2a033c8d8844a5ef1e4f53aff3299a}{ICM20948\+\_\+\+USER\+\_\+\+BANK\+\_\+0\+\_\+\+PWR\+\_\+\+MGMT\+\_\+1}}~0x06
+\item 
+\#define \mbox{\hyperlink{icm20948__driver_8c_a246abd502263dd9accadb752d380b6be}{ICM20948\+\_\+\+USER\+\_\+\+BANK\+\_\+0\+\_\+\+PWR\+\_\+\+MGMT\+\_\+2}}~0x07
+\item 
+\#define \mbox{\hyperlink{icm20948__driver_8c_ab496d05111bc2ffc13e95e03d6c9f2b6}{ICM20948\+\_\+\+USER\+\_\+\+BANK\+\_\+0\+\_\+\+INT\+\_\+\+PIN\+\_\+\+CFG}}~0x0F
+\item 
+\#define \mbox{\hyperlink{icm20948__driver_8c_a6c6dd90ce0bf8ddcebb9d0d5915e87f7}{ICM20948\+\_\+\+USER\+\_\+\+BANK\+\_\+0\+\_\+\+ACCEL\+\_\+\+XOUT\+\_\+H}}~0x2D
+\item 
+\#define \mbox{\hyperlink{icm20948__driver_8c_a576157066bcf0b32476b00eacac674b3}{ICM20948\+\_\+\+USER\+\_\+\+BANK\+\_\+0\+\_\+\+GYRO\+\_\+\+XOUT\+\_\+H}}~0x33
+\item 
+\#define \mbox{\hyperlink{icm20948__driver_8c_a6b75f5479cf0e02490af7c5888393cdd}{ICM20948\+\_\+\+USER\+\_\+\+BANK\+\_\+3\+\_\+\+I2\+C\+\_\+\+SLV0\+\_\+\+ADDR}}~0x03
+\item 
+\#define \mbox{\hyperlink{icm20948__driver_8c_adf35166d8e01c3bec2d4646119e07dda}{ICM20948\+\_\+\+USER\+\_\+\+BANK\+\_\+3\+\_\+\+I2\+C\+\_\+\+SLV0\+\_\+\+REG}}~0x04
+\item 
+\#define \mbox{\hyperlink{icm20948__driver_8c_a0d212cf3ad4960f2e091ee0880ba38ab}{ICM20948\+\_\+\+USER\+\_\+\+BANK\+\_\+3\+\_\+\+I2\+C\+\_\+\+SLV0\+\_\+\+CTRL}}~0x05
+\item 
+\#define \mbox{\hyperlink{icm20948__driver_8c_a38f47dc25d2d27b465f9cd8f99ed6b75}{ICM20948\+\_\+\+REG\+\_\+\+BANK\+\_\+\+SEL}}~0x7F
+\item 
+\#define \mbox{\hyperlink{icm20948__driver_8c_a728f36798aa7b2a6a7489045a5afe34b}{ICM20948\+\_\+\+WHO\+\_\+\+AM\+\_\+I}}~0x\+EA
+\item 
+\#define \mbox{\hyperlink{icm20948__driver_8c_a05829153febeecb3f29e7bfbc20d37c9}{ICM20948\+\_\+\+USER\+\_\+\+CTRL\+\_\+\+I2\+C\+\_\+\+MST\+\_\+\+RST}}~1
+\item 
+\#define \mbox{\hyperlink{icm20948__driver_8c_a139a4ce462cdb32bb4b17ee41000608a}{ICM20948\+\_\+\+USER\+\_\+\+CTRL\+\_\+\+SRAM\+\_\+\+RST}}~2
+\item 
+\#define \mbox{\hyperlink{icm20948__driver_8c_a8b9c651aa0269d5ef2a24007379ab323}{ICM20948\+\_\+\+USER\+\_\+\+CTRL\+\_\+\+DMP\+\_\+\+RST}}~3
+\item 
+\#define \mbox{\hyperlink{icm20948__driver_8c_a2d5242e55bf022b2f9ecdca1f32809b1}{ICM20948\+\_\+\+USER\+\_\+\+CTRL\+\_\+\+I2\+C\+\_\+\+IF\+\_\+\+DIS}}~4
+\item 
+\#define \mbox{\hyperlink{icm20948__driver_8c_ab231ed05844d631f5d49cc2668cdf579}{ICM20948\+\_\+\+USER\+\_\+\+CTRL\+\_\+\+I2\+C\+\_\+\+MST\+\_\+\+EN}}~5
+\item 
+\#define \mbox{\hyperlink{icm20948__driver_8c_ab4e4693820d3478b97e71077833d2021}{ICM20948\+\_\+\+USER\+\_\+\+CTRL\+\_\+\+FIFO\+\_\+\+EN}}~6
+\item 
+\#define \mbox{\hyperlink{icm20948__driver_8c_a8e5449d683757c5c17abb9dcb1b108ea}{ICM20948\+\_\+\+USER\+\_\+\+CTRL\+\_\+\+DMP\+\_\+\+EN}}~7
+\item 
+\#define \mbox{\hyperlink{icm20948__driver_8c_a80017d2a9119882512776dd56db5897e}{ICM20948\+\_\+\+INT\+\_\+\+PIN\+\_\+\+CFG\+\_\+\+BYPASS\+\_\+\+EN}}~1
+\item 
+\#define \mbox{\hyperlink{icm20948__driver_8c_afe8676b64e24fb54cc2e22acb04541dd}{ICM20948\+\_\+\+I2\+C\+\_\+\+SLV0\+\_\+\+ADDR\+\_\+\+I2\+C\+\_\+\+ID\+\_\+0}}~0
+\item 
+\#define \mbox{\hyperlink{icm20948__driver_8c_aaf835e5cf4308fad3c0b618ffc8f3d4d}{ICM20948\+\_\+\+I2\+C\+\_\+\+SLV0\+\_\+\+ADDR\+\_\+\+I2\+C\+\_\+\+SLV0\+\_\+\+RNW}}~7
+\item 
+\#define \mbox{\hyperlink{icm20948__driver_8c_a5bb0cf5d3b3fc02464b839bfcd5f4951}{ICM20948\+\_\+\+I2\+C\+\_\+\+SLV0\+\_\+\+CTRL\+\_\+\+I2\+C\+\_\+\+SLV0\+\_\+\+LENG}}~0
+\item 
+\#define \mbox{\hyperlink{icm20948__driver_8c_ae19c4146e7287ee572712636b557a11f}{ICM20948\+\_\+\+I2\+C\+\_\+\+SLV0\+\_\+\+CTRL\+\_\+\+I2\+C\+\_\+\+SLV0\+\_\+\+GRP}}~4
+\item 
+\#define \mbox{\hyperlink{icm20948__driver_8c_a92b0de784ebc677f13a20e2f4e666dc1}{ICM20948\+\_\+\+I2\+C\+\_\+\+SLV0\+\_\+\+CTRL\+\_\+\+I2\+C\+\_\+\+SLV0\+\_\+\+REG\+\_\+\+DIS}}~5
+\item 
+\#define \mbox{\hyperlink{icm20948__driver_8c_a0039dfcbf606c578a9ff45cb7f908b05}{ICM20948\+\_\+\+I2\+C\+\_\+\+SLV0\+\_\+\+CTRL\+\_\+\+I2\+C\+\_\+\+SLV0\+\_\+\+BYTE\+\_\+\+SW}}~6
+\item 
+\#define \mbox{\hyperlink{icm20948__driver_8c_af4faa07ea540fcbb819ce38223b22850}{ICM20948\+\_\+\+I2\+C\+\_\+\+SLV0\+\_\+\+CTRL\+\_\+\+I2\+C\+\_\+\+SLV0\+\_\+\+EN}}~7
+\item 
+\#define \mbox{\hyperlink{icm20948__driver_8c_ab583aea23b5b5fbf6deba7e9f9b1df67}{ICM20948\+\_\+\+REG\+\_\+\+BANK\+\_\+\+SEL\+\_\+\+USER\+\_\+\+BANK}}~4
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{icm20948__driver_8c_a97831d6680168d5a8e85b240cef6a891}{icm20948\+\_\+reg\+\_\+bank\+\_\+select}} (\mbox{\hyperlink{structicm20948__t}{icm20948\+\_\+t}} \texorpdfstring{$\ast$}{*}self, uint8\+\_\+t bank)
+\begin{DoxyCompactList}\small\item\em Select the register bank for the ICM-\/20948. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{icm20948__driver_8c_a5722027bcf019cbc684330915e3271c0}{icm20948\+\_\+init}} (\mbox{\hyperlink{structicm20948__t}{icm20948\+\_\+t}} \texorpdfstring{$\ast$}{*}self, void \texorpdfstring{$\ast$}{*}context, uint16\+\_\+t device\+\_\+address, uint32\+\_\+t timeout)
+\begin{DoxyCompactList}\small\item\em Initialize the ICM-\/20948 IMU. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{icm20948__driver_8c_aff785588b02e58c9fe05e962e2e90dcf}{icm20948\+\_\+who\+\_\+am\+\_\+i}} (\mbox{\hyperlink{structicm20948__t}{icm20948\+\_\+t}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Read the WHO\+\_\+\+AM\+\_\+I register of the ICM-\/20948 IMU. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{icm20948__driver_8c_a254a74266c33db3d6cec93c753129161}{icm20948\+\_\+read\+\_\+accelerometer}} (\mbox{\hyperlink{structicm20948__t}{icm20948\+\_\+t}} \texorpdfstring{$\ast$}{*}self, int16\+\_\+t \texorpdfstring{$\ast$}{*}accel\+\_\+x, int16\+\_\+t \texorpdfstring{$\ast$}{*}accel\+\_\+y, int16\+\_\+t \texorpdfstring{$\ast$}{*}accel\+\_\+z)
+\begin{DoxyCompactList}\small\item\em Read accelerometer data from the ICM-\/20948 IMU. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{icm20948__driver_8c_aebb31bd460284a6408cefe362effbe66}{icm20948\+\_\+read\+\_\+gyroscope}} (\mbox{\hyperlink{structicm20948__t}{icm20948\+\_\+t}} \texorpdfstring{$\ast$}{*}self, int16\+\_\+t \texorpdfstring{$\ast$}{*}gyro\+\_\+x, int16\+\_\+t \texorpdfstring{$\ast$}{*}gyro\+\_\+y, int16\+\_\+t \texorpdfstring{$\ast$}{*}gyro\+\_\+z)
+\begin{DoxyCompactList}\small\item\em Read gyroscope data from the ICM-\/20948 IMU. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{icm20948__driver_8c_a309991f5f09a5deb1d4976711c5a9e97}{icm20948\+\_\+i2c\+\_\+slave0\+\_\+read}} (\mbox{\hyperlink{structicm20948__t}{icm20948\+\_\+t}} \texorpdfstring{$\ast$}{*}self, uint8\+\_\+t device\+\_\+address, uint8\+\_\+t reg\+\_\+address, uint8\+\_\+t \texorpdfstring{$\ast$}{*}data, uint8\+\_\+t length)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{icm20948__driver_8c_afe8676b64e24fb54cc2e22acb04541dd}\label{icm20948__driver_8c_afe8676b64e24fb54cc2e22acb04541dd} 
+\index{icm20948\_driver.c@{icm20948\_driver.c}!ICM20948\_I2C\_SLV0\_ADDR\_I2C\_ID\_0@{ICM20948\_I2C\_SLV0\_ADDR\_I2C\_ID\_0}}
+\index{ICM20948\_I2C\_SLV0\_ADDR\_I2C\_ID\_0@{ICM20948\_I2C\_SLV0\_ADDR\_I2C\_ID\_0}!icm20948\_driver.c@{icm20948\_driver.c}}
+\doxysubsubsection{\texorpdfstring{ICM20948\_I2C\_SLV0\_ADDR\_I2C\_ID\_0}{ICM20948\_I2C\_SLV0\_ADDR\_I2C\_ID\_0}}
+{\footnotesize\ttfamily \#define ICM20948\+\_\+\+I2\+C\+\_\+\+SLV0\+\_\+\+ADDR\+\_\+\+I2\+C\+\_\+\+ID\+\_\+0~0}
+
+\Hypertarget{icm20948__driver_8c_aaf835e5cf4308fad3c0b618ffc8f3d4d}\label{icm20948__driver_8c_aaf835e5cf4308fad3c0b618ffc8f3d4d} 
+\index{icm20948\_driver.c@{icm20948\_driver.c}!ICM20948\_I2C\_SLV0\_ADDR\_I2C\_SLV0\_RNW@{ICM20948\_I2C\_SLV0\_ADDR\_I2C\_SLV0\_RNW}}
+\index{ICM20948\_I2C\_SLV0\_ADDR\_I2C\_SLV0\_RNW@{ICM20948\_I2C\_SLV0\_ADDR\_I2C\_SLV0\_RNW}!icm20948\_driver.c@{icm20948\_driver.c}}
+\doxysubsubsection{\texorpdfstring{ICM20948\_I2C\_SLV0\_ADDR\_I2C\_SLV0\_RNW}{ICM20948\_I2C\_SLV0\_ADDR\_I2C\_SLV0\_RNW}}
+{\footnotesize\ttfamily \#define ICM20948\+\_\+\+I2\+C\+\_\+\+SLV0\+\_\+\+ADDR\+\_\+\+I2\+C\+\_\+\+SLV0\+\_\+\+RNW~7}
+
+\Hypertarget{icm20948__driver_8c_a0039dfcbf606c578a9ff45cb7f908b05}\label{icm20948__driver_8c_a0039dfcbf606c578a9ff45cb7f908b05} 
+\index{icm20948\_driver.c@{icm20948\_driver.c}!ICM20948\_I2C\_SLV0\_CTRL\_I2C\_SLV0\_BYTE\_SW@{ICM20948\_I2C\_SLV0\_CTRL\_I2C\_SLV0\_BYTE\_SW}}
+\index{ICM20948\_I2C\_SLV0\_CTRL\_I2C\_SLV0\_BYTE\_SW@{ICM20948\_I2C\_SLV0\_CTRL\_I2C\_SLV0\_BYTE\_SW}!icm20948\_driver.c@{icm20948\_driver.c}}
+\doxysubsubsection{\texorpdfstring{ICM20948\_I2C\_SLV0\_CTRL\_I2C\_SLV0\_BYTE\_SW}{ICM20948\_I2C\_SLV0\_CTRL\_I2C\_SLV0\_BYTE\_SW}}
+{\footnotesize\ttfamily \#define ICM20948\+\_\+\+I2\+C\+\_\+\+SLV0\+\_\+\+CTRL\+\_\+\+I2\+C\+\_\+\+SLV0\+\_\+\+BYTE\+\_\+\+SW~6}
+
+\Hypertarget{icm20948__driver_8c_af4faa07ea540fcbb819ce38223b22850}\label{icm20948__driver_8c_af4faa07ea540fcbb819ce38223b22850} 
+\index{icm20948\_driver.c@{icm20948\_driver.c}!ICM20948\_I2C\_SLV0\_CTRL\_I2C\_SLV0\_EN@{ICM20948\_I2C\_SLV0\_CTRL\_I2C\_SLV0\_EN}}
+\index{ICM20948\_I2C\_SLV0\_CTRL\_I2C\_SLV0\_EN@{ICM20948\_I2C\_SLV0\_CTRL\_I2C\_SLV0\_EN}!icm20948\_driver.c@{icm20948\_driver.c}}
+\doxysubsubsection{\texorpdfstring{ICM20948\_I2C\_SLV0\_CTRL\_I2C\_SLV0\_EN}{ICM20948\_I2C\_SLV0\_CTRL\_I2C\_SLV0\_EN}}
+{\footnotesize\ttfamily \#define ICM20948\+\_\+\+I2\+C\+\_\+\+SLV0\+\_\+\+CTRL\+\_\+\+I2\+C\+\_\+\+SLV0\+\_\+\+EN~7}
+
+\Hypertarget{icm20948__driver_8c_ae19c4146e7287ee572712636b557a11f}\label{icm20948__driver_8c_ae19c4146e7287ee572712636b557a11f} 
+\index{icm20948\_driver.c@{icm20948\_driver.c}!ICM20948\_I2C\_SLV0\_CTRL\_I2C\_SLV0\_GRP@{ICM20948\_I2C\_SLV0\_CTRL\_I2C\_SLV0\_GRP}}
+\index{ICM20948\_I2C\_SLV0\_CTRL\_I2C\_SLV0\_GRP@{ICM20948\_I2C\_SLV0\_CTRL\_I2C\_SLV0\_GRP}!icm20948\_driver.c@{icm20948\_driver.c}}
+\doxysubsubsection{\texorpdfstring{ICM20948\_I2C\_SLV0\_CTRL\_I2C\_SLV0\_GRP}{ICM20948\_I2C\_SLV0\_CTRL\_I2C\_SLV0\_GRP}}
+{\footnotesize\ttfamily \#define ICM20948\+\_\+\+I2\+C\+\_\+\+SLV0\+\_\+\+CTRL\+\_\+\+I2\+C\+\_\+\+SLV0\+\_\+\+GRP~4}
+
+\Hypertarget{icm20948__driver_8c_a5bb0cf5d3b3fc02464b839bfcd5f4951}\label{icm20948__driver_8c_a5bb0cf5d3b3fc02464b839bfcd5f4951} 
+\index{icm20948\_driver.c@{icm20948\_driver.c}!ICM20948\_I2C\_SLV0\_CTRL\_I2C\_SLV0\_LENG@{ICM20948\_I2C\_SLV0\_CTRL\_I2C\_SLV0\_LENG}}
+\index{ICM20948\_I2C\_SLV0\_CTRL\_I2C\_SLV0\_LENG@{ICM20948\_I2C\_SLV0\_CTRL\_I2C\_SLV0\_LENG}!icm20948\_driver.c@{icm20948\_driver.c}}
+\doxysubsubsection{\texorpdfstring{ICM20948\_I2C\_SLV0\_CTRL\_I2C\_SLV0\_LENG}{ICM20948\_I2C\_SLV0\_CTRL\_I2C\_SLV0\_LENG}}
+{\footnotesize\ttfamily \#define ICM20948\+\_\+\+I2\+C\+\_\+\+SLV0\+\_\+\+CTRL\+\_\+\+I2\+C\+\_\+\+SLV0\+\_\+\+LENG~0}
+
+\Hypertarget{icm20948__driver_8c_a92b0de784ebc677f13a20e2f4e666dc1}\label{icm20948__driver_8c_a92b0de784ebc677f13a20e2f4e666dc1} 
+\index{icm20948\_driver.c@{icm20948\_driver.c}!ICM20948\_I2C\_SLV0\_CTRL\_I2C\_SLV0\_REG\_DIS@{ICM20948\_I2C\_SLV0\_CTRL\_I2C\_SLV0\_REG\_DIS}}
+\index{ICM20948\_I2C\_SLV0\_CTRL\_I2C\_SLV0\_REG\_DIS@{ICM20948\_I2C\_SLV0\_CTRL\_I2C\_SLV0\_REG\_DIS}!icm20948\_driver.c@{icm20948\_driver.c}}
+\doxysubsubsection{\texorpdfstring{ICM20948\_I2C\_SLV0\_CTRL\_I2C\_SLV0\_REG\_DIS}{ICM20948\_I2C\_SLV0\_CTRL\_I2C\_SLV0\_REG\_DIS}}
+{\footnotesize\ttfamily \#define ICM20948\+\_\+\+I2\+C\+\_\+\+SLV0\+\_\+\+CTRL\+\_\+\+I2\+C\+\_\+\+SLV0\+\_\+\+REG\+\_\+\+DIS~5}
+
+\Hypertarget{icm20948__driver_8c_a80017d2a9119882512776dd56db5897e}\label{icm20948__driver_8c_a80017d2a9119882512776dd56db5897e} 
+\index{icm20948\_driver.c@{icm20948\_driver.c}!ICM20948\_INT\_PIN\_CFG\_BYPASS\_EN@{ICM20948\_INT\_PIN\_CFG\_BYPASS\_EN}}
+\index{ICM20948\_INT\_PIN\_CFG\_BYPASS\_EN@{ICM20948\_INT\_PIN\_CFG\_BYPASS\_EN}!icm20948\_driver.c@{icm20948\_driver.c}}
+\doxysubsubsection{\texorpdfstring{ICM20948\_INT\_PIN\_CFG\_BYPASS\_EN}{ICM20948\_INT\_PIN\_CFG\_BYPASS\_EN}}
+{\footnotesize\ttfamily \#define ICM20948\+\_\+\+INT\+\_\+\+PIN\+\_\+\+CFG\+\_\+\+BYPASS\+\_\+\+EN~1}
+
+\Hypertarget{icm20948__driver_8c_a38f47dc25d2d27b465f9cd8f99ed6b75}\label{icm20948__driver_8c_a38f47dc25d2d27b465f9cd8f99ed6b75} 
+\index{icm20948\_driver.c@{icm20948\_driver.c}!ICM20948\_REG\_BANK\_SEL@{ICM20948\_REG\_BANK\_SEL}}
+\index{ICM20948\_REG\_BANK\_SEL@{ICM20948\_REG\_BANK\_SEL}!icm20948\_driver.c@{icm20948\_driver.c}}
+\doxysubsubsection{\texorpdfstring{ICM20948\_REG\_BANK\_SEL}{ICM20948\_REG\_BANK\_SEL}}
+{\footnotesize\ttfamily \#define ICM20948\+\_\+\+REG\+\_\+\+BANK\+\_\+\+SEL~0x7F}
+
+\Hypertarget{icm20948__driver_8c_ab583aea23b5b5fbf6deba7e9f9b1df67}\label{icm20948__driver_8c_ab583aea23b5b5fbf6deba7e9f9b1df67} 
+\index{icm20948\_driver.c@{icm20948\_driver.c}!ICM20948\_REG\_BANK\_SEL\_USER\_BANK@{ICM20948\_REG\_BANK\_SEL\_USER\_BANK}}
+\index{ICM20948\_REG\_BANK\_SEL\_USER\_BANK@{ICM20948\_REG\_BANK\_SEL\_USER\_BANK}!icm20948\_driver.c@{icm20948\_driver.c}}
+\doxysubsubsection{\texorpdfstring{ICM20948\_REG\_BANK\_SEL\_USER\_BANK}{ICM20948\_REG\_BANK\_SEL\_USER\_BANK}}
+{\footnotesize\ttfamily \#define ICM20948\+\_\+\+REG\+\_\+\+BANK\+\_\+\+SEL\+\_\+\+USER\+\_\+\+BANK~4}
+
+\Hypertarget{icm20948__driver_8c_a6c6dd90ce0bf8ddcebb9d0d5915e87f7}\label{icm20948__driver_8c_a6c6dd90ce0bf8ddcebb9d0d5915e87f7} 
+\index{icm20948\_driver.c@{icm20948\_driver.c}!ICM20948\_USER\_BANK\_0\_ACCEL\_XOUT\_H@{ICM20948\_USER\_BANK\_0\_ACCEL\_XOUT\_H}}
+\index{ICM20948\_USER\_BANK\_0\_ACCEL\_XOUT\_H@{ICM20948\_USER\_BANK\_0\_ACCEL\_XOUT\_H}!icm20948\_driver.c@{icm20948\_driver.c}}
+\doxysubsubsection{\texorpdfstring{ICM20948\_USER\_BANK\_0\_ACCEL\_XOUT\_H}{ICM20948\_USER\_BANK\_0\_ACCEL\_XOUT\_H}}
+{\footnotesize\ttfamily \#define ICM20948\+\_\+\+USER\+\_\+\+BANK\+\_\+0\+\_\+\+ACCEL\+\_\+\+XOUT\+\_\+H~0x2D}
+
+\Hypertarget{icm20948__driver_8c_a576157066bcf0b32476b00eacac674b3}\label{icm20948__driver_8c_a576157066bcf0b32476b00eacac674b3} 
+\index{icm20948\_driver.c@{icm20948\_driver.c}!ICM20948\_USER\_BANK\_0\_GYRO\_XOUT\_H@{ICM20948\_USER\_BANK\_0\_GYRO\_XOUT\_H}}
+\index{ICM20948\_USER\_BANK\_0\_GYRO\_XOUT\_H@{ICM20948\_USER\_BANK\_0\_GYRO\_XOUT\_H}!icm20948\_driver.c@{icm20948\_driver.c}}
+\doxysubsubsection{\texorpdfstring{ICM20948\_USER\_BANK\_0\_GYRO\_XOUT\_H}{ICM20948\_USER\_BANK\_0\_GYRO\_XOUT\_H}}
+{\footnotesize\ttfamily \#define ICM20948\+\_\+\+USER\+\_\+\+BANK\+\_\+0\+\_\+\+GYRO\+\_\+\+XOUT\+\_\+H~0x33}
+
+\Hypertarget{icm20948__driver_8c_ab496d05111bc2ffc13e95e03d6c9f2b6}\label{icm20948__driver_8c_ab496d05111bc2ffc13e95e03d6c9f2b6} 
+\index{icm20948\_driver.c@{icm20948\_driver.c}!ICM20948\_USER\_BANK\_0\_INT\_PIN\_CFG@{ICM20948\_USER\_BANK\_0\_INT\_PIN\_CFG}}
+\index{ICM20948\_USER\_BANK\_0\_INT\_PIN\_CFG@{ICM20948\_USER\_BANK\_0\_INT\_PIN\_CFG}!icm20948\_driver.c@{icm20948\_driver.c}}
+\doxysubsubsection{\texorpdfstring{ICM20948\_USER\_BANK\_0\_INT\_PIN\_CFG}{ICM20948\_USER\_BANK\_0\_INT\_PIN\_CFG}}
+{\footnotesize\ttfamily \#define ICM20948\+\_\+\+USER\+\_\+\+BANK\+\_\+0\+\_\+\+INT\+\_\+\+PIN\+\_\+\+CFG~0x0F}
+
+\Hypertarget{icm20948__driver_8c_ac3071860d251bf62d6b334beeac2dd12}\label{icm20948__driver_8c_ac3071860d251bf62d6b334beeac2dd12} 
+\index{icm20948\_driver.c@{icm20948\_driver.c}!ICM20948\_USER\_BANK\_0\_LP\_CONFIG@{ICM20948\_USER\_BANK\_0\_LP\_CONFIG}}
+\index{ICM20948\_USER\_BANK\_0\_LP\_CONFIG@{ICM20948\_USER\_BANK\_0\_LP\_CONFIG}!icm20948\_driver.c@{icm20948\_driver.c}}
+\doxysubsubsection{\texorpdfstring{ICM20948\_USER\_BANK\_0\_LP\_CONFIG}{ICM20948\_USER\_BANK\_0\_LP\_CONFIG}}
+{\footnotesize\ttfamily \#define ICM20948\+\_\+\+USER\+\_\+\+BANK\+\_\+0\+\_\+\+LP\+\_\+\+CONFIG~0x05}
+
+\Hypertarget{icm20948__driver_8c_ade2a033c8d8844a5ef1e4f53aff3299a}\label{icm20948__driver_8c_ade2a033c8d8844a5ef1e4f53aff3299a} 
+\index{icm20948\_driver.c@{icm20948\_driver.c}!ICM20948\_USER\_BANK\_0\_PWR\_MGMT\_1@{ICM20948\_USER\_BANK\_0\_PWR\_MGMT\_1}}
+\index{ICM20948\_USER\_BANK\_0\_PWR\_MGMT\_1@{ICM20948\_USER\_BANK\_0\_PWR\_MGMT\_1}!icm20948\_driver.c@{icm20948\_driver.c}}
+\doxysubsubsection{\texorpdfstring{ICM20948\_USER\_BANK\_0\_PWR\_MGMT\_1}{ICM20948\_USER\_BANK\_0\_PWR\_MGMT\_1}}
+{\footnotesize\ttfamily \#define ICM20948\+\_\+\+USER\+\_\+\+BANK\+\_\+0\+\_\+\+PWR\+\_\+\+MGMT\+\_\+1~0x06}
+
+\Hypertarget{icm20948__driver_8c_a246abd502263dd9accadb752d380b6be}\label{icm20948__driver_8c_a246abd502263dd9accadb752d380b6be} 
+\index{icm20948\_driver.c@{icm20948\_driver.c}!ICM20948\_USER\_BANK\_0\_PWR\_MGMT\_2@{ICM20948\_USER\_BANK\_0\_PWR\_MGMT\_2}}
+\index{ICM20948\_USER\_BANK\_0\_PWR\_MGMT\_2@{ICM20948\_USER\_BANK\_0\_PWR\_MGMT\_2}!icm20948\_driver.c@{icm20948\_driver.c}}
+\doxysubsubsection{\texorpdfstring{ICM20948\_USER\_BANK\_0\_PWR\_MGMT\_2}{ICM20948\_USER\_BANK\_0\_PWR\_MGMT\_2}}
+{\footnotesize\ttfamily \#define ICM20948\+\_\+\+USER\+\_\+\+BANK\+\_\+0\+\_\+\+PWR\+\_\+\+MGMT\+\_\+2~0x07}
+
+\Hypertarget{icm20948__driver_8c_ad92245bae37e6400f28e982d84c84954}\label{icm20948__driver_8c_ad92245bae37e6400f28e982d84c84954} 
+\index{icm20948\_driver.c@{icm20948\_driver.c}!ICM20948\_USER\_BANK\_0\_USER\_CTRL@{ICM20948\_USER\_BANK\_0\_USER\_CTRL}}
+\index{ICM20948\_USER\_BANK\_0\_USER\_CTRL@{ICM20948\_USER\_BANK\_0\_USER\_CTRL}!icm20948\_driver.c@{icm20948\_driver.c}}
+\doxysubsubsection{\texorpdfstring{ICM20948\_USER\_BANK\_0\_USER\_CTRL}{ICM20948\_USER\_BANK\_0\_USER\_CTRL}}
+{\footnotesize\ttfamily \#define ICM20948\+\_\+\+USER\+\_\+\+BANK\+\_\+0\+\_\+\+USER\+\_\+\+CTRL~0x03}
+
+\Hypertarget{icm20948__driver_8c_a7d78df94ca33c0ce5467b26aff2b4866}\label{icm20948__driver_8c_a7d78df94ca33c0ce5467b26aff2b4866} 
+\index{icm20948\_driver.c@{icm20948\_driver.c}!ICM20948\_USER\_BANK\_0\_WHO\_AM\_I@{ICM20948\_USER\_BANK\_0\_WHO\_AM\_I}}
+\index{ICM20948\_USER\_BANK\_0\_WHO\_AM\_I@{ICM20948\_USER\_BANK\_0\_WHO\_AM\_I}!icm20948\_driver.c@{icm20948\_driver.c}}
+\doxysubsubsection{\texorpdfstring{ICM20948\_USER\_BANK\_0\_WHO\_AM\_I}{ICM20948\_USER\_BANK\_0\_WHO\_AM\_I}}
+{\footnotesize\ttfamily \#define ICM20948\+\_\+\+USER\+\_\+\+BANK\+\_\+0\+\_\+\+WHO\+\_\+\+AM\+\_\+I~0x00}
+
+\Hypertarget{icm20948__driver_8c_a6b75f5479cf0e02490af7c5888393cdd}\label{icm20948__driver_8c_a6b75f5479cf0e02490af7c5888393cdd} 
+\index{icm20948\_driver.c@{icm20948\_driver.c}!ICM20948\_USER\_BANK\_3\_I2C\_SLV0\_ADDR@{ICM20948\_USER\_BANK\_3\_I2C\_SLV0\_ADDR}}
+\index{ICM20948\_USER\_BANK\_3\_I2C\_SLV0\_ADDR@{ICM20948\_USER\_BANK\_3\_I2C\_SLV0\_ADDR}!icm20948\_driver.c@{icm20948\_driver.c}}
+\doxysubsubsection{\texorpdfstring{ICM20948\_USER\_BANK\_3\_I2C\_SLV0\_ADDR}{ICM20948\_USER\_BANK\_3\_I2C\_SLV0\_ADDR}}
+{\footnotesize\ttfamily \#define ICM20948\+\_\+\+USER\+\_\+\+BANK\+\_\+3\+\_\+\+I2\+C\+\_\+\+SLV0\+\_\+\+ADDR~0x03}
+
+\Hypertarget{icm20948__driver_8c_a0d212cf3ad4960f2e091ee0880ba38ab}\label{icm20948__driver_8c_a0d212cf3ad4960f2e091ee0880ba38ab} 
+\index{icm20948\_driver.c@{icm20948\_driver.c}!ICM20948\_USER\_BANK\_3\_I2C\_SLV0\_CTRL@{ICM20948\_USER\_BANK\_3\_I2C\_SLV0\_CTRL}}
+\index{ICM20948\_USER\_BANK\_3\_I2C\_SLV0\_CTRL@{ICM20948\_USER\_BANK\_3\_I2C\_SLV0\_CTRL}!icm20948\_driver.c@{icm20948\_driver.c}}
+\doxysubsubsection{\texorpdfstring{ICM20948\_USER\_BANK\_3\_I2C\_SLV0\_CTRL}{ICM20948\_USER\_BANK\_3\_I2C\_SLV0\_CTRL}}
+{\footnotesize\ttfamily \#define ICM20948\+\_\+\+USER\+\_\+\+BANK\+\_\+3\+\_\+\+I2\+C\+\_\+\+SLV0\+\_\+\+CTRL~0x05}
+
+\Hypertarget{icm20948__driver_8c_adf35166d8e01c3bec2d4646119e07dda}\label{icm20948__driver_8c_adf35166d8e01c3bec2d4646119e07dda} 
+\index{icm20948\_driver.c@{icm20948\_driver.c}!ICM20948\_USER\_BANK\_3\_I2C\_SLV0\_REG@{ICM20948\_USER\_BANK\_3\_I2C\_SLV0\_REG}}
+\index{ICM20948\_USER\_BANK\_3\_I2C\_SLV0\_REG@{ICM20948\_USER\_BANK\_3\_I2C\_SLV0\_REG}!icm20948\_driver.c@{icm20948\_driver.c}}
+\doxysubsubsection{\texorpdfstring{ICM20948\_USER\_BANK\_3\_I2C\_SLV0\_REG}{ICM20948\_USER\_BANK\_3\_I2C\_SLV0\_REG}}
+{\footnotesize\ttfamily \#define ICM20948\+\_\+\+USER\+\_\+\+BANK\+\_\+3\+\_\+\+I2\+C\+\_\+\+SLV0\+\_\+\+REG~0x04}
+
+\Hypertarget{icm20948__driver_8c_a8e5449d683757c5c17abb9dcb1b108ea}\label{icm20948__driver_8c_a8e5449d683757c5c17abb9dcb1b108ea} 
+\index{icm20948\_driver.c@{icm20948\_driver.c}!ICM20948\_USER\_CTRL\_DMP\_EN@{ICM20948\_USER\_CTRL\_DMP\_EN}}
+\index{ICM20948\_USER\_CTRL\_DMP\_EN@{ICM20948\_USER\_CTRL\_DMP\_EN}!icm20948\_driver.c@{icm20948\_driver.c}}
+\doxysubsubsection{\texorpdfstring{ICM20948\_USER\_CTRL\_DMP\_EN}{ICM20948\_USER\_CTRL\_DMP\_EN}}
+{\footnotesize\ttfamily \#define ICM20948\+\_\+\+USER\+\_\+\+CTRL\+\_\+\+DMP\+\_\+\+EN~7}
+
+\Hypertarget{icm20948__driver_8c_a8b9c651aa0269d5ef2a24007379ab323}\label{icm20948__driver_8c_a8b9c651aa0269d5ef2a24007379ab323} 
+\index{icm20948\_driver.c@{icm20948\_driver.c}!ICM20948\_USER\_CTRL\_DMP\_RST@{ICM20948\_USER\_CTRL\_DMP\_RST}}
+\index{ICM20948\_USER\_CTRL\_DMP\_RST@{ICM20948\_USER\_CTRL\_DMP\_RST}!icm20948\_driver.c@{icm20948\_driver.c}}
+\doxysubsubsection{\texorpdfstring{ICM20948\_USER\_CTRL\_DMP\_RST}{ICM20948\_USER\_CTRL\_DMP\_RST}}
+{\footnotesize\ttfamily \#define ICM20948\+\_\+\+USER\+\_\+\+CTRL\+\_\+\+DMP\+\_\+\+RST~3}
+
+\Hypertarget{icm20948__driver_8c_ab4e4693820d3478b97e71077833d2021}\label{icm20948__driver_8c_ab4e4693820d3478b97e71077833d2021} 
+\index{icm20948\_driver.c@{icm20948\_driver.c}!ICM20948\_USER\_CTRL\_FIFO\_EN@{ICM20948\_USER\_CTRL\_FIFO\_EN}}
+\index{ICM20948\_USER\_CTRL\_FIFO\_EN@{ICM20948\_USER\_CTRL\_FIFO\_EN}!icm20948\_driver.c@{icm20948\_driver.c}}
+\doxysubsubsection{\texorpdfstring{ICM20948\_USER\_CTRL\_FIFO\_EN}{ICM20948\_USER\_CTRL\_FIFO\_EN}}
+{\footnotesize\ttfamily \#define ICM20948\+\_\+\+USER\+\_\+\+CTRL\+\_\+\+FIFO\+\_\+\+EN~6}
+
+\Hypertarget{icm20948__driver_8c_a2d5242e55bf022b2f9ecdca1f32809b1}\label{icm20948__driver_8c_a2d5242e55bf022b2f9ecdca1f32809b1} 
+\index{icm20948\_driver.c@{icm20948\_driver.c}!ICM20948\_USER\_CTRL\_I2C\_IF\_DIS@{ICM20948\_USER\_CTRL\_I2C\_IF\_DIS}}
+\index{ICM20948\_USER\_CTRL\_I2C\_IF\_DIS@{ICM20948\_USER\_CTRL\_I2C\_IF\_DIS}!icm20948\_driver.c@{icm20948\_driver.c}}
+\doxysubsubsection{\texorpdfstring{ICM20948\_USER\_CTRL\_I2C\_IF\_DIS}{ICM20948\_USER\_CTRL\_I2C\_IF\_DIS}}
+{\footnotesize\ttfamily \#define ICM20948\+\_\+\+USER\+\_\+\+CTRL\+\_\+\+I2\+C\+\_\+\+IF\+\_\+\+DIS~4}
+
+\Hypertarget{icm20948__driver_8c_ab231ed05844d631f5d49cc2668cdf579}\label{icm20948__driver_8c_ab231ed05844d631f5d49cc2668cdf579} 
+\index{icm20948\_driver.c@{icm20948\_driver.c}!ICM20948\_USER\_CTRL\_I2C\_MST\_EN@{ICM20948\_USER\_CTRL\_I2C\_MST\_EN}}
+\index{ICM20948\_USER\_CTRL\_I2C\_MST\_EN@{ICM20948\_USER\_CTRL\_I2C\_MST\_EN}!icm20948\_driver.c@{icm20948\_driver.c}}
+\doxysubsubsection{\texorpdfstring{ICM20948\_USER\_CTRL\_I2C\_MST\_EN}{ICM20948\_USER\_CTRL\_I2C\_MST\_EN}}
+{\footnotesize\ttfamily \#define ICM20948\+\_\+\+USER\+\_\+\+CTRL\+\_\+\+I2\+C\+\_\+\+MST\+\_\+\+EN~5}
+
+\Hypertarget{icm20948__driver_8c_a05829153febeecb3f29e7bfbc20d37c9}\label{icm20948__driver_8c_a05829153febeecb3f29e7bfbc20d37c9} 
+\index{icm20948\_driver.c@{icm20948\_driver.c}!ICM20948\_USER\_CTRL\_I2C\_MST\_RST@{ICM20948\_USER\_CTRL\_I2C\_MST\_RST}}
+\index{ICM20948\_USER\_CTRL\_I2C\_MST\_RST@{ICM20948\_USER\_CTRL\_I2C\_MST\_RST}!icm20948\_driver.c@{icm20948\_driver.c}}
+\doxysubsubsection{\texorpdfstring{ICM20948\_USER\_CTRL\_I2C\_MST\_RST}{ICM20948\_USER\_CTRL\_I2C\_MST\_RST}}
+{\footnotesize\ttfamily \#define ICM20948\+\_\+\+USER\+\_\+\+CTRL\+\_\+\+I2\+C\+\_\+\+MST\+\_\+\+RST~1}
+
+\Hypertarget{icm20948__driver_8c_a139a4ce462cdb32bb4b17ee41000608a}\label{icm20948__driver_8c_a139a4ce462cdb32bb4b17ee41000608a} 
+\index{icm20948\_driver.c@{icm20948\_driver.c}!ICM20948\_USER\_CTRL\_SRAM\_RST@{ICM20948\_USER\_CTRL\_SRAM\_RST}}
+\index{ICM20948\_USER\_CTRL\_SRAM\_RST@{ICM20948\_USER\_CTRL\_SRAM\_RST}!icm20948\_driver.c@{icm20948\_driver.c}}
+\doxysubsubsection{\texorpdfstring{ICM20948\_USER\_CTRL\_SRAM\_RST}{ICM20948\_USER\_CTRL\_SRAM\_RST}}
+{\footnotesize\ttfamily \#define ICM20948\+\_\+\+USER\+\_\+\+CTRL\+\_\+\+SRAM\+\_\+\+RST~2}
+
+\Hypertarget{icm20948__driver_8c_a728f36798aa7b2a6a7489045a5afe34b}\label{icm20948__driver_8c_a728f36798aa7b2a6a7489045a5afe34b} 
+\index{icm20948\_driver.c@{icm20948\_driver.c}!ICM20948\_WHO\_AM\_I@{ICM20948\_WHO\_AM\_I}}
+\index{ICM20948\_WHO\_AM\_I@{ICM20948\_WHO\_AM\_I}!icm20948\_driver.c@{icm20948\_driver.c}}
+\doxysubsubsection{\texorpdfstring{ICM20948\_WHO\_AM\_I}{ICM20948\_WHO\_AM\_I}}
+{\footnotesize\ttfamily \#define ICM20948\+\_\+\+WHO\+\_\+\+AM\+\_\+I~0x\+EA}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{icm20948__driver_8c_a309991f5f09a5deb1d4976711c5a9e97}\label{icm20948__driver_8c_a309991f5f09a5deb1d4976711c5a9e97} 
+\index{icm20948\_driver.c@{icm20948\_driver.c}!icm20948\_i2c\_slave0\_read@{icm20948\_i2c\_slave0\_read}}
+\index{icm20948\_i2c\_slave0\_read@{icm20948\_i2c\_slave0\_read}!icm20948\_driver.c@{icm20948\_driver.c}}
+\doxysubsubsection{\texorpdfstring{icm20948\_i2c\_slave0\_read()}{icm20948\_i2c\_slave0\_read()}}
+{\footnotesize\ttfamily int icm20948\+\_\+i2c\+\_\+slave0\+\_\+read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structicm20948__t}{icm20948\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{self,  }\item[{uint8\+\_\+t}]{device\+\_\+address,  }\item[{uint8\+\_\+t}]{reg\+\_\+address,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{data,  }\item[{uint8\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{icm20948__driver_8c_a309991f5f09a5deb1d4976711c5a9e97_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{icm20948__driver_8c_a5722027bcf019cbc684330915e3271c0}\label{icm20948__driver_8c_a5722027bcf019cbc684330915e3271c0} 
+\index{icm20948\_driver.c@{icm20948\_driver.c}!icm20948\_init@{icm20948\_init}}
+\index{icm20948\_init@{icm20948\_init}!icm20948\_driver.c@{icm20948\_driver.c}}
+\doxysubsubsection{\texorpdfstring{icm20948\_init()}{icm20948\_init()}}
+{\footnotesize\ttfamily int icm20948\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structicm20948__t}{icm20948\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{self,  }\item[{void \texorpdfstring{$\ast$}{*}}]{context,  }\item[{uint16\+\_\+t}]{device\+\_\+address,  }\item[{uint32\+\_\+t}]{timeout }\end{DoxyParamCaption})}
+
+
+
+Initialize the ICM-\/20948 IMU. 
+
+This function initializes the ICM-\/20948 IMU. It must be called before any other functions in this driver.
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Pointer to the I2C port context. \\
+\hline
+{\em device\+\_\+address} & I2C device address of the IMU. \\
+\hline
+{\em timeout} & Timeout for I2C operations. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{icm20948__driver_8c_a5722027bcf019cbc684330915e3271c0_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{icm20948__driver_8c_a254a74266c33db3d6cec93c753129161}\label{icm20948__driver_8c_a254a74266c33db3d6cec93c753129161} 
+\index{icm20948\_driver.c@{icm20948\_driver.c}!icm20948\_read\_accelerometer@{icm20948\_read\_accelerometer}}
+\index{icm20948\_read\_accelerometer@{icm20948\_read\_accelerometer}!icm20948\_driver.c@{icm20948\_driver.c}}
+\doxysubsubsection{\texorpdfstring{icm20948\_read\_accelerometer()}{icm20948\_read\_accelerometer()}}
+{\footnotesize\ttfamily int icm20948\+\_\+read\+\_\+accelerometer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structicm20948__t}{icm20948\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{self,  }\item[{int16\+\_\+t \texorpdfstring{$\ast$}{*}}]{accel\+\_\+x,  }\item[{int16\+\_\+t \texorpdfstring{$\ast$}{*}}]{accel\+\_\+y,  }\item[{int16\+\_\+t \texorpdfstring{$\ast$}{*}}]{accel\+\_\+z }\end{DoxyParamCaption})}
+
+
+
+Read accelerometer data from the ICM-\/20948 IMU. 
+
+This function reads the accelerometer data from the ICM-\/20948 IMU.
+
+
+\begin{DoxyParams}{Parameters}
+{\em accel\+\_\+x} & Pointer to store the X-\/axis accelerometer data. \\
+\hline
+{\em accel\+\_\+y} & Pointer to store the Y-\/axis accelerometer data. \\
+\hline
+{\em accel\+\_\+z} & Pointer to store the Z-\/axis accelerometer data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 on failure. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{icm20948__driver_8c_a254a74266c33db3d6cec93c753129161_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{icm20948__driver_8c_aebb31bd460284a6408cefe362effbe66}\label{icm20948__driver_8c_aebb31bd460284a6408cefe362effbe66} 
+\index{icm20948\_driver.c@{icm20948\_driver.c}!icm20948\_read\_gyroscope@{icm20948\_read\_gyroscope}}
+\index{icm20948\_read\_gyroscope@{icm20948\_read\_gyroscope}!icm20948\_driver.c@{icm20948\_driver.c}}
+\doxysubsubsection{\texorpdfstring{icm20948\_read\_gyroscope()}{icm20948\_read\_gyroscope()}}
+{\footnotesize\ttfamily int icm20948\+\_\+read\+\_\+gyroscope (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structicm20948__t}{icm20948\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{self,  }\item[{int16\+\_\+t \texorpdfstring{$\ast$}{*}}]{gyro\+\_\+x,  }\item[{int16\+\_\+t \texorpdfstring{$\ast$}{*}}]{gyro\+\_\+y,  }\item[{int16\+\_\+t \texorpdfstring{$\ast$}{*}}]{gyro\+\_\+z }\end{DoxyParamCaption})}
+
+
+
+Read gyroscope data from the ICM-\/20948 IMU. 
+
+This function reads the gyroscope data from the ICM-\/20948 IMU.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gyro\+\_\+x} & Pointer to store the X-\/axis gyroscope data. \\
+\hline
+{\em gyro\+\_\+y} & Pointer to store the Y-\/axis gyroscope data. \\
+\hline
+{\em gyro\+\_\+z} & Pointer to store the Z-\/axis gyroscope data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 on failure. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{icm20948__driver_8c_aebb31bd460284a6408cefe362effbe66_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{icm20948__driver_8c_a97831d6680168d5a8e85b240cef6a891}\label{icm20948__driver_8c_a97831d6680168d5a8e85b240cef6a891} 
+\index{icm20948\_driver.c@{icm20948\_driver.c}!icm20948\_reg\_bank\_select@{icm20948\_reg\_bank\_select}}
+\index{icm20948\_reg\_bank\_select@{icm20948\_reg\_bank\_select}!icm20948\_driver.c@{icm20948\_driver.c}}
+\doxysubsubsection{\texorpdfstring{icm20948\_reg\_bank\_select()}{icm20948\_reg\_bank\_select()}}
+{\footnotesize\ttfamily static int icm20948\+\_\+reg\+\_\+bank\+\_\+select (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structicm20948__t}{icm20948\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{self,  }\item[{uint8\+\_\+t}]{bank }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Select the register bank for the ICM-\/20948. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & Pointer to the ICM-\/20948 IMU structure. \\
+\hline
+{\em bank} & The register bank to select (0, 1, 2, or 3). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 on failure. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{icm20948__driver_8c_a97831d6680168d5a8e85b240cef6a891_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{icm20948__driver_8c_a97831d6680168d5a8e85b240cef6a891_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{icm20948__driver_8c_aff785588b02e58c9fe05e962e2e90dcf}\label{icm20948__driver_8c_aff785588b02e58c9fe05e962e2e90dcf} 
+\index{icm20948\_driver.c@{icm20948\_driver.c}!icm20948\_who\_am\_i@{icm20948\_who\_am\_i}}
+\index{icm20948\_who\_am\_i@{icm20948\_who\_am\_i}!icm20948\_driver.c@{icm20948\_driver.c}}
+\doxysubsubsection{\texorpdfstring{icm20948\_who\_am\_i()}{icm20948\_who\_am\_i()}}
+{\footnotesize\ttfamily uint8\+\_\+t icm20948\+\_\+who\+\_\+am\+\_\+i (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structicm20948__t}{icm20948\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{self }\end{DoxyParamCaption})}
+
+
+
+Read the WHO\+\_\+\+AM\+\_\+I register of the ICM-\/20948 IMU. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & Pointer to the ICM-\/20948 IMU structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value of the WHO\+\_\+\+AM\+\_\+I register. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{icm20948__driver_8c_aff785588b02e58c9fe05e962e2e90dcf_cgraph}
+\end{center}
+\end{figure}

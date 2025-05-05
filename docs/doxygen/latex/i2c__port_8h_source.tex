@@ -1,0 +1,33 @@
+\doxysection{i2c\+\_\+port.\+h}
+\hypertarget{i2c__port_8h_source}{}\label{i2c__port_8h_source}\index{include/i2c\_port.h@{include/i2c\_port.h}}
+\mbox{\hyperlink{i2c__port_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ I2C\_PORT\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ I2C\_PORT\_H}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00013\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{icm20948__driver_8h}{icm20948\_driver.h}}"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00027\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{i2c__port_8h_a07b475b0c3ab865ab405afc5482df20d}{i2c\_init}}(\textcolor{keywordtype}{void}\ *context,\ uint16\_t\ device\_address,\ uint32\_t\ timeout);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00039\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{i2c__port_8h_aaa6761a99112c87a8119dd2e35d752d2}{i2c\_blocking\_read}}(\textcolor{keywordtype}{void}\ *context,\ uint16\_t\ device\_address,}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint16\_t\ reg\_addres,\ uint8\_t\ *data,\ uint16\_t\ length,}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ timeout);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00053\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{i2c__port_8h_aaea43c6887f46dc58d27ed30ac6d1cf3}{i2c\_blocking\_write}}(\textcolor{keywordtype}{void}\ *context,\ uint16\_t\ device\_address,}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint16\_t\ reg\_addres,\ uint8\_t\ *data,\ uint16\_t\ length,}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ timeout);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00058\ \}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ I2C\_PORT\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,40 @@
+\doxysection{icm20948\+\_\+driver.\+h}
+\hypertarget{icm20948__driver_8h_source}{}\label{icm20948__driver_8h_source}\index{include/icm20948\_driver.h@{include/icm20948\_driver.h}}
+\mbox{\hyperlink{icm20948__driver_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ ICM20948\_DRIVER\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ ICM20948\_DRIVER\_H}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00015\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ ICM20948\_I2C\_ADDRESS0\ 0b11010000\ \ }\textcolor{comment}{//\ I2C\ address\ 0\ for\ the\ ICM-\/20948}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ ICM20948\_I2C\_ADDRESS1\ 0b11010010\ \ }\textcolor{comment}{//\ I2C\ address\ 1\ for\ the\ ICM-\/20948}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}*\ \mbox{\hyperlink{structicm20948__t_afd57a713e8aeb8a2efe3bbb58ea78dc1}{context}};\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Context\ for\ the\ I2C\ port}}
+\DoxyCodeLine{00023\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structicm20948__t_ab6288eed5ecead071beb4d9fcc9268c1}{device\_address}};\ \ \textcolor{comment}{//\ I2C\ device\ address}}
+\DoxyCodeLine{00024\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structicm20948__t_a466a656b6c29878a21d1fafc97c82f69}{timeout}};\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Timeout\ for\ I2C\ operations}}
+\DoxyCodeLine{00025\ \}\ \mbox{\hyperlink{structicm20948__t}{icm20948\_t}};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00037\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{icm20948__driver_8h_a5722027bcf019cbc684330915e3271c0}{icm20948\_init}}(\mbox{\hyperlink{structicm20948__t}{icm20948\_t}}*\ self,\ \textcolor{keywordtype}{void}*\ context,\ uint16\_t\ device\_address,}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ timeout);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00046\ uint8\_t\ \mbox{\hyperlink{icm20948__driver_8h_aff785588b02e58c9fe05e962e2e90dcf}{icm20948\_who\_am\_i}}(\mbox{\hyperlink{structicm20948__t}{icm20948\_t}}*\ self);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00058\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{icm20948__driver_8h_a254a74266c33db3d6cec93c753129161}{icm20948\_read\_accelerometer}}(\mbox{\hyperlink{structicm20948__t}{icm20948\_t}}*\ self,\ int16\_t*\ accel\_x,}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ int16\_t*\ accel\_y,\ int16\_t*\ accel\_z);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00071\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{icm20948__driver_8h_aebb31bd460284a6408cefe362effbe66}{icm20948\_read\_gyroscope}}(\mbox{\hyperlink{structicm20948__t}{icm20948\_t}}*\ self,\ int16\_t*\ gyro\_x,\ int16\_t*\ gyro\_y,}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ int16\_t*\ gyro\_z);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00075\ \}}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ ICM20948\_DRIVER\_H}}
+
+\end{DoxyCode}

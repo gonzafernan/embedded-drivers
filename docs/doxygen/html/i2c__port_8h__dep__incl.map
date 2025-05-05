@@ -1,0 +1,9 @@
+<map id="include/i2c_port.h" name="include/i2c_port.h">
+<area shape="rect" id="Node000001" title="I2C port header file." alt="" coords="234,5,371,31"/>
+<area shape="rect" id="Node000002" href="$stm32f4__i2c__port_8c.html" title=" " alt="" coords="5,79,200,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="262,38,152,81,150,76,260,33"/>
+<area shape="rect" id="Node000003" href="$ak09916__driver_8c.html" title="AK09916 driver implementation." alt="" coords="225,86,381,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="305,44,305,86,300,86,300,44"/>
+<area shape="rect" id="Node000004" href="$icm20948__driver_8c.html" title=" " alt="" coords="405,86,569,111"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="343,33,461,84,459,88,341,38"/>
+</map>

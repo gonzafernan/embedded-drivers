@@ -1,0 +1,180 @@
+\doxysection{include/icm20948\+\_\+driver.h File Reference}
+\hypertarget{icm20948__driver_8h}{}\label{icm20948__driver_8h}\index{include/icm20948\_driver.h@{include/icm20948\_driver.h}}
+
+
+ICM20948 driver header file.  
+
+
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{icm20948__driver_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structicm20948__t}{icm20948\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{icm20948__driver_8h_a1906523fc146b5733789abfb76eb3f73}{ICM20948\+\_\+\+I2\+C\+\_\+\+ADDRESS0}}~0b11010000
+\item 
+\#define \mbox{\hyperlink{icm20948__driver_8h_a7a6836c53eb8bef61a38542d55d6db21}{ICM20948\+\_\+\+I2\+C\+\_\+\+ADDRESS1}}~0b11010010
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{icm20948__driver_8h_a5722027bcf019cbc684330915e3271c0}{icm20948\+\_\+init}} (\mbox{\hyperlink{structicm20948__t}{icm20948\+\_\+t}} \texorpdfstring{$\ast$}{*}self, void \texorpdfstring{$\ast$}{*}context, uint16\+\_\+t device\+\_\+address, uint32\+\_\+t timeout)
+\begin{DoxyCompactList}\small\item\em Initialize the ICM-\/20948 IMU. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{icm20948__driver_8h_aff785588b02e58c9fe05e962e2e90dcf}{icm20948\+\_\+who\+\_\+am\+\_\+i}} (\mbox{\hyperlink{structicm20948__t}{icm20948\+\_\+t}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Read the WHO\+\_\+\+AM\+\_\+I register of the ICM-\/20948 IMU. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{icm20948__driver_8h_a254a74266c33db3d6cec93c753129161}{icm20948\+\_\+read\+\_\+accelerometer}} (\mbox{\hyperlink{structicm20948__t}{icm20948\+\_\+t}} \texorpdfstring{$\ast$}{*}self, int16\+\_\+t \texorpdfstring{$\ast$}{*}accel\+\_\+x, int16\+\_\+t \texorpdfstring{$\ast$}{*}accel\+\_\+y, int16\+\_\+t \texorpdfstring{$\ast$}{*}accel\+\_\+z)
+\begin{DoxyCompactList}\small\item\em Read accelerometer data from the ICM-\/20948 IMU. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{icm20948__driver_8h_aebb31bd460284a6408cefe362effbe66}{icm20948\+\_\+read\+\_\+gyroscope}} (\mbox{\hyperlink{structicm20948__t}{icm20948\+\_\+t}} \texorpdfstring{$\ast$}{*}self, int16\+\_\+t \texorpdfstring{$\ast$}{*}gyro\+\_\+x, int16\+\_\+t \texorpdfstring{$\ast$}{*}gyro\+\_\+y, int16\+\_\+t \texorpdfstring{$\ast$}{*}gyro\+\_\+z)
+\begin{DoxyCompactList}\small\item\em Read gyroscope data from the ICM-\/20948 IMU. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+ICM20948 driver header file. 
+
+This file defines the public interface for interacting with the ICM-\/20948 IMU. It must be used in conjunction with a platform-\/specific implementation of the low-\/level I2C access functions defined in icm20948\+\_\+port.\+h. 
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{icm20948__driver_8h_a1906523fc146b5733789abfb76eb3f73}\label{icm20948__driver_8h_a1906523fc146b5733789abfb76eb3f73} 
+\index{icm20948\_driver.h@{icm20948\_driver.h}!ICM20948\_I2C\_ADDRESS0@{ICM20948\_I2C\_ADDRESS0}}
+\index{ICM20948\_I2C\_ADDRESS0@{ICM20948\_I2C\_ADDRESS0}!icm20948\_driver.h@{icm20948\_driver.h}}
+\doxysubsubsection{\texorpdfstring{ICM20948\_I2C\_ADDRESS0}{ICM20948\_I2C\_ADDRESS0}}
+{\footnotesize\ttfamily \#define ICM20948\+\_\+\+I2\+C\+\_\+\+ADDRESS0~0b11010000}
+
+\Hypertarget{icm20948__driver_8h_a7a6836c53eb8bef61a38542d55d6db21}\label{icm20948__driver_8h_a7a6836c53eb8bef61a38542d55d6db21} 
+\index{icm20948\_driver.h@{icm20948\_driver.h}!ICM20948\_I2C\_ADDRESS1@{ICM20948\_I2C\_ADDRESS1}}
+\index{ICM20948\_I2C\_ADDRESS1@{ICM20948\_I2C\_ADDRESS1}!icm20948\_driver.h@{icm20948\_driver.h}}
+\doxysubsubsection{\texorpdfstring{ICM20948\_I2C\_ADDRESS1}{ICM20948\_I2C\_ADDRESS1}}
+{\footnotesize\ttfamily \#define ICM20948\+\_\+\+I2\+C\+\_\+\+ADDRESS1~0b11010010}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{icm20948__driver_8h_a5722027bcf019cbc684330915e3271c0}\label{icm20948__driver_8h_a5722027bcf019cbc684330915e3271c0} 
+\index{icm20948\_driver.h@{icm20948\_driver.h}!icm20948\_init@{icm20948\_init}}
+\index{icm20948\_init@{icm20948\_init}!icm20948\_driver.h@{icm20948\_driver.h}}
+\doxysubsubsection{\texorpdfstring{icm20948\_init()}{icm20948\_init()}}
+{\footnotesize\ttfamily int icm20948\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structicm20948__t}{icm20948\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{self,  }\item[{void \texorpdfstring{$\ast$}{*}}]{context,  }\item[{uint16\+\_\+t}]{device\+\_\+address,  }\item[{uint32\+\_\+t}]{timeout }\end{DoxyParamCaption})}
+
+
+
+Initialize the ICM-\/20948 IMU. 
+
+This function initializes the ICM-\/20948 IMU. It must be called before any other functions in this driver.
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Pointer to the I2C port context. \\
+\hline
+{\em device\+\_\+address} & I2C device address of the IMU. \\
+\hline
+{\em timeout} & Timeout for I2C operations. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{icm20948__driver_8h_a5722027bcf019cbc684330915e3271c0_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{icm20948__driver_8h_a254a74266c33db3d6cec93c753129161}\label{icm20948__driver_8h_a254a74266c33db3d6cec93c753129161} 
+\index{icm20948\_driver.h@{icm20948\_driver.h}!icm20948\_read\_accelerometer@{icm20948\_read\_accelerometer}}
+\index{icm20948\_read\_accelerometer@{icm20948\_read\_accelerometer}!icm20948\_driver.h@{icm20948\_driver.h}}
+\doxysubsubsection{\texorpdfstring{icm20948\_read\_accelerometer()}{icm20948\_read\_accelerometer()}}
+{\footnotesize\ttfamily int icm20948\+\_\+read\+\_\+accelerometer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structicm20948__t}{icm20948\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{self,  }\item[{int16\+\_\+t \texorpdfstring{$\ast$}{*}}]{accel\+\_\+x,  }\item[{int16\+\_\+t \texorpdfstring{$\ast$}{*}}]{accel\+\_\+y,  }\item[{int16\+\_\+t \texorpdfstring{$\ast$}{*}}]{accel\+\_\+z }\end{DoxyParamCaption})}
+
+
+
+Read accelerometer data from the ICM-\/20948 IMU. 
+
+This function reads the accelerometer data from the ICM-\/20948 IMU.
+
+
+\begin{DoxyParams}{Parameters}
+{\em accel\+\_\+x} & Pointer to store the X-\/axis accelerometer data. \\
+\hline
+{\em accel\+\_\+y} & Pointer to store the Y-\/axis accelerometer data. \\
+\hline
+{\em accel\+\_\+z} & Pointer to store the Z-\/axis accelerometer data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 on failure. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{icm20948__driver_8h_a254a74266c33db3d6cec93c753129161_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{icm20948__driver_8h_aebb31bd460284a6408cefe362effbe66}\label{icm20948__driver_8h_aebb31bd460284a6408cefe362effbe66} 
+\index{icm20948\_driver.h@{icm20948\_driver.h}!icm20948\_read\_gyroscope@{icm20948\_read\_gyroscope}}
+\index{icm20948\_read\_gyroscope@{icm20948\_read\_gyroscope}!icm20948\_driver.h@{icm20948\_driver.h}}
+\doxysubsubsection{\texorpdfstring{icm20948\_read\_gyroscope()}{icm20948\_read\_gyroscope()}}
+{\footnotesize\ttfamily int icm20948\+\_\+read\+\_\+gyroscope (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structicm20948__t}{icm20948\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{self,  }\item[{int16\+\_\+t \texorpdfstring{$\ast$}{*}}]{gyro\+\_\+x,  }\item[{int16\+\_\+t \texorpdfstring{$\ast$}{*}}]{gyro\+\_\+y,  }\item[{int16\+\_\+t \texorpdfstring{$\ast$}{*}}]{gyro\+\_\+z }\end{DoxyParamCaption})}
+
+
+
+Read gyroscope data from the ICM-\/20948 IMU. 
+
+This function reads the gyroscope data from the ICM-\/20948 IMU.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gyro\+\_\+x} & Pointer to store the X-\/axis gyroscope data. \\
+\hline
+{\em gyro\+\_\+y} & Pointer to store the Y-\/axis gyroscope data. \\
+\hline
+{\em gyro\+\_\+z} & Pointer to store the Z-\/axis gyroscope data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 on failure. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{icm20948__driver_8h_aebb31bd460284a6408cefe362effbe66_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{icm20948__driver_8h_aff785588b02e58c9fe05e962e2e90dcf}\label{icm20948__driver_8h_aff785588b02e58c9fe05e962e2e90dcf} 
+\index{icm20948\_driver.h@{icm20948\_driver.h}!icm20948\_who\_am\_i@{icm20948\_who\_am\_i}}
+\index{icm20948\_who\_am\_i@{icm20948\_who\_am\_i}!icm20948\_driver.h@{icm20948\_driver.h}}
+\doxysubsubsection{\texorpdfstring{icm20948\_who\_am\_i()}{icm20948\_who\_am\_i()}}
+{\footnotesize\ttfamily uint8\+\_\+t icm20948\+\_\+who\+\_\+am\+\_\+i (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structicm20948__t}{icm20948\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{self }\end{DoxyParamCaption})}
+
+
+
+Read the WHO\+\_\+\+AM\+\_\+I register of the ICM-\/20948 IMU. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & Pointer to the ICM-\/20948 IMU structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value of the WHO\+\_\+\+AM\+\_\+I register. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{icm20948__driver_8h_aff785588b02e58c9fe05e962e2e90dcf_cgraph}
+\end{center}
+\end{figure}

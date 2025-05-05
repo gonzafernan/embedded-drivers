@@ -1,0 +1,12 @@
+<map id="src/ak09916_driver.c" name="src/ak09916_driver.c">
+<area shape="rect" id="Node000001" title="AK09916 driver implementation." alt="" coords="61,5,217,31"/>
+<area shape="rect" id="Node000002" href="$ak09916__driver_8h.html" title="AK09916 driver header file." alt="" coords="5,79,140,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="130,33,95,70,91,67,126,29"/>
+<area shape="rect" id="Node000004" href="$i2c__port_8h.html" title="I2C port header file." alt="" coords="164,79,251,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="152,29,189,67,185,70,149,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="39,152,109,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="76,104,76,138,71,139,70,104"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="187,106,109,148,107,143,185,102"/>
+<area shape="rect" id="Node000005" href="$icm20948__driver_8h.html" title="ICM20948 driver header file." alt="" coords="136,152,279,177"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="210,104,210,138,205,138,205,104"/>
+</map>

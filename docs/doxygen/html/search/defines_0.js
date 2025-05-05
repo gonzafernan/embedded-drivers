@@ -1,0 +1,17 @@
+var searchData=
+[
+  ['ak09916_5fcntl2_0',['AK09916_CNTL2',['../ak09916__driver_8c.html#aa523000feb252cc32d4f55cb53141823',1,'ak09916_driver.c']]],
+  ['ak09916_5fhxl_1',['AK09916_HXL',['../ak09916__driver_8c.html#a6b1fe460fe91fece6e7f0e3ba359e456',1,'ak09916_driver.c']]],
+  ['ak09916_5fi2c_5faddress_2',['AK09916_I2C_ADDRESS',['../ak09916__driver_8c.html#a4426a26848498ced6e4c7414440b12b9',1,'ak09916_driver.c']]],
+  ['ak09916_5fi2c_5faddress_5faddr_5fbit_3',['AK09916_I2C_ADDRESS_ADDR_BIT',['../ak09916__driver_8c.html#af403d1953c286e3e6b30396ceabb7460',1,'ak09916_driver.c']]],
+  ['ak09916_5fi2c_5faddress_5frw_5fbit_4',['AK09916_I2C_ADDRESS_RW_BIT',['../ak09916__driver_8c.html#aec44fd964c68b29e6b3407982c67b1ee',1,'ak09916_driver.c']]],
+  ['ak09916_5fi2c_5frw_5fread_5',['AK09916_I2C_RW_READ',['../ak09916__driver_8c.html#a677d4bbabf00b421f8a8aff060b04884',1,'ak09916_driver.c']]],
+  ['ak09916_5fi2c_5frw_5fwrite_6',['AK09916_I2C_RW_WRITE',['../ak09916__driver_8c.html#a0adadeffe79910c3792971ced8fa9a77',1,'ak09916_driver.c']]],
+  ['ak09916_5fmeasurement_5frange_7',['AK09916_MEASUREMENT_RANGE',['../ak09916__driver_8c.html#a7e05bc36d484b455650411a5df320c87',1,'ak09916_driver.c']]],
+  ['ak09916_5frepresentation_5frange_8',['AK09916_REPRESENTATION_RANGE',['../ak09916__driver_8c.html#a1a49ef0f2560bb9543b47ed71dd248bb',1,'ak09916_driver.c']]],
+  ['ak09916_5fst1_9',['AK09916_ST1',['../ak09916__driver_8c.html#add010c2e5cb83bf0131ded5fe96e9e67',1,'ak09916_driver.c']]],
+  ['ak09916_5fst1_5fdrdy_10',['AK09916_ST1_DRDY',['../ak09916__driver_8c.html#a89309680ea9ab407679611d67a49413e',1,'ak09916_driver.c']]],
+  ['ak09916_5fst2_11',['AK09916_ST2',['../ak09916__driver_8c.html#a05eea1f8a28216458d7a87ba064b4538',1,'ak09916_driver.c']]],
+  ['ak09916_5fwia1_12',['AK09916_WIA1',['../ak09916__driver_8c.html#a7d4632468753f5c06eab21b93aeffd93',1,'ak09916_driver.c']]],
+  ['ak09916_5fwia2_13',['AK09916_WIA2',['../ak09916__driver_8c.html#a88d7447ba83e611b16b5684188c1e792',1,'ak09916_driver.c']]]
+];

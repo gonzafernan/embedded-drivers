@@ -1,0 +1,12 @@
+<map id="platform/stm32f4/stm32f4_i2c_port.c" name="platform/stm32f4/stm32f4_i2c_port.c">
+<area shape="rect" id="Node000001" title=" " alt="" coords="25,5,219,45"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,167,76,192"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,47,87,69,70,95,57,125,48,154,43,152,52,123,65,92,82,66,101,44"/>
+<area shape="rect" id="Node000003" href="$i2c__port_8h.html" title="I2C port header file." alt="" coords="79,93,165,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="125,46,125,79,119,79,119,46"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="190,93,321,119"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="155,43,225,84,223,89,153,48"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="111,121,66,160,62,156,107,117"/>
+<area shape="rect" id="Node000004" href="$icm20948__driver_8h.html" title="ICM20948 driver header file." alt="" coords="100,167,243,192"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="132,117,158,154,153,157,128,121"/>
+</map>

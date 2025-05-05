@@ -1,0 +1,7 @@
+<map id="i2c_init" name="i2c_init">
+<area shape="rect" id="Node000001" title="Initialize the I2C port." alt="" coords="168,31,237,56"/>
+<area shape="rect" id="Node000002" href="$ak09916__driver_8c.html#a34428f4ae98aab4e25b812d56d36e7f8" title="Initialize the AK09916 magnetometer." alt="" coords="9,5,116,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="154,37,116,30,117,25,155,32"/>
+<area shape="rect" id="Node000003" href="$icm20948__driver_8c.html#a5722027bcf019cbc684330915e3271c0" title="Initialize the ICM&#45;20948 IMU." alt="" coords="5,55,120,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="155,54,121,60,120,55,154,49"/>
+</map>
