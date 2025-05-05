@@ -1,0 +1,5 @@
+<map id="icm20948_reg_bank_select" name="icm20948_reg_bank_select">
+<area shape="rect" id="Node000001" title="Select the register bank for the ICM&#45;20948." alt="" coords="5,5,204,31"/>
+<area shape="rect" id="Node000002" href="$stm32f4__i2c__port_8c.html#aaea43c6887f46dc58d27ed30ac6d1cf3" title="Write data to the I2C device." alt="" coords="252,5,395,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="205,15,238,15,238,21,205,21"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="i2c_blocking_read" name="i2c_blocking_read">
+<area shape="rect" id="node1" title="Read data from the I2C device." alt="" coords="252,104,379,129"/>
+<area shape="rect" id="node2" href="$ak09916__driver_8c.html#aeb5dc98f401e48dfd95760b3c7822881" title="Read magnetometer data from the AK09916 magnetometer." alt="" coords="8,5,201,31"/>
+<area shape="rect" id="node3" href="$ak09916__driver_8c.html#adc070bf486e819850f15d861aee5021f" title="Read the WHO_AM_I register of the AK09916 magnetometer." alt="" coords="36,55,173,80"/>
+<area shape="rect" id="node4" href="$icm20948__driver_8c.html#a254a74266c33db3d6cec93c753129161" title="Read accelerometer data from the ICM&#45;20948 IMU." alt="" coords="5,104,204,129"/>
+<area shape="rect" id="node5" href="$icm20948__driver_8c.html#aebb31bd460284a6408cefe362effbe66" title="Read gyroscope data from the ICM&#45;20948 IMU." alt="" coords="17,153,193,179"/>
+<area shape="rect" id="node6" href="$icm20948__driver_8c.html#aff785588b02e58c9fe05e962e2e90dcf" title="Read the WHO_AM_I register of the ICM&#45;20948 IMU." alt="" coords="33,203,177,228"/>
+</map>

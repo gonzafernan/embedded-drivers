@@ -1,0 +1,7 @@
+<map id="include/icm20948_driver.h" name="include/icm20948_driver.h">
+<area shape="rect" id="node1" title="ICM20948 driver header file." alt="" coords="271,5,443,31"/>
+<area shape="rect" id="node2" href="$i2c__port_8h.html" title="I2C port header file." alt="" coords="247,79,369,104"/>
+<area shape="rect" id="node5" href="$icm20948__driver_8c.html" title=" " alt="" coords="368,159,517,185"/>
+<area shape="rect" id="node3" href="$stm32f4__i2c__port_8c.html" title=" " alt="" coords="5,152,176,192"/>
+<area shape="rect" id="node4" href="$ak09916__driver_8c.html" title="AK09916 driver implementation." alt="" coords="201,159,343,185"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="icm20948_reg_bank_select" name="icm20948_reg_bank_select">
+<area shape="rect" id="Node000001" title="Select the register bank for the ICM&#45;20948." alt="" coords="252,5,451,31"/>
+<area shape="rect" id="Node000002" href="$icm20948__driver_8c.html#a309991f5f09a5deb1d4976711c5a9e97" title=" " alt="" coords="5,5,204,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="238,21,204,21,204,15,238,15"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="i2c_blocking_write" name="i2c_blocking_write">
+<area shape="rect" id="node1" title="Write data to the I2C device." alt="" coords="188,31,317,56"/>
+<area shape="rect" id="node2" href="$ak09916__driver_8c.html#a560c4ca238767729e64296b3453584ac" title="Set the operation mode of the AK09916 magnetometer." alt="" coords="5,5,140,31"/>
+<area shape="rect" id="node3" href="$icm20948__driver_8c.html#a5722027bcf019cbc684330915e3271c0" title="Initialize the ICM&#45;20948 IMU." alt="" coords="21,55,124,80"/>
+</map>

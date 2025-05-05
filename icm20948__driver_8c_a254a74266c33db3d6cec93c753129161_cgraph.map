@@ -1,0 +1,4 @@
+<map id="icm20948_read_accelerometer" name="icm20948_read_accelerometer">
+<area shape="rect" id="node1" title="Read accelerometer data from the ICM&#45;20948 IMU." alt="" coords="5,5,204,31"/>
+<area shape="rect" id="node2" href="$stm32f4__i2c__port_8c.html#aaa6761a99112c87a8119dd2e35d752d2" title="Read data from the I2C device." alt="" coords="252,5,379,31"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="icm20948_init" name="icm20948_init">
+<area shape="rect" id="node1" title="Initialize the ICM&#45;20948 IMU." alt="" coords="5,31,108,56"/>
+<area shape="rect" id="node2" href="$stm32f4__i2c__port_8c.html#aaea43c6887f46dc58d27ed30ac6d1cf3" title="Write data to the I2C device." alt="" coords="156,5,285,31"/>
+<area shape="rect" id="node3" href="$stm32f4__i2c__port_8c.html#a07b475b0c3ab865ab405afc5482df20d" title="Initialize the I2C port." alt="" coords="189,55,252,80"/>
+</map>
