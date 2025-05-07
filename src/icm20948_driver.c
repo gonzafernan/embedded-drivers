@@ -1,3 +1,4 @@
+#include <stdbool.h>
 #include <stdint.h>
 
 #include "i2c_port.h"
@@ -35,16 +36,17 @@ int icm20948_init(icm20948_t* self, void* context, uint16_t device_address,
                            timeout) < 0) {  // Set clock source
         return -1;
     }
+    return 0;
 }
 
-uint8_t icm20948_who_am_i(icm20948_t* self) {
+bool icm20948_is_device_available(icm20948_t* self) {
     uint8_t who_am_i;
     if (i2c_blocking_read(self->context, self->device_address,
                           ICM20948_USER_BANK_0_WHO_AM_I, &who_am_i, 1,
-                          self->timeout)) {
-        return -1;
+                          self->timeout) < 0) {
+        return false;
     }
-    return who_am_i;
+    return who_am_i == ICM20948_WHO_AM_I;
 }
 
 int icm20948_read_accelerometer(icm20948_t* self, int16_t* accel_x,
