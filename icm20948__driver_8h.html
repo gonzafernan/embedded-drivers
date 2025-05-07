@@ -116,9 +116,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a5722027bcf019cbc684330915e3271c0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="icm20948__driver_8h.html#a5722027bcf019cbc684330915e3271c0">icm20948_init</a> (<a class="el" href="structicm20948__t.html">icm20948_t</a> *self, void *context, uint16_t device_address, uint32_t timeout)</td></tr>
 <tr class="memdesc:a5722027bcf019cbc684330915e3271c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the ICM-20948 IMU.  <a href="icm20948__driver_8h.html#a5722027bcf019cbc684330915e3271c0">More...</a><br /></td></tr>
 <tr class="separator:a5722027bcf019cbc684330915e3271c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff785588b02e58c9fe05e962e2e90dcf"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="icm20948__driver_8h.html#aff785588b02e58c9fe05e962e2e90dcf">icm20948_who_am_i</a> (<a class="el" href="structicm20948__t.html">icm20948_t</a> *self)</td></tr>
-<tr class="memdesc:aff785588b02e58c9fe05e962e2e90dcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the WHO_AM_I register of the ICM-20948 IMU.  <a href="icm20948__driver_8h.html#aff785588b02e58c9fe05e962e2e90dcf">More...</a><br /></td></tr>
-<tr class="separator:aff785588b02e58c9fe05e962e2e90dcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2de9ecea521835b9a65fea99ee53024"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="icm20948__driver_8h.html#ab2de9ecea521835b9a65fea99ee53024">icm20948_is_device_available</a> (<a class="el" href="structicm20948__t.html">icm20948_t</a> *self)</td></tr>
+<tr class="memdesc:ab2de9ecea521835b9a65fea99ee53024"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the ICM-20948 IMU is available.  <a href="icm20948__driver_8h.html#ab2de9ecea521835b9a65fea99ee53024">More...</a><br /></td></tr>
+<tr class="separator:ab2de9ecea521835b9a65fea99ee53024"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a254a74266c33db3d6cec93c753129161"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="icm20948__driver_8h.html#a254a74266c33db3d6cec93c753129161">icm20948_read_accelerometer</a> (<a class="el" href="structicm20948__t.html">icm20948_t</a> *self, int16_t *accel_x, int16_t *accel_y, int16_t *accel_z)</td></tr>
 <tr class="memdesc:a254a74266c33db3d6cec93c753129161"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read accelerometer data from the ICM-20948 IMU.  <a href="icm20948__driver_8h.html#a254a74266c33db3d6cec93c753129161">More...</a><br /></td></tr>
 <tr class="separator:a254a74266c33db3d6cec93c753129161"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -212,9 +212,50 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="icm20948__driver_8h_a5722027bcf019cbc684330915e3271c0_cgraph.png" border="0" usemap="#aicm20948__driver_8h_a5722027bcf019cbc684330915e3271c0_cgraph" alt=""/></div>
 <map name="aicm20948__driver_8h_a5722027bcf019cbc684330915e3271c0_cgraph" id="aicm20948__driver_8h_a5722027bcf019cbc684330915e3271c0_cgraph">
-<area shape="rect" title="Initialize the ICM&#45;20948 IMU." alt="" coords="5,31,108,56"/>
-<area shape="rect" href="stm32f4__i2c__port_8c.html#aaea43c6887f46dc58d27ed30ac6d1cf3" title="Write data to the I2C device." alt="" coords="156,5,285,31"/>
-<area shape="rect" href="stm32f4__i2c__port_8c.html#a07b475b0c3ab865ab405afc5482df20d" title="Initialize the I2C port." alt="" coords="189,55,252,80"/>
+<area shape="rect" title="Initialize the ICM&#45;20948 IMU." alt="" coords="5,133,108,159"/>
+<area shape="rect" href="stm32f4__i2c__port_8c.html#aaa6761a99112c87a8119dd2e35d752d2" title="Read data from the I2C device." alt="" coords="192,5,319,31"/>
+<area shape="rect" href="stm32f4__i2c__port_8c.html#aaea43c6887f46dc58d27ed30ac6d1cf3" title="Write data to the I2C device." alt="" coords="191,55,320,80"/>
+<area shape="rect" href="stm32f4__i2c__port_8c.html#a07b475b0c3ab865ab405afc5482df20d" title="Initialize the I2C port." alt="" coords="224,104,287,129"/>
+<area shape="rect" href="icm20948__driver_8h.html#ab2de9ecea521835b9a65fea99ee53024" title="Check if the ICM&#45;20948 IMU is available." alt="" coords="185,154,325,194"/>
+<area shape="rect" href="icm20948__driver_8h.html#a254a74266c33db3d6cec93c753129161" title="Read accelerometer data from the ICM&#45;20948 IMU." alt="" coords="156,219,355,244"/>
+<area shape="rect" href="icm20948__driver_8h.html#aebb31bd460284a6408cefe362effbe66" title="Read gyroscope data from the ICM&#45;20948 IMU." alt="" coords="167,268,343,293"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab2de9ecea521835b9a65fea99ee53024" name="ab2de9ecea521835b9a65fea99ee53024"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2de9ecea521835b9a65fea99ee53024">&#9670;&#160;</a></span>icm20948_is_device_available()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool icm20948_is_device_available </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structicm20948__t.html">icm20948_t</a> *&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if the ICM-20948 IMU is available. </p>
+<p >This function checks if the ICM-20948 IMU is available by reading the WHO_AM_I register. If the value matches the expected value, the IMU is considered available.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Pointer to the ICM-20948 IMU structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the IMU is available, false otherwise. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="icm20948__driver_8h_ab2de9ecea521835b9a65fea99ee53024_icgraph.png" border="0" usemap="#aicm20948__driver_8h_ab2de9ecea521835b9a65fea99ee53024_icgraph" alt=""/></div>
+<map name="aicm20948__driver_8h_ab2de9ecea521835b9a65fea99ee53024_icgraph" id="aicm20948__driver_8h_ab2de9ecea521835b9a65fea99ee53024_icgraph">
+<area shape="rect" title="Check if the ICM&#45;20948 IMU is available." alt="" coords="156,5,296,45"/>
+<area shape="rect" href="icm20948__driver_8c.html#a5722027bcf019cbc684330915e3271c0" title="Initialize the ICM&#45;20948 IMU." alt="" coords="5,13,108,38"/>
 </map>
 </div>
 
@@ -270,12 +311,12 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 on success, -1 on failure. </dd></dl>
 <div class="dynheader">
-Here is the call graph for this function:</div>
+Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="icm20948__driver_8h_a254a74266c33db3d6cec93c753129161_cgraph.png" border="0" usemap="#aicm20948__driver_8h_a254a74266c33db3d6cec93c753129161_cgraph" alt=""/></div>
-<map name="aicm20948__driver_8h_a254a74266c33db3d6cec93c753129161_cgraph" id="aicm20948__driver_8h_a254a74266c33db3d6cec93c753129161_cgraph">
-<area shape="rect" title="Read accelerometer data from the ICM&#45;20948 IMU." alt="" coords="5,5,204,31"/>
-<area shape="rect" href="stm32f4__i2c__port_8c.html#aaa6761a99112c87a8119dd2e35d752d2" title="Read data from the I2C device." alt="" coords="252,5,379,31"/>
+<div class="center"><img src="icm20948__driver_8h_a254a74266c33db3d6cec93c753129161_icgraph.png" border="0" usemap="#aicm20948__driver_8h_a254a74266c33db3d6cec93c753129161_icgraph" alt=""/></div>
+<map name="aicm20948__driver_8h_a254a74266c33db3d6cec93c753129161_icgraph" id="aicm20948__driver_8h_a254a74266c33db3d6cec93c753129161_icgraph">
+<area shape="rect" title="Read accelerometer data from the ICM&#45;20948 IMU." alt="" coords="156,5,355,31"/>
+<area shape="rect" href="icm20948__driver_8c.html#a5722027bcf019cbc684330915e3271c0" title="Initialize the ICM&#45;20948 IMU." alt="" coords="5,5,108,31"/>
 </map>
 </div>
 
@@ -331,48 +372,12 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 on success, -1 on failure. </dd></dl>
 <div class="dynheader">
-Here is the call graph for this function:</div>
+Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="icm20948__driver_8h_aebb31bd460284a6408cefe362effbe66_cgraph.png" border="0" usemap="#aicm20948__driver_8h_aebb31bd460284a6408cefe362effbe66_cgraph" alt=""/></div>
-<map name="aicm20948__driver_8h_aebb31bd460284a6408cefe362effbe66_cgraph" id="aicm20948__driver_8h_aebb31bd460284a6408cefe362effbe66_cgraph">
-<area shape="rect" title="Read gyroscope data from the ICM&#45;20948 IMU." alt="" coords="5,5,181,31"/>
-<area shape="rect" href="stm32f4__i2c__port_8c.html#aaa6761a99112c87a8119dd2e35d752d2" title="Read data from the I2C device." alt="" coords="229,5,356,31"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="aff785588b02e58c9fe05e962e2e90dcf" name="aff785588b02e58c9fe05e962e2e90dcf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff785588b02e58c9fe05e962e2e90dcf">&#9670;&#160;</a></span>icm20948_who_am_i()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t icm20948_who_am_i </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structicm20948__t.html">icm20948_t</a> *&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Read the WHO_AM_I register of the ICM-20948 IMU. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">self</td><td>Pointer to the ICM-20948 IMU structure. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The value of the WHO_AM_I register. </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="icm20948__driver_8h_aff785588b02e58c9fe05e962e2e90dcf_cgraph.png" border="0" usemap="#aicm20948__driver_8h_aff785588b02e58c9fe05e962e2e90dcf_cgraph" alt=""/></div>
-<map name="aicm20948__driver_8h_aff785588b02e58c9fe05e962e2e90dcf_cgraph" id="aicm20948__driver_8h_aff785588b02e58c9fe05e962e2e90dcf_cgraph">
-<area shape="rect" title="Read the WHO_AM_I register of the ICM&#45;20948 IMU." alt="" coords="5,5,149,31"/>
-<area shape="rect" href="stm32f4__i2c__port_8c.html#aaa6761a99112c87a8119dd2e35d752d2" title="Read data from the I2C device." alt="" coords="197,5,324,31"/>
+<div class="center"><img src="icm20948__driver_8h_aebb31bd460284a6408cefe362effbe66_icgraph.png" border="0" usemap="#aicm20948__driver_8h_aebb31bd460284a6408cefe362effbe66_icgraph" alt=""/></div>
+<map name="aicm20948__driver_8h_aebb31bd460284a6408cefe362effbe66_icgraph" id="aicm20948__driver_8h_aebb31bd460284a6408cefe362effbe66_icgraph">
+<area shape="rect" title="Read gyroscope data from the ICM&#45;20948 IMU." alt="" coords="156,5,332,31"/>
+<area shape="rect" href="icm20948__driver_8c.html#a5722027bcf019cbc684330915e3271c0" title="Initialize the ICM&#45;20948 IMU." alt="" coords="5,5,108,31"/>
 </map>
 </div>
 

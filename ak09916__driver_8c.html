@@ -137,9 +137,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a560c4ca238767729e64296b3453584ac"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ak09916__driver_8c.html#a560c4ca238767729e64296b3453584ac">ak09916_set_mode</a> (<a class="el" href="structak09916__t.html">ak09916_t</a> *self, <a class="el" href="ak09916__driver_8h.html#a609ecb4972d90be882ff882f8f7d03cd">ak09916_mode_t</a> mode)</td></tr>
 <tr class="memdesc:a560c4ca238767729e64296b3453584ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the operation mode of the AK09916 magnetometer.  <a href="ak09916__driver_8c.html#a560c4ca238767729e64296b3453584ac">More...</a><br /></td></tr>
 <tr class="separator:a560c4ca238767729e64296b3453584ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc070bf486e819850f15d861aee5021f"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ak09916__driver_8c.html#adc070bf486e819850f15d861aee5021f">ak09916_who_am_i</a> (<a class="el" href="structak09916__t.html">ak09916_t</a> *self)</td></tr>
-<tr class="memdesc:adc070bf486e819850f15d861aee5021f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the WHO_AM_I register of the AK09916 magnetometer.  <a href="ak09916__driver_8c.html#adc070bf486e819850f15d861aee5021f">More...</a><br /></td></tr>
-<tr class="separator:adc070bf486e819850f15d861aee5021f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8418cee055160cd85f61f985f2c8d9d2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ak09916__driver_8c.html#a8418cee055160cd85f61f985f2c8d9d2">ak09916_is_device_available</a> (<a class="el" href="structak09916__t.html">ak09916_t</a> *self)</td></tr>
+<tr class="memdesc:a8418cee055160cd85f61f985f2c8d9d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the AK09916 is available.  <a href="ak09916__driver_8c.html#a8418cee055160cd85f61f985f2c8d9d2">More...</a><br /></td></tr>
+<tr class="separator:a8418cee055160cd85f61f985f2c8d9d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb5dc98f401e48dfd95760b3c7822881"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ak09916__driver_8c.html#aeb5dc98f401e48dfd95760b3c7822881">ak09916_read_magnetometer</a> (<a class="el" href="structak09916__t.html">ak09916_t</a> *self, int16_t *mag_x, int16_t *mag_y, int16_t *mag_z)</td></tr>
 <tr class="memdesc:aeb5dc98f401e48dfd95760b3c7822881"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read magnetometer data from the AK09916 magnetometer.  <a href="ak09916__driver_8c.html#aeb5dc98f401e48dfd95760b3c7822881">More...</a><br /></td></tr>
 <tr class="separator:aeb5dc98f401e48dfd95760b3c7822881"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -403,6 +403,43 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="a8418cee055160cd85f61f985f2c8d9d2" name="a8418cee055160cd85f61f985f2c8d9d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8418cee055160cd85f61f985f2c8d9d2">&#9670;&#160;</a></span>ak09916_is_device_available()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ak09916_is_device_available </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structak09916__t.html">ak09916_t</a> *&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if the AK09916 is available. </p>
+<p >This function checks if the AK09916 is available by reading the WHO_AM_I register. If the value matches the expected value, the IMU is considered available.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Pointer to the AK09916 structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the IMU is available, false otherwise. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="ak09916__driver_8c_a8418cee055160cd85f61f985f2c8d9d2_cgraph.png" border="0" usemap="#aak09916__driver_8c_a8418cee055160cd85f61f985f2c8d9d2_cgraph" alt=""/></div>
+<map name="aak09916__driver_8c_a8418cee055160cd85f61f985f2c8d9d2_cgraph" id="aak09916__driver_8c_a8418cee055160cd85f61f985f2c8d9d2_cgraph">
+<area shape="rect" title="Check if the AK09916 is available." alt="" coords="5,5,196,31"/>
+<area shape="rect" href="stm32f4__i2c__port_8c.html#aaa6761a99112c87a8119dd2e35d752d2" title="Read data from the I2C device." alt="" coords="244,5,371,31"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a2708019969ddad75192d484e3b76f703" name="a2708019969ddad75192d484e3b76f703"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2708019969ddad75192d484e3b76f703">&#9670;&#160;</a></span>ak09916_raw_to_float()</h2>
 
@@ -535,42 +572,6 @@ Here is the call graph for this function:</div>
 <map name="aak09916__driver_8c_a560c4ca238767729e64296b3453584ac_cgraph" id="aak09916__driver_8c_a560c4ca238767729e64296b3453584ac_cgraph">
 <area shape="rect" title="Set the operation mode of the AK09916 magnetometer." alt="" coords="5,5,140,31"/>
 <area shape="rect" href="stm32f4__i2c__port_8c.html#aaea43c6887f46dc58d27ed30ac6d1cf3" title="Write data to the I2C device." alt="" coords="188,5,317,31"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="adc070bf486e819850f15d861aee5021f" name="adc070bf486e819850f15d861aee5021f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc070bf486e819850f15d861aee5021f">&#9670;&#160;</a></span>ak09916_who_am_i()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t ak09916_who_am_i </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structak09916__t.html">ak09916_t</a> *&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Read the WHO_AM_I register of the AK09916 magnetometer. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">self</td><td>Pointer to the AK09916 structure. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The value of the WHO_AM_I register. </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="ak09916__driver_8c_adc070bf486e819850f15d861aee5021f_cgraph.png" border="0" usemap="#aak09916__driver_8c_adc070bf486e819850f15d861aee5021f_cgraph" alt=""/></div>
-<map name="aak09916__driver_8c_adc070bf486e819850f15d861aee5021f_cgraph" id="aak09916__driver_8c_adc070bf486e819850f15d861aee5021f_cgraph">
-<area shape="rect" title="Read the WHO_AM_I register of the AK09916 magnetometer." alt="" coords="5,5,143,31"/>
-<area shape="rect" href="stm32f4__i2c__port_8c.html#aaa6761a99112c87a8119dd2e35d752d2" title="Read data from the I2C device." alt="" coords="191,5,317,31"/>
 </map>
 </div>
 
