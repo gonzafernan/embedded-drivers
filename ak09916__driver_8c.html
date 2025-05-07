@@ -83,18 +83,20 @@ $(function() {
 
 <p>AK09916 driver implementation.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="ak09916__driver_8h_source.html">ak09916_driver.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="ak09916__driver_8h_source.html">ak09916_driver.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="i2c__port_8h_source.html">i2c_port.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for ak09916_driver.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="ak09916__driver_8c__incl.png" border="0" usemap="#asrc_2ak09916__driver_8c" alt=""/></div>
 <map name="asrc_2ak09916__driver_8c" id="asrc_2ak09916__driver_8c">
-<area shape="rect" title="AK09916 driver implementation." alt="" coords="55,5,198,31"/>
-<area shape="rect" href="ak09916__driver_8h.html" title="AK09916 driver header file." alt="" coords="5,79,125,104"/>
-<area shape="rect" href="i2c__port_8h.html" title="I2C port header file." alt="" coords="150,79,229,104"/>
-<area shape="rect" title=" " alt="" coords="36,152,100,177"/>
-<area shape="rect" href="icm20948__driver_8h.html" title="ICM20948 driver header file." alt="" coords="126,152,253,177"/>
+<area shape="rect" title="AK09916 driver implementation." alt="" coords="9,5,152,31"/>
+<area shape="rect" title=" " alt="" coords="43,225,118,251"/>
+<area shape="rect" href="ak09916__driver_8h.html" title="AK09916 driver header file." alt="" coords="20,152,140,177"/>
+<area shape="rect" href="i2c__port_8h.html" title="I2C port header file." alt="" coords="189,79,268,104"/>
+<area shape="rect" title=" " alt="" coords="196,225,260,251"/>
+<area shape="rect" href="icm20948__driver_8h.html" title="ICM20948 driver header file." alt="" coords="165,152,292,177"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -124,6 +126,10 @@ Macros</h2></td></tr>
 <tr class="separator:aa523000feb252cc32d4f55cb53141823"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89309680ea9ab407679611d67a49413e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ak09916__driver_8c.html#a89309680ea9ab407679611d67a49413e">AK09916_ST1_DRDY</a>&#160;&#160;&#160;0</td></tr>
 <tr class="separator:a89309680ea9ab407679611d67a49413e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24d6468464a31fc94a262334b7eb2553"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ak09916__driver_8c.html#a24d6468464a31fc94a262334b7eb2553">AK09916_WHO_AM_I_1</a>&#160;&#160;&#160;0x48</td></tr>
+<tr class="separator:a24d6468464a31fc94a262334b7eb2553"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16b05ad9b291dca7207a7ec5d5cd34f7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ak09916__driver_8c.html#a16b05ad9b291dca7207a7ec5d5cd34f7">AK09916_WHO_AM_I_2</a>&#160;&#160;&#160;0x09</td></tr>
+<tr class="separator:a16b05ad9b291dca7207a7ec5d5cd34f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e05bc36d484b455650411a5df320c87"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ak09916__driver_8c.html#a7e05bc36d484b455650411a5df320c87">AK09916_MEASUREMENT_RANGE</a>&#160;&#160;&#160;4912</td></tr>
 <tr class="separator:a7e05bc36d484b455650411a5df320c87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a49ef0f2560bb9543b47ed71dd248bb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ak09916__driver_8c.html#a1a49ef0f2560bb9543b47ed71dd248bb">AK09916_REPRESENTATION_RANGE</a>&#160;&#160;&#160;32752.0</td></tr>
@@ -313,6 +319,34 @@ Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">#define AK09916_ST2&#160;&#160;&#160;0x18</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a24d6468464a31fc94a262334b7eb2553" name="a24d6468464a31fc94a262334b7eb2553"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24d6468464a31fc94a262334b7eb2553">&#9670;&#160;</a></span>AK09916_WHO_AM_I_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AK09916_WHO_AM_I_1&#160;&#160;&#160;0x48</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a16b05ad9b291dca7207a7ec5d5cd34f7" name="a16b05ad9b291dca7207a7ec5d5cd34f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16b05ad9b291dca7207a7ec5d5cd34f7">&#9670;&#160;</a></span>AK09916_WHO_AM_I_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AK09916_WHO_AM_I_2&#160;&#160;&#160;0x09</td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -1,7 +1,8 @@
 <map id="platform/stm32f4/stm32f4_i2c_port.c" name="platform/stm32f4/stm32f4_i2c_port.c">
-<area shape="rect" id="node1" title=" " alt="" coords="29,5,200,45"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,167,69,192"/>
-<area shape="rect" id="node3" href="$i2c__port_8h.html" title="I2C port header file." alt="" coords="75,93,154,119"/>
-<area shape="rect" id="node5" title=" " alt="" coords="179,93,293,119"/>
-<area shape="rect" id="node4" href="$icm20948__driver_8h.html" title="ICM20948 driver header file." alt="" coords="94,167,221,192"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,176,45"/>
+<area shape="rect" id="node2" title=" " alt="" coords="32,240,96,265"/>
+<area shape="rect" id="node3" href="$i2c__port_8h.html" title="I2C port header file." alt="" coords="51,93,130,119"/>
+<area shape="rect" id="node6" title=" " alt="" coords="155,93,269,119"/>
+<area shape="rect" id="node4" href="$icm20948__driver_8h.html" title="ICM20948 driver header file." alt="" coords="102,167,229,192"/>
+<area shape="rect" id="node5" title=" " alt="" coords="128,240,203,265"/>
 </map>

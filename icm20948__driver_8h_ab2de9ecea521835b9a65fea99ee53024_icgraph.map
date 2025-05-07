@@ -1,4 +1,0 @@
-<map id="icm20948_is_device_available" name="icm20948_is_device_available">
-<area shape="rect" id="node1" title="Check if the ICM&#45;20948 IMU is available." alt="" coords="156,5,296,45"/>
-<area shape="rect" id="node2" href="$icm20948__driver_8c.html#a5722027bcf019cbc684330915e3271c0" title="Initialize the ICM&#45;20948 IMU." alt="" coords="5,13,108,38"/>
-</map>

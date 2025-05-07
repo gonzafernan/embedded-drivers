@@ -1,6 +1,8 @@
 <map id="i2c_blocking_read" name="i2c_blocking_read">
-<area shape="rect" id="node1" title="Read data from the I2C device." alt="" coords="247,55,373,80"/>
-<area shape="rect" id="node2" href="$ak09916__driver_8c.html#a8418cee055160cd85f61f985f2c8d9d2" title="Check if the AK09916 is available." alt="" coords="7,5,197,31"/>
-<area shape="rect" id="node3" href="$ak09916__driver_8c.html#aeb5dc98f401e48dfd95760b3c7822881" title="Read magnetometer data from the AK09916 magnetometer." alt="" coords="5,55,199,80"/>
-<area shape="rect" id="node4" href="$icm20948__driver_8c.html#a5722027bcf019cbc684330915e3271c0" title="Initialize the ICM&#45;20948 IMU." alt="" coords="51,104,153,129"/>
+<area shape="rect" id="node1" title="Read data from the I2C device." alt="" coords="252,112,379,137"/>
+<area shape="rect" id="node2" href="$ak09916__driver_8c.html#a8418cee055160cd85f61f985f2c8d9d2" title="Check if the AK09916 is available." alt="" coords="9,5,200,31"/>
+<area shape="rect" id="node3" href="$ak09916__driver_8c.html#aeb5dc98f401e48dfd95760b3c7822881" title="Read magnetometer data from the AK09916 magnetometer." alt="" coords="8,55,201,80"/>
+<area shape="rect" id="node4" href="$icm20948__driver_8c.html#ab2de9ecea521835b9a65fea99ee53024" title="Check if the ICM&#45;20948 IMU is available." alt="" coords="35,105,175,145"/>
+<area shape="rect" id="node5" href="$icm20948__driver_8c.html#a254a74266c33db3d6cec93c753129161" title="Read accelerometer data from the ICM&#45;20948 IMU." alt="" coords="5,169,204,195"/>
+<area shape="rect" id="node6" href="$icm20948__driver_8c.html#aebb31bd460284a6408cefe362effbe66" title="Read gyroscope data from the ICM&#45;20948 IMU." alt="" coords="17,219,193,244"/>
 </map>

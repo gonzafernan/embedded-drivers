@@ -12,6 +12,8 @@ var searchData=
   ['ak09916_5fst1_9',['AK09916_ST1',['../ak09916__driver_8c.html#add010c2e5cb83bf0131ded5fe96e9e67',1,'ak09916_driver.c']]],
   ['ak09916_5fst1_5fdrdy_10',['AK09916_ST1_DRDY',['../ak09916__driver_8c.html#a89309680ea9ab407679611d67a49413e',1,'ak09916_driver.c']]],
   ['ak09916_5fst2_11',['AK09916_ST2',['../ak09916__driver_8c.html#a05eea1f8a28216458d7a87ba064b4538',1,'ak09916_driver.c']]],
-  ['ak09916_5fwia1_12',['AK09916_WIA1',['../ak09916__driver_8c.html#a7d4632468753f5c06eab21b93aeffd93',1,'ak09916_driver.c']]],
-  ['ak09916_5fwia2_13',['AK09916_WIA2',['../ak09916__driver_8c.html#a88d7447ba83e611b16b5684188c1e792',1,'ak09916_driver.c']]]
+  ['ak09916_5fwho_5fam_5fi_5f1_12',['AK09916_WHO_AM_I_1',['../ak09916__driver_8c.html#a24d6468464a31fc94a262334b7eb2553',1,'ak09916_driver.c']]],
+  ['ak09916_5fwho_5fam_5fi_5f2_13',['AK09916_WHO_AM_I_2',['../ak09916__driver_8c.html#a16b05ad9b291dca7207a7ec5d5cd34f7',1,'ak09916_driver.c']]],
+  ['ak09916_5fwia1_14',['AK09916_WIA1',['../ak09916__driver_8c.html#a7d4632468753f5c06eab21b93aeffd93',1,'ak09916_driver.c']]],
+  ['ak09916_5fwia2_15',['AK09916_WIA2',['../ak09916__driver_8c.html#a88d7447ba83e611b16b5684188c1e792',1,'ak09916_driver.c']]]
 ];

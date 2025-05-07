@@ -84,7 +84,19 @@ $(function() {
 
 <p>ICM20948 driver header file.  
 <a href="#details">More...</a></p>
-<div class="textblock"><div class="dynheader">
+<div class="textblock"><code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for icm20948_driver.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="icm20948__driver_8h__incl.png" border="0" usemap="#ainclude_2icm20948__driver_8h" alt=""/></div>
+<map name="ainclude_2icm20948__driver_8h" id="ainclude_2icm20948__driver_8h">
+<area shape="rect" title="ICM20948 driver header file." alt="" coords="5,5,177,31"/>
+<area shape="rect" title=" " alt="" coords="7,79,82,104"/>
+<area shape="rect" title=" " alt="" coords="106,79,170,104"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="icm20948__driver_8h__dep__incl.png" border="0" usemap="#ainclude_2icm20948__driver_8hdep" alt=""/></div>
@@ -212,13 +224,9 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="icm20948__driver_8h_a5722027bcf019cbc684330915e3271c0_cgraph.png" border="0" usemap="#aicm20948__driver_8h_a5722027bcf019cbc684330915e3271c0_cgraph" alt=""/></div>
 <map name="aicm20948__driver_8h_a5722027bcf019cbc684330915e3271c0_cgraph" id="aicm20948__driver_8h_a5722027bcf019cbc684330915e3271c0_cgraph">
-<area shape="rect" title="Initialize the ICM&#45;20948 IMU." alt="" coords="5,133,108,159"/>
-<area shape="rect" href="stm32f4__i2c__port_8c.html#aaa6761a99112c87a8119dd2e35d752d2" title="Read data from the I2C device." alt="" coords="192,5,319,31"/>
-<area shape="rect" href="stm32f4__i2c__port_8c.html#aaea43c6887f46dc58d27ed30ac6d1cf3" title="Write data to the I2C device." alt="" coords="191,55,320,80"/>
-<area shape="rect" href="stm32f4__i2c__port_8c.html#a07b475b0c3ab865ab405afc5482df20d" title="Initialize the I2C port." alt="" coords="224,104,287,129"/>
-<area shape="rect" href="icm20948__driver_8h.html#ab2de9ecea521835b9a65fea99ee53024" title="Check if the ICM&#45;20948 IMU is available." alt="" coords="185,154,325,194"/>
-<area shape="rect" href="icm20948__driver_8h.html#a254a74266c33db3d6cec93c753129161" title="Read accelerometer data from the ICM&#45;20948 IMU." alt="" coords="156,219,355,244"/>
-<area shape="rect" href="icm20948__driver_8h.html#aebb31bd460284a6408cefe362effbe66" title="Read gyroscope data from the ICM&#45;20948 IMU." alt="" coords="167,268,343,293"/>
+<area shape="rect" title="Initialize the ICM&#45;20948 IMU." alt="" coords="5,31,108,56"/>
+<area shape="rect" href="stm32f4__i2c__port_8c.html#aaea43c6887f46dc58d27ed30ac6d1cf3" title="Write data to the I2C device." alt="" coords="156,5,285,31"/>
+<area shape="rect" href="stm32f4__i2c__port_8c.html#a07b475b0c3ab865ab405afc5482df20d" title="Initialize the I2C port." alt="" coords="189,55,252,80"/>
 </map>
 </div>
 
@@ -250,12 +258,12 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the IMU is available, false otherwise. </dd></dl>
 <div class="dynheader">
-Here is the caller graph for this function:</div>
+Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="icm20948__driver_8h_ab2de9ecea521835b9a65fea99ee53024_icgraph.png" border="0" usemap="#aicm20948__driver_8h_ab2de9ecea521835b9a65fea99ee53024_icgraph" alt=""/></div>
-<map name="aicm20948__driver_8h_ab2de9ecea521835b9a65fea99ee53024_icgraph" id="aicm20948__driver_8h_ab2de9ecea521835b9a65fea99ee53024_icgraph">
-<area shape="rect" title="Check if the ICM&#45;20948 IMU is available." alt="" coords="156,5,296,45"/>
-<area shape="rect" href="icm20948__driver_8c.html#a5722027bcf019cbc684330915e3271c0" title="Initialize the ICM&#45;20948 IMU." alt="" coords="5,13,108,38"/>
+<div class="center"><img src="icm20948__driver_8h_ab2de9ecea521835b9a65fea99ee53024_cgraph.png" border="0" usemap="#aicm20948__driver_8h_ab2de9ecea521835b9a65fea99ee53024_cgraph" alt=""/></div>
+<map name="aicm20948__driver_8h_ab2de9ecea521835b9a65fea99ee53024_cgraph" id="aicm20948__driver_8h_ab2de9ecea521835b9a65fea99ee53024_cgraph">
+<area shape="rect" title="Check if the ICM&#45;20948 IMU is available." alt="" coords="5,5,145,45"/>
+<area shape="rect" href="stm32f4__i2c__port_8c.html#aaa6761a99112c87a8119dd2e35d752d2" title="Read data from the I2C device." alt="" coords="193,13,320,38"/>
 </map>
 </div>
 
@@ -311,12 +319,12 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 on success, -1 on failure. </dd></dl>
 <div class="dynheader">
-Here is the caller graph for this function:</div>
+Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="icm20948__driver_8h_a254a74266c33db3d6cec93c753129161_icgraph.png" border="0" usemap="#aicm20948__driver_8h_a254a74266c33db3d6cec93c753129161_icgraph" alt=""/></div>
-<map name="aicm20948__driver_8h_a254a74266c33db3d6cec93c753129161_icgraph" id="aicm20948__driver_8h_a254a74266c33db3d6cec93c753129161_icgraph">
-<area shape="rect" title="Read accelerometer data from the ICM&#45;20948 IMU." alt="" coords="156,5,355,31"/>
-<area shape="rect" href="icm20948__driver_8c.html#a5722027bcf019cbc684330915e3271c0" title="Initialize the ICM&#45;20948 IMU." alt="" coords="5,5,108,31"/>
+<div class="center"><img src="icm20948__driver_8h_a254a74266c33db3d6cec93c753129161_cgraph.png" border="0" usemap="#aicm20948__driver_8h_a254a74266c33db3d6cec93c753129161_cgraph" alt=""/></div>
+<map name="aicm20948__driver_8h_a254a74266c33db3d6cec93c753129161_cgraph" id="aicm20948__driver_8h_a254a74266c33db3d6cec93c753129161_cgraph">
+<area shape="rect" title="Read accelerometer data from the ICM&#45;20948 IMU." alt="" coords="5,5,204,31"/>
+<area shape="rect" href="stm32f4__i2c__port_8c.html#aaa6761a99112c87a8119dd2e35d752d2" title="Read data from the I2C device." alt="" coords="252,5,379,31"/>
 </map>
 </div>
 
@@ -372,12 +380,12 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 on success, -1 on failure. </dd></dl>
 <div class="dynheader">
-Here is the caller graph for this function:</div>
+Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="icm20948__driver_8h_aebb31bd460284a6408cefe362effbe66_icgraph.png" border="0" usemap="#aicm20948__driver_8h_aebb31bd460284a6408cefe362effbe66_icgraph" alt=""/></div>
-<map name="aicm20948__driver_8h_aebb31bd460284a6408cefe362effbe66_icgraph" id="aicm20948__driver_8h_aebb31bd460284a6408cefe362effbe66_icgraph">
-<area shape="rect" title="Read gyroscope data from the ICM&#45;20948 IMU." alt="" coords="156,5,332,31"/>
-<area shape="rect" href="icm20948__driver_8c.html#a5722027bcf019cbc684330915e3271c0" title="Initialize the ICM&#45;20948 IMU." alt="" coords="5,5,108,31"/>
+<div class="center"><img src="icm20948__driver_8h_aebb31bd460284a6408cefe362effbe66_cgraph.png" border="0" usemap="#aicm20948__driver_8h_aebb31bd460284a6408cefe362effbe66_cgraph" alt=""/></div>
+<map name="aicm20948__driver_8h_aebb31bd460284a6408cefe362effbe66_cgraph" id="aicm20948__driver_8h_aebb31bd460284a6408cefe362effbe66_cgraph">
+<area shape="rect" title="Read gyroscope data from the ICM&#45;20948 IMU." alt="" coords="5,5,181,31"/>
+<area shape="rect" href="stm32f4__i2c__port_8c.html#aaa6761a99112c87a8119dd2e35d752d2" title="Read data from the I2C device." alt="" coords="229,5,356,31"/>
 </map>
 </div>
 

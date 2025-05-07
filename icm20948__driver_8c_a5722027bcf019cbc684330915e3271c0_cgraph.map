@@ -1,9 +1,5 @@
 <map id="icm20948_init" name="icm20948_init">
-<area shape="rect" id="node1" title="Initialize the ICM&#45;20948 IMU." alt="" coords="5,133,108,159"/>
-<area shape="rect" id="node2" href="$stm32f4__i2c__port_8c.html#aaa6761a99112c87a8119dd2e35d752d2" title="Read data from the I2C device." alt="" coords="192,5,319,31"/>
-<area shape="rect" id="node3" href="$stm32f4__i2c__port_8c.html#aaea43c6887f46dc58d27ed30ac6d1cf3" title="Write data to the I2C device." alt="" coords="191,55,320,80"/>
-<area shape="rect" id="node4" href="$stm32f4__i2c__port_8c.html#a07b475b0c3ab865ab405afc5482df20d" title="Initialize the I2C port." alt="" coords="224,104,287,129"/>
-<area shape="rect" id="node5" href="$icm20948__driver_8h.html#ab2de9ecea521835b9a65fea99ee53024" title="Check if the ICM&#45;20948 IMU is available." alt="" coords="185,154,325,194"/>
-<area shape="rect" id="node6" href="$icm20948__driver_8h.html#a254a74266c33db3d6cec93c753129161" title="Read accelerometer data from the ICM&#45;20948 IMU." alt="" coords="156,219,355,244"/>
-<area shape="rect" id="node7" href="$icm20948__driver_8h.html#aebb31bd460284a6408cefe362effbe66" title="Read gyroscope data from the ICM&#45;20948 IMU." alt="" coords="167,268,343,293"/>
+<area shape="rect" id="node1" title="Initialize the ICM&#45;20948 IMU." alt="" coords="5,31,108,56"/>
+<area shape="rect" id="node2" href="$stm32f4__i2c__port_8c.html#aaea43c6887f46dc58d27ed30ac6d1cf3" title="Write data to the I2C device." alt="" coords="156,5,285,31"/>
+<area shape="rect" id="node3" href="$stm32f4__i2c__port_8c.html#a07b475b0c3ab865ab405afc5482df20d" title="Initialize the I2C port." alt="" coords="189,55,252,80"/>
 </map>

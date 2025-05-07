@@ -21,13 +21,15 @@ var searchData=
   ['ak09916_5fmode_5fsingle_5fmeasurement_18',['AK09916_MODE_SINGLE_MEASUREMENT',['../ak09916__driver_8h.html#a609ecb4972d90be882ff882f8f7d03cda6b94d22e06ecf607f9a30ad586df6847',1,'ak09916_driver.h']]],
   ['ak09916_5fmode_5ft_19',['ak09916_mode_t',['../ak09916__driver_8h.html#a609ecb4972d90be882ff882f8f7d03cd',1,'ak09916_driver.h']]],
   ['ak09916_5fraw_5fto_5ffloat_20',['ak09916_raw_to_float',['../ak09916__driver_8h.html#a2708019969ddad75192d484e3b76f703',1,'ak09916_raw_to_float(int16_t raw_value):&#160;ak09916_driver.c'],['../ak09916__driver_8c.html#a2708019969ddad75192d484e3b76f703',1,'ak09916_raw_to_float(int16_t raw_value):&#160;ak09916_driver.c']]],
-  ['ak09916_5fread_5fmagnetometer_21',['ak09916_read_magnetometer',['../ak09916__driver_8c.html#aeb5dc98f401e48dfd95760b3c7822881',1,'ak09916_read_magnetometer(ak09916_t *self, int16_t *mag_x, int16_t *mag_y, int16_t *mag_z):&#160;ak09916_driver.c'],['../ak09916__driver_8h.html#aeb5dc98f401e48dfd95760b3c7822881',1,'ak09916_read_magnetometer(ak09916_t *self, int16_t *mag_x, int16_t *mag_y, int16_t *mag_z):&#160;ak09916_driver.c']]],
+  ['ak09916_5fread_5fmagnetometer_21',['ak09916_read_magnetometer',['../ak09916__driver_8h.html#aeb5dc98f401e48dfd95760b3c7822881',1,'ak09916_read_magnetometer(ak09916_t *self, int16_t *mag_x, int16_t *mag_y, int16_t *mag_z):&#160;ak09916_driver.c'],['../ak09916__driver_8c.html#aeb5dc98f401e48dfd95760b3c7822881',1,'ak09916_read_magnetometer(ak09916_t *self, int16_t *mag_x, int16_t *mag_y, int16_t *mag_z):&#160;ak09916_driver.c']]],
   ['ak09916_5frepresentation_5frange_22',['AK09916_REPRESENTATION_RANGE',['../ak09916__driver_8c.html#a1a49ef0f2560bb9543b47ed71dd248bb',1,'ak09916_driver.c']]],
   ['ak09916_5fset_5fmode_23',['ak09916_set_mode',['../ak09916__driver_8h.html#a560c4ca238767729e64296b3453584ac',1,'ak09916_set_mode(ak09916_t *self, ak09916_mode_t mode):&#160;ak09916_driver.c'],['../ak09916__driver_8c.html#a560c4ca238767729e64296b3453584ac',1,'ak09916_set_mode(ak09916_t *self, ak09916_mode_t mode):&#160;ak09916_driver.c']]],
   ['ak09916_5fst1_24',['AK09916_ST1',['../ak09916__driver_8c.html#add010c2e5cb83bf0131ded5fe96e9e67',1,'ak09916_driver.c']]],
   ['ak09916_5fst1_5fdrdy_25',['AK09916_ST1_DRDY',['../ak09916__driver_8c.html#a89309680ea9ab407679611d67a49413e',1,'ak09916_driver.c']]],
   ['ak09916_5fst2_26',['AK09916_ST2',['../ak09916__driver_8c.html#a05eea1f8a28216458d7a87ba064b4538',1,'ak09916_driver.c']]],
   ['ak09916_5ft_27',['ak09916_t',['../structak09916__t.html',1,'']]],
-  ['ak09916_5fwia1_28',['AK09916_WIA1',['../ak09916__driver_8c.html#a7d4632468753f5c06eab21b93aeffd93',1,'ak09916_driver.c']]],
-  ['ak09916_5fwia2_29',['AK09916_WIA2',['../ak09916__driver_8c.html#a88d7447ba83e611b16b5684188c1e792',1,'ak09916_driver.c']]]
+  ['ak09916_5fwho_5fam_5fi_5f1_28',['AK09916_WHO_AM_I_1',['../ak09916__driver_8c.html#a24d6468464a31fc94a262334b7eb2553',1,'ak09916_driver.c']]],
+  ['ak09916_5fwho_5fam_5fi_5f2_29',['AK09916_WHO_AM_I_2',['../ak09916__driver_8c.html#a16b05ad9b291dca7207a7ec5d5cd34f7',1,'ak09916_driver.c']]],
+  ['ak09916_5fwia1_30',['AK09916_WIA1',['../ak09916__driver_8c.html#a7d4632468753f5c06eab21b93aeffd93',1,'ak09916_driver.c']]],
+  ['ak09916_5fwia2_31',['AK09916_WIA2',['../ak09916__driver_8c.html#a88d7447ba83e611b16b5684188c1e792',1,'ak09916_driver.c']]]
 ];

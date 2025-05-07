@@ -1,5 +1,4 @@
 <map id="icm20948_read_gyroscope" name="icm20948_read_gyroscope">
-<area shape="rect" id="Node000001" title="Read gyroscope data from the ICM&#45;20948 IMU." alt="" coords="5,5,201,31"/>
-<area shape="rect" id="Node000002" href="$stm32f4__i2c__port_8c.html#aaa6761a99112c87a8119dd2e35d752d2" title="Read data from the I2C device." alt="" coords="249,5,388,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="202,15,236,15,236,21,202,21"/>
+<area shape="rect" id="node1" title="Read gyroscope data from the ICM&#45;20948 IMU." alt="" coords="5,5,181,31"/>
+<area shape="rect" id="node2" href="$stm32f4__i2c__port_8c.html#aaa6761a99112c87a8119dd2e35d752d2" title="Read data from the I2C device." alt="" coords="229,5,356,31"/>
 </map>
