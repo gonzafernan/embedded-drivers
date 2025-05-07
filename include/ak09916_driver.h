@@ -14,6 +14,7 @@
 extern "C" {
 #endif
 
+#include <stdbool.h>
 #include <stdint.h>
 
 typedef struct {
@@ -57,11 +58,16 @@ int ak09916_init(ak09916_t* self, void* context, uint32_t timeout);
 int ak09916_set_mode(ak09916_t* self, ak09916_mode_t mode);
 
 /**
- * @brief Read the WHO_AM_I register of the AK09916 magnetometer.
+ * @brief Check if the AK09916 is available.
+ *
+ * This function checks if the AK09916 is available by reading the
+ * WHO_AM_I register. If the value matches the expected value, the IMU is
+ * considered available.
+ *
  * @param self Pointer to the AK09916 structure.
- * @return The value of the WHO_AM_I register.
+ * @return true if the IMU is available, false otherwise.
  */
-uint8_t ak09916_who_am_i(ak09916_t* self);
+bool ak09916_is_device_available(ak09916_t* self);
 
 /**
  * @brief Read magnetometer data from the AK09916 magnetometer.

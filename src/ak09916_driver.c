@@ -6,6 +6,8 @@
  *
  */
 
+#include <stdbool.h>
+
 #include "ak09916_driver.h"
 #include "i2c_port.h"
 
@@ -27,6 +29,9 @@
 // AK09916 register addresses bits
 #define AK09916_ST1_DRDY 0  // Data ready
 
+#define AK09916_WHO_AM_I_1 0x48  /// AK09916 WHO_AM_I Company ID
+#define AK09916_WHO_AM_I_2 0x09  /// AK09916 WHO_AM_I Device ID
+
 #define AK09916_MEASUREMENT_RANGE 4912
 #define AK09916_REPRESENTATION_RANGE 32752.0
 
@@ -44,16 +49,17 @@ int ak09916_set_mode(ak09916_t* self, ak09916_mode_t mode) {
                               (uint8_t*)&mode, 1, self->timeout);
 }
 
-uint8_t ak09916_who_am_i(ak09916_t* self) {
-    uint8_t who_am_i;
+bool ak09916_is_device_available(ak09916_t* self) {
+    uint8_t who_am_i[2];
     uint8_t slave_address = 0x00;
     slave_address |= (AK09916_I2C_ADDRESS << AK09916_I2C_ADDRESS_ADDR_BIT);
     slave_address |= (AK09916_I2C_RW_READ << AK09916_I2C_ADDRESS_RW_BIT);
-    if (i2c_blocking_read(self->context, slave_address, AK09916_WIA1, &who_am_i,
-                          1, self->timeout) < 0) {
-        return -1;
+    if (i2c_blocking_read(self->context, slave_address, AK09916_WIA1, who_am_i,
+                          2, self->timeout) < 0) {
+        return false;
     }
-    return who_am_i;
+    return (who_am_i[0] == AK09916_WHO_AM_I_1) &&
+           (who_am_i[1] == AK09916_WHO_AM_I_2);
 }
 
 int ak09916_read_magnetometer(ak09916_t* self, int16_t* mag_x, int16_t* mag_y,
