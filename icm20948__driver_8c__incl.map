@@ -1,7 +1,7 @@
 <map id="src/icm20948_driver.c" name="src/icm20948_driver.c">
-<area shape="rect" id="node1" title=" " alt="" coords="55,5,204,31"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,225,80,251"/>
-<area shape="rect" id="node3" title=" " alt="" coords="163,225,227,251"/>
-<area shape="rect" id="node4" href="$i2c__port_8h.html" title="I2C port header file." alt="" coords="129,79,207,104"/>
-<area shape="rect" id="node5" href="$icm20948__driver_8h.html" title="ICM20948 driver header file." alt="" coords="30,152,157,177"/>
+<area shape="rect" id="node1" title=" " alt="" coords="69,5,219,31"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,152,80,177"/>
+<area shape="rect" id="node3" title=" " alt="" coords="163,152,227,177"/>
+<area shape="rect" id="node4" href="$i2c__port_8h.html" title="I2C port header file." alt="" coords="233,79,311,104"/>
+<area shape="rect" id="node5" href="$icm20948__driver_8h.html" title="ICM20948 driver header file." alt="" coords="30,79,157,104"/>
 </map>

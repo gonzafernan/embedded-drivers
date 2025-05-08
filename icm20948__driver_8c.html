@@ -89,11 +89,11 @@ Include dependency graph for icm20948_driver.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="icm20948__driver_8c__incl.png" border="0" usemap="#asrc_2icm20948__driver_8c" alt=""/></div>
 <map name="asrc_2icm20948__driver_8c" id="asrc_2icm20948__driver_8c">
-<area shape="rect" title=" " alt="" coords="55,5,204,31"/>
-<area shape="rect" title=" " alt="" coords="5,225,80,251"/>
-<area shape="rect" title=" " alt="" coords="163,225,227,251"/>
-<area shape="rect" href="i2c__port_8h.html" title="I2C port header file." alt="" coords="129,79,207,104"/>
-<area shape="rect" href="icm20948__driver_8h.html" title="ICM20948 driver header file." alt="" coords="30,152,157,177"/>
+<area shape="rect" title=" " alt="" coords="69,5,219,31"/>
+<area shape="rect" title=" " alt="" coords="5,152,80,177"/>
+<area shape="rect" title=" " alt="" coords="163,152,227,177"/>
+<area shape="rect" href="i2c__port_8h.html" title="I2C port header file." alt="" coords="233,79,311,104"/>
+<area shape="rect" href="icm20948__driver_8h.html" title="ICM20948 driver header file." alt="" coords="30,79,157,104"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -111,16 +111,78 @@ Macros</h2></td></tr>
 <tr class="separator:a246abd502263dd9accadb752d380b6be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab496d05111bc2ffc13e95e03d6c9f2b6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="icm20948__driver_8c.html#ab496d05111bc2ffc13e95e03d6c9f2b6">ICM20948_USER_BANK_0_INT_PIN_CFG</a>&#160;&#160;&#160;0x0F</td></tr>
 <tr class="separator:ab496d05111bc2ffc13e95e03d6c9f2b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad856efb299283b1bfd632688af4c76b4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="icm20948__driver_8c.html#ad856efb299283b1bfd632688af4c76b4">ICM20948_USER_BANK_0_INT_ENABLE_1</a>&#160;&#160;&#160;0x11</td></tr>
+<tr class="separator:ad856efb299283b1bfd632688af4c76b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c3cc04e17e9afd93f1d9b5d8f956eef"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="icm20948__driver_8c.html#a5c3cc04e17e9afd93f1d9b5d8f956eef">ICM20948_USER_BANK_0_INT_STATUS</a>&#160;&#160;&#160;0x19</td></tr>
+<tr class="separator:a5c3cc04e17e9afd93f1d9b5d8f956eef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c55d2bf0abdde62da7f3d34a9567103"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="icm20948__driver_8c.html#a1c55d2bf0abdde62da7f3d34a9567103">ICM20948_USER_BANK_0_INT_STATUS_1</a>&#160;&#160;&#160;0x1A</td></tr>
+<tr class="separator:a1c55d2bf0abdde62da7f3d34a9567103"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c6dd90ce0bf8ddcebb9d0d5915e87f7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="icm20948__driver_8c.html#a6c6dd90ce0bf8ddcebb9d0d5915e87f7">ICM20948_USER_BANK_0_ACCEL_XOUT_H</a>&#160;&#160;&#160;0x2D</td></tr>
 <tr class="separator:a6c6dd90ce0bf8ddcebb9d0d5915e87f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a576157066bcf0b32476b00eacac674b3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="icm20948__driver_8c.html#a576157066bcf0b32476b00eacac674b3">ICM20948_USER_BANK_0_GYRO_XOUT_H</a>&#160;&#160;&#160;0x33</td></tr>
 <tr class="separator:a576157066bcf0b32476b00eacac674b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b75f5479cf0e02490af7c5888393cdd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="icm20948__driver_8c.html#a6b75f5479cf0e02490af7c5888393cdd">ICM20948_USER_BANK_3_I2C_SLV0_ADDR</a>&#160;&#160;&#160;0x03</td></tr>
+<tr class="separator:a6b75f5479cf0e02490af7c5888393cdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf35166d8e01c3bec2d4646119e07dda"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="icm20948__driver_8c.html#adf35166d8e01c3bec2d4646119e07dda">ICM20948_USER_BANK_3_I2C_SLV0_REG</a>&#160;&#160;&#160;0x04</td></tr>
+<tr class="separator:adf35166d8e01c3bec2d4646119e07dda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d212cf3ad4960f2e091ee0880ba38ab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="icm20948__driver_8c.html#a0d212cf3ad4960f2e091ee0880ba38ab">ICM20948_USER_BANK_3_I2C_SLV0_CTRL</a>&#160;&#160;&#160;0x05</td></tr>
 <tr class="separator:a0d212cf3ad4960f2e091ee0880ba38ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38f47dc25d2d27b465f9cd8f99ed6b75"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="icm20948__driver_8c.html#a38f47dc25d2d27b465f9cd8f99ed6b75">ICM20948_REG_BANK_SEL</a>&#160;&#160;&#160;0x7F</td></tr>
 <tr class="separator:a38f47dc25d2d27b465f9cd8f99ed6b75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a728f36798aa7b2a6a7489045a5afe34b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="icm20948__driver_8c.html#a728f36798aa7b2a6a7489045a5afe34b">ICM20948_WHO_AM_I</a>&#160;&#160;&#160;0xEA</td></tr>
 <tr class="separator:a728f36798aa7b2a6a7489045a5afe34b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05829153febeecb3f29e7bfbc20d37c9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="icm20948__driver_8c.html#a05829153febeecb3f29e7bfbc20d37c9">ICM20948_USER_CTRL_I2C_MST_RST</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:a05829153febeecb3f29e7bfbc20d37c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a139a4ce462cdb32bb4b17ee41000608a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="icm20948__driver_8c.html#a139a4ce462cdb32bb4b17ee41000608a">ICM20948_USER_CTRL_SRAM_RST</a>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:a139a4ce462cdb32bb4b17ee41000608a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b9c651aa0269d5ef2a24007379ab323"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="icm20948__driver_8c.html#a8b9c651aa0269d5ef2a24007379ab323">ICM20948_USER_CTRL_DMP_RST</a>&#160;&#160;&#160;3</td></tr>
+<tr class="separator:a8b9c651aa0269d5ef2a24007379ab323"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d5242e55bf022b2f9ecdca1f32809b1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="icm20948__driver_8c.html#a2d5242e55bf022b2f9ecdca1f32809b1">ICM20948_USER_CTRL_I2C_IF_DIS</a>&#160;&#160;&#160;4</td></tr>
+<tr class="separator:a2d5242e55bf022b2f9ecdca1f32809b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab231ed05844d631f5d49cc2668cdf579"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="icm20948__driver_8c.html#ab231ed05844d631f5d49cc2668cdf579">ICM20948_USER_CTRL_I2C_MST_EN</a>&#160;&#160;&#160;5</td></tr>
+<tr class="separator:ab231ed05844d631f5d49cc2668cdf579"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4e4693820d3478b97e71077833d2021"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="icm20948__driver_8c.html#ab4e4693820d3478b97e71077833d2021">ICM20948_USER_CTRL_FIFO_EN</a>&#160;&#160;&#160;6</td></tr>
+<tr class="separator:ab4e4693820d3478b97e71077833d2021"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e5449d683757c5c17abb9dcb1b108ea"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="icm20948__driver_8c.html#a8e5449d683757c5c17abb9dcb1b108ea">ICM20948_USER_CTRL_DMP_EN</a>&#160;&#160;&#160;7</td></tr>
+<tr class="separator:a8e5449d683757c5c17abb9dcb1b108ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80017d2a9119882512776dd56db5897e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="icm20948__driver_8c.html#a80017d2a9119882512776dd56db5897e">ICM20948_INT_PIN_CFG_BYPASS_EN</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:a80017d2a9119882512776dd56db5897e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a572a518da8a8ff4c1783eda7e71d9602"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="icm20948__driver_8c.html#a572a518da8a8ff4c1783eda7e71d9602">ICM20948_INT_PIN_CFG_INT1_LATCH_EN</a>&#160;&#160;&#160;5</td></tr>
+<tr class="separator:a572a518da8a8ff4c1783eda7e71d9602"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a041800fd41b7fe973139900e0cb79e09"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="icm20948__driver_8c.html#a041800fd41b7fe973139900e0cb79e09">ICM20948_INT_PIN_CFG_INT1_OPEN</a>&#160;&#160;&#160;6</td></tr>
+<tr class="separator:a041800fd41b7fe973139900e0cb79e09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84ae5891eeaf1ce7681baea7a8588468"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="icm20948__driver_8c.html#a84ae5891eeaf1ce7681baea7a8588468">ICM20948_INT_PIN_CFG_INT1_ACTL</a>&#160;&#160;&#160;7</td></tr>
+<tr class="separator:a84ae5891eeaf1ce7681baea7a8588468"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae029298661a82532172d0ede18a1de0c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="icm20948__driver_8c.html#ae029298661a82532172d0ede18a1de0c">ICM20948_INT_STATUS_I2C_MST_INT</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:ae029298661a82532172d0ede18a1de0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73289e4531447efbf0eacd57cd4be97e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="icm20948__driver_8c.html#a73289e4531447efbf0eacd57cd4be97e">ICM20948_INT_STATUS_DMP_INT1</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:a73289e4531447efbf0eacd57cd4be97e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85433ea432382c3ba6f84332deeb3c36"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="icm20948__driver_8c.html#a85433ea432382c3ba6f84332deeb3c36">ICM20948_INT_STATUS_PLL_RDY_INT</a>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:a85433ea432382c3ba6f84332deeb3c36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41c76eccf5cf0900829fd15c80d7c335"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="icm20948__driver_8c.html#a41c76eccf5cf0900829fd15c80d7c335">ICM20948_INT_STATUS_WOM_INT</a>&#160;&#160;&#160;3</td></tr>
+<tr class="separator:a41c76eccf5cf0900829fd15c80d7c335"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe8676b64e24fb54cc2e22acb04541dd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="icm20948__driver_8c.html#afe8676b64e24fb54cc2e22acb04541dd">ICM20948_I2C_SLV0_ADDR_I2C_ID_0</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:afe8676b64e24fb54cc2e22acb04541dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf835e5cf4308fad3c0b618ffc8f3d4d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="icm20948__driver_8c.html#aaf835e5cf4308fad3c0b618ffc8f3d4d">ICM20948_I2C_SLV0_ADDR_I2C_SLV0_RNW</a>&#160;&#160;&#160;7</td></tr>
+<tr class="separator:aaf835e5cf4308fad3c0b618ffc8f3d4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bb0cf5d3b3fc02464b839bfcd5f4951"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="icm20948__driver_8c.html#a5bb0cf5d3b3fc02464b839bfcd5f4951">ICM20948_I2C_SLV0_CTRL_I2C_SLV0_LENG</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a5bb0cf5d3b3fc02464b839bfcd5f4951"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae19c4146e7287ee572712636b557a11f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="icm20948__driver_8c.html#ae19c4146e7287ee572712636b557a11f">ICM20948_I2C_SLV0_CTRL_I2C_SLV0_GRP</a>&#160;&#160;&#160;4</td></tr>
+<tr class="separator:ae19c4146e7287ee572712636b557a11f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92b0de784ebc677f13a20e2f4e666dc1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="icm20948__driver_8c.html#a92b0de784ebc677f13a20e2f4e666dc1">ICM20948_I2C_SLV0_CTRL_I2C_SLV0_REG_DIS</a>&#160;&#160;&#160;5</td></tr>
+<tr class="separator:a92b0de784ebc677f13a20e2f4e666dc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0039dfcbf606c578a9ff45cb7f908b05"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="icm20948__driver_8c.html#a0039dfcbf606c578a9ff45cb7f908b05">ICM20948_I2C_SLV0_CTRL_I2C_SLV0_BYTE_SW</a>&#160;&#160;&#160;6</td></tr>
+<tr class="separator:a0039dfcbf606c578a9ff45cb7f908b05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4faa07ea540fcbb819ce38223b22850"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="icm20948__driver_8c.html#af4faa07ea540fcbb819ce38223b22850">ICM20948_I2C_SLV0_CTRL_I2C_SLV0_EN</a>&#160;&#160;&#160;7</td></tr>
+<tr class="separator:af4faa07ea540fcbb819ce38223b22850"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab583aea23b5b5fbf6deba7e9f9b1df67"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="icm20948__driver_8c.html#ab583aea23b5b5fbf6deba7e9f9b1df67">ICM20948_REG_BANK_SEL_USER_BANK</a>&#160;&#160;&#160;4</td></tr>
+<tr class="separator:ab583aea23b5b5fbf6deba7e9f9b1df67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77a6b89c3973a626b4497dc98cba5bff"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="icm20948__driver_8c.html#a77a6b89c3973a626b4497dc98cba5bff">ICM20948_MSK_INT_STATUS_1_RAW_DATA_0_RDY_INT</a>&#160;&#160;&#160;0x01</td></tr>
+<tr class="separator:a77a6b89c3973a626b4497dc98cba5bff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97f93e6fa3d2af808f34b2de4caff6f9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="icm20948__driver_8c.html#a97f93e6fa3d2af808f34b2de4caff6f9">ICM20948_MSK_INT_STATUS_2_FIFO_OVERFLOW_INT</a>&#160;&#160;&#160;0x1F</td></tr>
+<tr class="separator:a97f93e6fa3d2af808f34b2de4caff6f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c0fb76e021b6ac4b8b6fc0965f99c46"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="icm20948__driver_8c.html#a7c0fb76e021b6ac4b8b6fc0965f99c46">ICM20948_MSK_INT_STATUS_3_FIFO_WM_INT</a>&#160;&#160;&#160;0x1F</td></tr>
+<tr class="separator:a7c0fb76e021b6ac4b8b6fc0965f99c46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -136,8 +198,263 @@ Functions</h2></td></tr>
 <tr class="memitem:aebb31bd460284a6408cefe362effbe66"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="icm20948__driver_8c.html#aebb31bd460284a6408cefe362effbe66">icm20948_read_gyroscope</a> (<a class="el" href="structicm20948__t.html">icm20948_t</a> *self, int16_t *gyro_x, int16_t *gyro_y, int16_t *gyro_z)</td></tr>
 <tr class="memdesc:aebb31bd460284a6408cefe362effbe66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read gyroscope data from the ICM-20948 IMU.  <a href="icm20948__driver_8c.html#aebb31bd460284a6408cefe362effbe66">More...</a><br /></td></tr>
 <tr class="separator:aebb31bd460284a6408cefe362effbe66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a56ca2abd4d1579d0a07de8060cadec"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="icm20948__driver_8c.html#a9a56ca2abd4d1579d0a07de8060cadec">icm20948_clear_int_status</a> (<a class="el" href="structicm20948__t.html">icm20948_t</a> *self, <a class="el" href="structicm20948__int__status__t.html">icm20948_int_status_t</a> *int_status)</td></tr>
+<tr class="memdesc:a9a56ca2abd4d1579d0a07de8060cadec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the interrupt status of the ICM-20948 IMU.  <a href="icm20948__driver_8c.html#a9a56ca2abd4d1579d0a07de8060cadec">More...</a><br /></td></tr>
+<tr class="separator:a9a56ca2abd4d1579d0a07de8060cadec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="afe8676b64e24fb54cc2e22acb04541dd" name="afe8676b64e24fb54cc2e22acb04541dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe8676b64e24fb54cc2e22acb04541dd">&#9670;&#160;</a></span>ICM20948_I2C_SLV0_ADDR_I2C_ID_0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ICM20948_I2C_SLV0_ADDR_I2C_ID_0&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaf835e5cf4308fad3c0b618ffc8f3d4d" name="aaf835e5cf4308fad3c0b618ffc8f3d4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf835e5cf4308fad3c0b618ffc8f3d4d">&#9670;&#160;</a></span>ICM20948_I2C_SLV0_ADDR_I2C_SLV0_RNW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ICM20948_I2C_SLV0_ADDR_I2C_SLV0_RNW&#160;&#160;&#160;7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0039dfcbf606c578a9ff45cb7f908b05" name="a0039dfcbf606c578a9ff45cb7f908b05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0039dfcbf606c578a9ff45cb7f908b05">&#9670;&#160;</a></span>ICM20948_I2C_SLV0_CTRL_I2C_SLV0_BYTE_SW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ICM20948_I2C_SLV0_CTRL_I2C_SLV0_BYTE_SW&#160;&#160;&#160;6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af4faa07ea540fcbb819ce38223b22850" name="af4faa07ea540fcbb819ce38223b22850"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4faa07ea540fcbb819ce38223b22850">&#9670;&#160;</a></span>ICM20948_I2C_SLV0_CTRL_I2C_SLV0_EN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ICM20948_I2C_SLV0_CTRL_I2C_SLV0_EN&#160;&#160;&#160;7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae19c4146e7287ee572712636b557a11f" name="ae19c4146e7287ee572712636b557a11f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae19c4146e7287ee572712636b557a11f">&#9670;&#160;</a></span>ICM20948_I2C_SLV0_CTRL_I2C_SLV0_GRP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ICM20948_I2C_SLV0_CTRL_I2C_SLV0_GRP&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5bb0cf5d3b3fc02464b839bfcd5f4951" name="a5bb0cf5d3b3fc02464b839bfcd5f4951"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bb0cf5d3b3fc02464b839bfcd5f4951">&#9670;&#160;</a></span>ICM20948_I2C_SLV0_CTRL_I2C_SLV0_LENG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ICM20948_I2C_SLV0_CTRL_I2C_SLV0_LENG&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a92b0de784ebc677f13a20e2f4e666dc1" name="a92b0de784ebc677f13a20e2f4e666dc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92b0de784ebc677f13a20e2f4e666dc1">&#9670;&#160;</a></span>ICM20948_I2C_SLV0_CTRL_I2C_SLV0_REG_DIS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ICM20948_I2C_SLV0_CTRL_I2C_SLV0_REG_DIS&#160;&#160;&#160;5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a80017d2a9119882512776dd56db5897e" name="a80017d2a9119882512776dd56db5897e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80017d2a9119882512776dd56db5897e">&#9670;&#160;</a></span>ICM20948_INT_PIN_CFG_BYPASS_EN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ICM20948_INT_PIN_CFG_BYPASS_EN&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a84ae5891eeaf1ce7681baea7a8588468" name="a84ae5891eeaf1ce7681baea7a8588468"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84ae5891eeaf1ce7681baea7a8588468">&#9670;&#160;</a></span>ICM20948_INT_PIN_CFG_INT1_ACTL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ICM20948_INT_PIN_CFG_INT1_ACTL&#160;&#160;&#160;7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a572a518da8a8ff4c1783eda7e71d9602" name="a572a518da8a8ff4c1783eda7e71d9602"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a572a518da8a8ff4c1783eda7e71d9602">&#9670;&#160;</a></span>ICM20948_INT_PIN_CFG_INT1_LATCH_EN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ICM20948_INT_PIN_CFG_INT1_LATCH_EN&#160;&#160;&#160;5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a041800fd41b7fe973139900e0cb79e09" name="a041800fd41b7fe973139900e0cb79e09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a041800fd41b7fe973139900e0cb79e09">&#9670;&#160;</a></span>ICM20948_INT_PIN_CFG_INT1_OPEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ICM20948_INT_PIN_CFG_INT1_OPEN&#160;&#160;&#160;6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a73289e4531447efbf0eacd57cd4be97e" name="a73289e4531447efbf0eacd57cd4be97e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73289e4531447efbf0eacd57cd4be97e">&#9670;&#160;</a></span>ICM20948_INT_STATUS_DMP_INT1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ICM20948_INT_STATUS_DMP_INT1&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae029298661a82532172d0ede18a1de0c" name="ae029298661a82532172d0ede18a1de0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae029298661a82532172d0ede18a1de0c">&#9670;&#160;</a></span>ICM20948_INT_STATUS_I2C_MST_INT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ICM20948_INT_STATUS_I2C_MST_INT&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a85433ea432382c3ba6f84332deeb3c36" name="a85433ea432382c3ba6f84332deeb3c36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85433ea432382c3ba6f84332deeb3c36">&#9670;&#160;</a></span>ICM20948_INT_STATUS_PLL_RDY_INT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ICM20948_INT_STATUS_PLL_RDY_INT&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a41c76eccf5cf0900829fd15c80d7c335" name="a41c76eccf5cf0900829fd15c80d7c335"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41c76eccf5cf0900829fd15c80d7c335">&#9670;&#160;</a></span>ICM20948_INT_STATUS_WOM_INT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ICM20948_INT_STATUS_WOM_INT&#160;&#160;&#160;3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a77a6b89c3973a626b4497dc98cba5bff" name="a77a6b89c3973a626b4497dc98cba5bff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77a6b89c3973a626b4497dc98cba5bff">&#9670;&#160;</a></span>ICM20948_MSK_INT_STATUS_1_RAW_DATA_0_RDY_INT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ICM20948_MSK_INT_STATUS_1_RAW_DATA_0_RDY_INT&#160;&#160;&#160;0x01</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a97f93e6fa3d2af808f34b2de4caff6f9" name="a97f93e6fa3d2af808f34b2de4caff6f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97f93e6fa3d2af808f34b2de4caff6f9">&#9670;&#160;</a></span>ICM20948_MSK_INT_STATUS_2_FIFO_OVERFLOW_INT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ICM20948_MSK_INT_STATUS_2_FIFO_OVERFLOW_INT&#160;&#160;&#160;0x1F</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7c0fb76e021b6ac4b8b6fc0965f99c46" name="a7c0fb76e021b6ac4b8b6fc0965f99c46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c0fb76e021b6ac4b8b6fc0965f99c46">&#9670;&#160;</a></span>ICM20948_MSK_INT_STATUS_3_FIFO_WM_INT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ICM20948_MSK_INT_STATUS_3_FIFO_WM_INT&#160;&#160;&#160;0x1F</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a38f47dc25d2d27b465f9cd8f99ed6b75" name="a38f47dc25d2d27b465f9cd8f99ed6b75"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a38f47dc25d2d27b465f9cd8f99ed6b75">&#9670;&#160;</a></span>ICM20948_REG_BANK_SEL</h2>
 
@@ -146,6 +463,20 @@ Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">#define ICM20948_REG_BANK_SEL&#160;&#160;&#160;0x7F</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab583aea23b5b5fbf6deba7e9f9b1df67" name="ab583aea23b5b5fbf6deba7e9f9b1df67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab583aea23b5b5fbf6deba7e9f9b1df67">&#9670;&#160;</a></span>ICM20948_REG_BANK_SEL_USER_BANK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ICM20948_REG_BANK_SEL_USER_BANK&#160;&#160;&#160;4</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -180,6 +511,20 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ad856efb299283b1bfd632688af4c76b4" name="ad856efb299283b1bfd632688af4c76b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad856efb299283b1bfd632688af4c76b4">&#9670;&#160;</a></span>ICM20948_USER_BANK_0_INT_ENABLE_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ICM20948_USER_BANK_0_INT_ENABLE_1&#160;&#160;&#160;0x11</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ab496d05111bc2ffc13e95e03d6c9f2b6" name="ab496d05111bc2ffc13e95e03d6c9f2b6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab496d05111bc2ffc13e95e03d6c9f2b6">&#9670;&#160;</a></span>ICM20948_USER_BANK_0_INT_PIN_CFG</h2>
 
@@ -188,6 +533,34 @@ Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">#define ICM20948_USER_BANK_0_INT_PIN_CFG&#160;&#160;&#160;0x0F</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5c3cc04e17e9afd93f1d9b5d8f956eef" name="a5c3cc04e17e9afd93f1d9b5d8f956eef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c3cc04e17e9afd93f1d9b5d8f956eef">&#9670;&#160;</a></span>ICM20948_USER_BANK_0_INT_STATUS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ICM20948_USER_BANK_0_INT_STATUS&#160;&#160;&#160;0x19</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1c55d2bf0abdde62da7f3d34a9567103" name="a1c55d2bf0abdde62da7f3d34a9567103"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c55d2bf0abdde62da7f3d34a9567103">&#9670;&#160;</a></span>ICM20948_USER_BANK_0_INT_STATUS_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ICM20948_USER_BANK_0_INT_STATUS_1&#160;&#160;&#160;0x1A</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -264,6 +637,20 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a6b75f5479cf0e02490af7c5888393cdd" name="a6b75f5479cf0e02490af7c5888393cdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b75f5479cf0e02490af7c5888393cdd">&#9670;&#160;</a></span>ICM20948_USER_BANK_3_I2C_SLV0_ADDR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ICM20948_USER_BANK_3_I2C_SLV0_ADDR&#160;&#160;&#160;0x03</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a0d212cf3ad4960f2e091ee0880ba38ab" name="a0d212cf3ad4960f2e091ee0880ba38ab"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0d212cf3ad4960f2e091ee0880ba38ab">&#9670;&#160;</a></span>ICM20948_USER_BANK_3_I2C_SLV0_CTRL</h2>
 
@@ -272,6 +659,118 @@ Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">#define ICM20948_USER_BANK_3_I2C_SLV0_CTRL&#160;&#160;&#160;0x05</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adf35166d8e01c3bec2d4646119e07dda" name="adf35166d8e01c3bec2d4646119e07dda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf35166d8e01c3bec2d4646119e07dda">&#9670;&#160;</a></span>ICM20948_USER_BANK_3_I2C_SLV0_REG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ICM20948_USER_BANK_3_I2C_SLV0_REG&#160;&#160;&#160;0x04</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8e5449d683757c5c17abb9dcb1b108ea" name="a8e5449d683757c5c17abb9dcb1b108ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e5449d683757c5c17abb9dcb1b108ea">&#9670;&#160;</a></span>ICM20948_USER_CTRL_DMP_EN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ICM20948_USER_CTRL_DMP_EN&#160;&#160;&#160;7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8b9c651aa0269d5ef2a24007379ab323" name="a8b9c651aa0269d5ef2a24007379ab323"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b9c651aa0269d5ef2a24007379ab323">&#9670;&#160;</a></span>ICM20948_USER_CTRL_DMP_RST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ICM20948_USER_CTRL_DMP_RST&#160;&#160;&#160;3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab4e4693820d3478b97e71077833d2021" name="ab4e4693820d3478b97e71077833d2021"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4e4693820d3478b97e71077833d2021">&#9670;&#160;</a></span>ICM20948_USER_CTRL_FIFO_EN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ICM20948_USER_CTRL_FIFO_EN&#160;&#160;&#160;6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2d5242e55bf022b2f9ecdca1f32809b1" name="a2d5242e55bf022b2f9ecdca1f32809b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d5242e55bf022b2f9ecdca1f32809b1">&#9670;&#160;</a></span>ICM20948_USER_CTRL_I2C_IF_DIS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ICM20948_USER_CTRL_I2C_IF_DIS&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab231ed05844d631f5d49cc2668cdf579" name="ab231ed05844d631f5d49cc2668cdf579"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab231ed05844d631f5d49cc2668cdf579">&#9670;&#160;</a></span>ICM20948_USER_CTRL_I2C_MST_EN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ICM20948_USER_CTRL_I2C_MST_EN&#160;&#160;&#160;5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a05829153febeecb3f29e7bfbc20d37c9" name="a05829153febeecb3f29e7bfbc20d37c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05829153febeecb3f29e7bfbc20d37c9">&#9670;&#160;</a></span>ICM20948_USER_CTRL_I2C_MST_RST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ICM20948_USER_CTRL_I2C_MST_RST&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a139a4ce462cdb32bb4b17ee41000608a" name="a139a4ce462cdb32bb4b17ee41000608a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a139a4ce462cdb32bb4b17ee41000608a">&#9670;&#160;</a></span>ICM20948_USER_CTRL_SRAM_RST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ICM20948_USER_CTRL_SRAM_RST&#160;&#160;&#160;2</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -293,6 +792,53 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a9a56ca2abd4d1579d0a07de8060cadec" name="a9a56ca2abd4d1579d0a07de8060cadec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a56ca2abd4d1579d0a07de8060cadec">&#9670;&#160;</a></span>icm20948_clear_int_status()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int icm20948_clear_int_status </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structicm20948__t.html">icm20948_t</a> *&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structicm20948__int__status__t.html">icm20948_int_status_t</a> *&#160;</td>
+          <td class="paramname"><em>int_status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clear the interrupt status of the ICM-20948 IMU. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Pointer to the ICM-20948 IMU structure. </td></tr>
+    <tr><td class="paramname">int_status</td><td>Pointer to the interrupt status structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, -1 on failure. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="icm20948__driver_8c_a9a56ca2abd4d1579d0a07de8060cadec_cgraph.png" border="0" usemap="#aicm20948__driver_8c_a9a56ca2abd4d1579d0a07de8060cadec_cgraph" alt=""/></div>
+<map name="aicm20948__driver_8c_a9a56ca2abd4d1579d0a07de8060cadec_cgraph" id="aicm20948__driver_8c_a9a56ca2abd4d1579d0a07de8060cadec_cgraph">
+<area shape="rect" title="Clear the interrupt status of the ICM&#45;20948 IMU." alt="" coords="5,5,140,45"/>
+<area shape="rect" href="stm32f4__i2c__port_8c.html#aaa6761a99112c87a8119dd2e35d752d2" title="Read data from the I2C device." alt="" coords="188,13,315,38"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a5722027bcf019cbc684330915e3271c0" name="a5722027bcf019cbc684330915e3271c0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5722027bcf019cbc684330915e3271c0">&#9670;&#160;</a></span>icm20948_init()</h2>
 

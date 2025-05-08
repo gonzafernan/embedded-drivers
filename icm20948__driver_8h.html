@@ -101,11 +101,8 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="icm20948__driver_8h__dep__incl.png" border="0" usemap="#ainclude_2icm20948__driver_8hdep" alt=""/></div>
 <map name="ainclude_2icm20948__driver_8hdep" id="ainclude_2icm20948__driver_8hdep">
-<area shape="rect" title="ICM20948 driver header file." alt="" coords="271,5,443,31"/>
-<area shape="rect" href="i2c__port_8h.html" title="I2C port header file." alt="" coords="247,79,369,104"/>
-<area shape="rect" href="icm20948__driver_8c.html" title=" " alt="" coords="368,159,517,185"/>
-<area shape="rect" href="stm32f4__i2c__port_8c.html" title=" " alt="" coords="5,152,176,192"/>
-<area shape="rect" href="ak09916__driver_8c.html" title="AK09916 driver implementation." alt="" coords="201,159,343,185"/>
+<area shape="rect" title="ICM20948 driver header file." alt="" coords="5,5,177,31"/>
+<area shape="rect" href="icm20948__driver_8c.html" title=" " alt="" coords="17,79,166,104"/>
 </map>
 </div>
 </div>
@@ -114,6 +111,8 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structicm20948__t.html">icm20948_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structicm20948__int__status__t.html">icm20948_int_status_t</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
@@ -137,6 +136,9 @@ Functions</h2></td></tr>
 <tr class="memitem:aebb31bd460284a6408cefe362effbe66"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="icm20948__driver_8h.html#aebb31bd460284a6408cefe362effbe66">icm20948_read_gyroscope</a> (<a class="el" href="structicm20948__t.html">icm20948_t</a> *self, int16_t *gyro_x, int16_t *gyro_y, int16_t *gyro_z)</td></tr>
 <tr class="memdesc:aebb31bd460284a6408cefe362effbe66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read gyroscope data from the ICM-20948 IMU.  <a href="icm20948__driver_8h.html#aebb31bd460284a6408cefe362effbe66">More...</a><br /></td></tr>
 <tr class="separator:aebb31bd460284a6408cefe362effbe66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a56ca2abd4d1579d0a07de8060cadec"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="icm20948__driver_8h.html#a9a56ca2abd4d1579d0a07de8060cadec">icm20948_clear_int_status</a> (<a class="el" href="structicm20948__t.html">icm20948_t</a> *self, <a class="el" href="structicm20948__int__status__t.html">icm20948_int_status_t</a> *int_status)</td></tr>
+<tr class="memdesc:a9a56ca2abd4d1579d0a07de8060cadec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the interrupt status of the ICM-20948 IMU.  <a href="icm20948__driver_8h.html#a9a56ca2abd4d1579d0a07de8060cadec">More...</a><br /></td></tr>
+<tr class="separator:a9a56ca2abd4d1579d0a07de8060cadec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >ICM20948 driver header file. </p>
@@ -171,6 +173,53 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a9a56ca2abd4d1579d0a07de8060cadec" name="a9a56ca2abd4d1579d0a07de8060cadec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a56ca2abd4d1579d0a07de8060cadec">&#9670;&#160;</a></span>icm20948_clear_int_status()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int icm20948_clear_int_status </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structicm20948__t.html">icm20948_t</a> *&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structicm20948__int__status__t.html">icm20948_int_status_t</a> *&#160;</td>
+          <td class="paramname"><em>int_status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clear the interrupt status of the ICM-20948 IMU. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Pointer to the ICM-20948 IMU structure. </td></tr>
+    <tr><td class="paramname">int_status</td><td>Pointer to the interrupt status structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, -1 on failure. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="icm20948__driver_8h_a9a56ca2abd4d1579d0a07de8060cadec_cgraph.png" border="0" usemap="#aicm20948__driver_8h_a9a56ca2abd4d1579d0a07de8060cadec_cgraph" alt=""/></div>
+<map name="aicm20948__driver_8h_a9a56ca2abd4d1579d0a07de8060cadec_cgraph" id="aicm20948__driver_8h_a9a56ca2abd4d1579d0a07de8060cadec_cgraph">
+<area shape="rect" title="Clear the interrupt status of the ICM&#45;20948 IMU." alt="" coords="5,5,140,45"/>
+<area shape="rect" href="stm32f4__i2c__port_8c.html#aaa6761a99112c87a8119dd2e35d752d2" title="Read data from the I2C device." alt="" coords="188,13,315,38"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a5722027bcf019cbc684330915e3271c0" name="a5722027bcf019cbc684330915e3271c0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5722027bcf019cbc684330915e3271c0">&#9670;&#160;</a></span>icm20948_init()</h2>
 

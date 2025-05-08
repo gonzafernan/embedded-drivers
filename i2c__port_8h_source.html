@@ -87,27 +87,24 @@ $(function() {
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;<a class="code" href="icm20948__driver_8h.html">icm20948_driver.h</a>&quot;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keywordtype">int</span> <a class="code hl_function" href="i2c__port_8h.html#a07b475b0c3ab865ab405afc5482df20d">i2c_init</a>(<span class="keywordtype">void</span> *context, uint16_t device_address, uint32_t timeout);</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keywordtype">int</span> <a class="code hl_function" href="i2c__port_8h.html#aaa6761a99112c87a8119dd2e35d752d2">i2c_blocking_read</a>(<span class="keywordtype">void</span> *context, uint16_t device_address,</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                      uint16_t reg_addres, uint8_t *data, uint16_t length,</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                      uint32_t timeout);</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keywordtype">int</span> <a class="code hl_function" href="i2c__port_8h.html#aaea43c6887f46dc58d27ed30ac6d1cf3">i2c_blocking_write</a>(<span class="keywordtype">void</span> *context, uint16_t device_address,</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                       uint16_t reg_addres, uint8_t *data, uint16_t length,</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                       uint32_t timeout);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#endif  </span><span class="comment">// I2C_PORT_H</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keywordtype">int</span> <a class="code hl_function" href="i2c__port_8h.html#a07b475b0c3ab865ab405afc5482df20d">i2c_init</a>(<span class="keywordtype">void</span> *context, uint16_t device_address, uint32_t timeout);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keywordtype">int</span> <a class="code hl_function" href="i2c__port_8h.html#aaa6761a99112c87a8119dd2e35d752d2">i2c_blocking_read</a>(<span class="keywordtype">void</span> *context, uint16_t device_address,</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                      uint16_t reg_addres, uint8_t *data, uint16_t length,</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                      uint32_t timeout);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keywordtype">int</span> <a class="code hl_function" href="i2c__port_8h.html#aaea43c6887f46dc58d27ed30ac6d1cf3">i2c_blocking_write</a>(<span class="keywordtype">void</span> *context, uint16_t device_address,</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                       uint16_t reg_addres, uint8_t *data, uint16_t length,</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                       uint32_t timeout);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>}</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#endif  </span><span class="comment">// I2C_PORT_H</span></div>
 <div class="ttc" id="ai2c__port_8h_html_a07b475b0c3ab865ab405afc5482df20d"><div class="ttname"><a href="i2c__port_8h.html#a07b475b0c3ab865ab405afc5482df20d">i2c_init</a></div><div class="ttdeci">int i2c_init(void *context, uint16_t device_address, uint32_t timeout)</div><div class="ttdoc">Initialize the I2C port.</div><div class="ttdef"><b>Definition:</b> stm32f4_i2c_port.c:6</div></div>
 <div class="ttc" id="ai2c__port_8h_html_aaa6761a99112c87a8119dd2e35d752d2"><div class="ttname"><a href="i2c__port_8h.html#aaa6761a99112c87a8119dd2e35d752d2">i2c_blocking_read</a></div><div class="ttdeci">int i2c_blocking_read(void *context, uint16_t device_address, uint16_t reg_addres, uint8_t *data, uint16_t length, uint32_t timeout)</div><div class="ttdoc">Read data from the I2C device.</div><div class="ttdef"><b>Definition:</b> stm32f4_i2c_port.c:13</div></div>
 <div class="ttc" id="ai2c__port_8h_html_aaea43c6887f46dc58d27ed30ac6d1cf3"><div class="ttname"><a href="i2c__port_8h.html#aaea43c6887f46dc58d27ed30ac6d1cf3">i2c_blocking_write</a></div><div class="ttdeci">int i2c_blocking_write(void *context, uint16_t device_address, uint16_t reg_addres, uint8_t *data, uint16_t length, uint32_t timeout)</div><div class="ttdoc">Write data to the I2C device.</div><div class="ttdef"><b>Definition:</b> stm32f4_i2c_port.c:23</div></div>
-<div class="ttc" id="aicm20948__driver_8h_html"><div class="ttname"><a href="icm20948__driver_8h.html">icm20948_driver.h</a></div><div class="ttdoc">ICM20948 driver header file.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
