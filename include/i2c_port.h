@@ -15,8 +15,6 @@ extern "C" {
 
 #include <stdint.h>
 
-#include "icm20948_driver.h"
-
 /**
  * @brief Initialize the I2C port.
  * @param context Pointer to the I2C port context.

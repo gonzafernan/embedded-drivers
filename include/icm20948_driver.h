@@ -27,6 +27,17 @@ typedef struct {
     uint32_t timeout;         // Timeout for I2C operations
 } icm20948_t;
 
+// ICM-20948 interrupt status structure
+typedef struct {
+    bool i2c_mst_int;
+    bool dmp_int1;
+    bool pll_rdy_int;
+    bool wom_int;
+    bool raw_data_0_rdy_int;
+    uint8_t fifo_overflow_int;
+    uint8_t fifo_wm_int;
+} icm20948_int_status_t;
+
 /**
  * @brief Initialize the ICM-20948 IMU.
  *
@@ -77,6 +88,16 @@ int icm20948_read_accelerometer(icm20948_t* self, int16_t* accel_x,
  */
 int icm20948_read_gyroscope(icm20948_t* self, int16_t* gyro_x, int16_t* gyro_y,
                             int16_t* gyro_z);
+
+/**
+ * @brief Clear the interrupt status of the ICM-20948 IMU.
+ *
+ * @param self Pointer to the ICM-20948 IMU structure.
+ * @param int_status Pointer to the interrupt status structure.
+ * @return 0 on success, -1 on failure.
+ */
+int icm20948_clear_int_status(icm20948_t* self,
+                              icm20948_int_status_t* int_status);
 
 #ifdef __cplusplus
 }
