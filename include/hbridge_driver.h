@@ -10,6 +10,8 @@
 extern "C" {
 #endif
 
+#include <stdint.h>
+
 typedef struct {
     void *pwm_context;  // Context for PWM control
     void *in1_context;  // Context for IN1 gpio output

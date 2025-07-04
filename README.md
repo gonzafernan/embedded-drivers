@@ -10,3 +10,12 @@ All documentation of the driver can be fount at https://gonzafernan.github.io/em
 ### AK09916
 - Description: 3-axis Electronic Compass (integrated in ICM20948).
 - Datasheet link: https://www.y-ic.es/datasheet/78/SMDSW.020-2OZ.pdf
+
+## How to build the library
+From the 'build/' folder:
+
+```bash
+cmake ..
+make
+ctest
+```

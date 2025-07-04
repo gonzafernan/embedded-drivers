@@ -13,13 +13,9 @@ int pwm_init(void *context) {
     return (status == HAL_OK) ? 0 : -1;
 }
 
-int pwm_set_duty_cycle(void *context, float duty_cycle) {
+void pwm_set_duty_cycle(void *context, float duty_cycle) {
     stm32f4_pwm_port_t *pwm_port = (stm32f4_pwm_port_t *)context;
-    if (duty_cycle < 0 || duty_cycle > 100) {
-        return -1;
-    }
     uint32_t period = __HAL_TIM_GET_AUTORELOAD(pwm_port->htim);
     uint32_t pulse = (uint32_t)((duty_cycle / 100.0f) * period);
     __HAL_TIM_SET_COMPARE(pwm_port->htim, pwm_port->channel, pulse);
-    return 0;
 }

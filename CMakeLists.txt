@@ -11,8 +11,13 @@ add_library(ak09916 STATIC
     src/ak09916_driver.c
 )
 
+add_library(hbridge STATIC
+    src/hbridge_driver.c
+)
+
 target_include_directories(icm20948 PUBLIC include)
 target_include_directories(ak09916 PUBLIC include)
+target_include_directories(hbridge PUBLIC include)
 
 # Google Test
 include(FetchContent)
@@ -23,14 +28,19 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(googletest)
 
 add_executable(test_driver
+    test/mock_hardware.cpp
+    test/mock_i2c_port.cpp
     test/test_icm20948_driver.cpp
     test/test_ak09916_driver.cpp
-    test/mock_i2c_port.c
+    test/test_hbridge_driver.cpp
 )
 
 target_link_libraries(test_driver
     icm20948
     ak09916
+    hbridge
+    gtest
+    gmock
     gtest_main
 )
 

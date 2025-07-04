@@ -27,9 +27,8 @@ int pwm_init(void *context);
  *
  * @param context Pointer to the context for the PWM port.
  * @param duty_cycle Duty cycle value (0.0 to 100.0).
- * @return 0 on success, -1 on failure.
  */
-int pwm_set_duty_cycle(void *context, float duty_cycle);
+void pwm_set_duty_cycle(void *context, float duty_cycle);
 
 #ifdef __cplusplus
 }

@@ -12,8 +12,9 @@
 extern "C" {
 #include "i2c_port.h"
 #include "icm20948_driver.h"
-#include "mock_i2c_port.h"
 }
+
+#include "mock_hardware.hpp"
 
 TEST(ICM20948Test, InitSuccess) {
     icm20948_t icm20948;

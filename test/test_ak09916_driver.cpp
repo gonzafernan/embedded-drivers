@@ -12,8 +12,9 @@
 extern "C" {
 #include "ak09916_driver.h"
 #include "i2c_port.h"
-#include "mock_i2c_port.h"
 }
+
+#include "mock_hardware.hpp"
 
 constexpr float MEASUREMENT_RANGE = 4912.0f;
 constexpr float REPRESENTATION_RANGE = 32752.0f;
@@ -36,7 +37,8 @@ TEST(AK09916SetModeTest, SetModeSuccess) {
     mock_i2c_context_t mock_context;
     ak09916_init(&ak09916, (void *)&mock_context, 1000);
 
-    int result = ak09916_set_mode(&ak09916, AK09916_MODE_CONTINUOUS_MEASUREMENT_1);
+    int result =
+        ak09916_set_mode(&ak09916, AK09916_MODE_CONTINUOUS_MEASUREMENT_1);
     EXPECT_EQ(result, 0);
     EXPECT_EQ(mock_context.memory[0x31], AK09916_MODE_CONTINUOUS_MEASUREMENT_1);
 }
