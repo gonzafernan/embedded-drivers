@@ -1,0 +1,4 @@
+<map id="platform/stm32f4/stm32f4_gpio_port_config.h" name="platform/stm32f4/stm32f4_gpio_port_config.h">
+<area shape="rect" id="node1" title="Configuration file for STM32F4 GPIO port settings." alt="" coords="5,5,176,45"/>
+<area shape="rect" id="node2" href="$stm32f4__gpio__port_8c.html" title="GPIO port operations for STM32F4 platform." alt="" coords="5,93,176,133"/>
+</map>

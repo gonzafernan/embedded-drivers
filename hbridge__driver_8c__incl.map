@@ -1,0 +1,7 @@
+<map id="src/hbridge_driver.c" name="src/hbridge_driver.c">
+<area shape="rect" id="node1" title="H&#45;bridge driver for controlling motor direction and speed." alt="" coords="119,5,253,31"/>
+<area shape="rect" id="node2" href="$hbridge__driver_8h.html" title="Header file for the H&#45;bridge driver module." alt="" coords="5,79,119,104"/>
+<area shape="rect" id="node4" href="$gpio__port_8h.html" title="Header file for the GPIO port operations." alt="" coords="143,79,229,104"/>
+<area shape="rect" id="node5" href="$pwm__port_8h.html" title="PWM port header file." alt="" coords="253,79,343,104"/>
+<area shape="rect" id="node3" title=" " alt="" coords="91,152,155,177"/>
+</map>

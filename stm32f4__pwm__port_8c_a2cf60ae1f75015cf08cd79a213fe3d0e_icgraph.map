@@ -1,0 +1,4 @@
+<map id="pwm_init" name="pwm_init">
+<area shape="rect" id="node1" title="Initialize the PWM port." alt="" coords="141,5,216,31"/>
+<area shape="rect" id="node2" href="$hbridge__driver_8c.html#ab1a8521a0c1076c55862c563b3eaad0a" title="Initialize the H&#45;bridge driver." alt="" coords="5,5,93,31"/>
+</map>

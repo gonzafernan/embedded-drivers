@@ -1,0 +1,4 @@
+<map id="platform/stm32f4/stm32f4_pwm_port_config.h" name="platform/stm32f4/stm32f4_pwm_port_config.h">
+<area shape="rect" id="node1" title="Configuration header for STM32F4 PWM port." alt="" coords="5,5,176,45"/>
+<area shape="rect" id="node2" href="$stm32f4__pwm__port_8c.html" title="STM32F4 PWM port implementation." alt="" coords="5,93,176,133"/>
+</map>
