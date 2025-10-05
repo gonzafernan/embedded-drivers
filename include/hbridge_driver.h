@@ -16,6 +16,7 @@ typedef struct {
     void *pwm_context;  // Context for PWM control
     void *in1_context;  // Context for IN1 gpio output
     void *in2_context;  // Context for IN2 gpio output
+    int last_sign;      // Last sign for smooth transition
 } hbridge_t;
 
 /**
@@ -33,11 +34,18 @@ typedef struct {
 int hbridge_init(hbridge_t *self, void *pwm_context, void *in1_context,
                  void *in2_context);
 
+// Hi-Z stop
+/**
+ * @brief Hi-Z stop
+ * @param self Pointer to the H-bridge structure.
+ */
+void hbridge_coast(hbridge_t *s);
+
 /**
  * @brief Apply a short brake to the H-bridge.
  * @param self Pointer to the H-bridge structure.
  */
-void hbridge_short_brake(hbridge_t *self);
+void hbridge_brake(hbridge_t *self);
 
 /**
  * @brief Set the output of the H-bridge.
@@ -45,11 +53,9 @@ void hbridge_short_brake(hbridge_t *self);
  * This function sets the output direction and duty cycle for the H-bridge.
  *
  * @param self Pointer to the H-bridge structure.
- * @param direction Direction of the motor (0 for forward, 1 for reverse, 2 for
- * stop).
- * @param duty_cycle Duty cycle percentage (0.0 to 100.0).
+ * @param signed duty_cycle Duty cycle percentage (-100.0 to 100.0).
  */
-void hbridge_set_output(hbridge_t *self, uint8_t direction, float duty_cycle);
+void hbridge_set_output_signed(hbridge_t *s, float cmd);
 
 #ifdef __cplusplus
 }
