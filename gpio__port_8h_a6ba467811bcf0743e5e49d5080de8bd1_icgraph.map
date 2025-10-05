@@ -1,6 +1,10 @@
 <map id="gpio_write" name="gpio_write">
-<area shape="rect" id="node1" title="Writes a value to the GPIO pin." alt="" coords="192,55,273,80"/>
-<area shape="rect" id="node2" href="$hbridge__driver_8c.html#ab1a8521a0c1076c55862c563b3eaad0a" title="Initialize the H&#45;bridge driver." alt="" coords="31,5,119,31"/>
-<area shape="rect" id="node3" href="$hbridge__driver_8c.html#ae6b1e78f137d3ef97e2e45c31baf93d0" title="Set the output of the H&#45;bridge." alt="" coords="9,55,141,80"/>
-<area shape="rect" id="node4" href="$hbridge__driver_8c.html#ae549cfe3fcd6d060d359bb7c2cf7f5c8" title="Apply a short brake to the H&#45;bridge." alt="" coords="5,104,144,129"/>
+<area shape="rect" id="node1" title="Writes a value to the GPIO pin." alt="" coords="365,129,447,155"/>
+<area shape="rect" id="node2" href="$hbridge__driver_8c.html#a3ad75b858c5b2f14bf9a0cddfab9832e" title="Apply a short brake to the H&#45;bridge." alt="" coords="200,5,303,31"/>
+<area shape="rect" id="node3" href="$hbridge__driver_8c.html#ab2d906b73c8227df013aac1f46d79c87" title="Hi&#45;Z stop." alt="" coords="200,55,303,80"/>
+<area shape="rect" id="node5" href="$hbridge__driver_8c.html#ab1a8521a0c1076c55862c563b3eaad0a" title="Initialize the H&#45;bridge driver." alt="" coords="207,104,295,129"/>
+<area shape="rect" id="node6" href="$hbridge__driver_8c.html#ae6b1e78f137d3ef97e2e45c31baf93d0" title=" " alt="" coords="185,153,317,179"/>
+<area shape="rect" id="node7" href="$hbridge__driver_8c.html#a5d106d37e245e39721adafb02f64675c" title=" " alt="" coords="196,203,307,228"/>
+<area shape="rect" id="node8" href="$hbridge__driver_8c.html#a85d58472842c9395961ca48fffce41a7" title=" " alt="" coords="196,252,307,277"/>
+<area shape="rect" id="node4" href="$hbridge__driver_8c.html#a4d832624d01ae95ecc3fd0ccec1d5b32" title="Set the output of the H&#45;bridge." alt="" coords="5,195,137,235"/>
 </map>

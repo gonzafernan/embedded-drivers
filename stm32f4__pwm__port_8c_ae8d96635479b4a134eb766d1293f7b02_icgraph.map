@@ -1,0 +1,8 @@
+<map id="clamp01" name="clamp01">
+<area shape="rect" id="node1" title=" " alt="" coords="556,81,627,107"/>
+<area shape="rect" id="node2" href="$stm32f4__pwm__port_8c.html#ab9ae2bfab02817eb06ac7737a570b1f8" title="Set the duty cycle for the PWM port." alt="" coords="365,81,508,107"/>
+<area shape="rect" id="node3" href="$hbridge__driver_8c.html#ab2d906b73c8227df013aac1f46d79c87" title="Hi&#45;Z stop." alt="" coords="200,5,303,31"/>
+<area shape="rect" id="node4" href="$hbridge__driver_8c.html#a4d832624d01ae95ecc3fd0ccec1d5b32" title="Set the output of the H&#45;bridge." alt="" coords="5,23,137,63"/>
+<area shape="rect" id="node5" href="$hbridge__driver_8c.html#ab1a8521a0c1076c55862c563b3eaad0a" title="Initialize the H&#45;bridge driver." alt="" coords="207,107,295,132"/>
+<area shape="rect" id="node6" href="$hbridge__driver_8c.html#ae6b1e78f137d3ef97e2e45c31baf93d0" title=" " alt="" coords="185,156,317,181"/>
+</map>

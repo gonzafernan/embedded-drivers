@@ -1,0 +1,6 @@
+<map id="hbridge_coast" name="hbridge_coast">
+<area shape="rect" id="node1" title="Hi&#45;Z stop." alt="" coords="5,31,108,56"/>
+<area shape="rect" id="node2" href="$stm32f4__gpio__port_8c.html#a6ba467811bcf0743e5e49d5080de8bd1" title="Writes a value to the GPIO pin." alt="" coords="187,5,268,31"/>
+<area shape="rect" id="node3" href="$stm32f4__pwm__port_8c.html#ab9ae2bfab02817eb06ac7737a570b1f8" title="Set the duty cycle for the PWM port." alt="" coords="156,55,299,80"/>
+<area shape="rect" id="node4" href="$stm32f4__pwm__port_8c.html#ae8d96635479b4a134eb766d1293f7b02" title=" " alt="" coords="347,55,417,80"/>
+</map>

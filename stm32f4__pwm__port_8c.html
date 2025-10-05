@@ -98,6 +98,8 @@ Include dependency graph for stm32f4_pwm_port.c:</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ae8d96635479b4a134eb766d1293f7b02"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f4__pwm__port_8c.html#ae8d96635479b4a134eb766d1293f7b02">clamp01</a> (float x)</td></tr>
+<tr class="separator:ae8d96635479b4a134eb766d1293f7b02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2cf60ae1f75015cf08cd79a213fe3d0e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f4__pwm__port_8c.html#a2cf60ae1f75015cf08cd79a213fe3d0e">pwm_init</a> (void *context)</td></tr>
 <tr class="memdesc:a2cf60ae1f75015cf08cd79a213fe3d0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the PWM port.  <a href="stm32f4__pwm__port_8c.html#a2cf60ae1f75015cf08cd79a213fe3d0e">More...</a><br /></td></tr>
 <tr class="separator:a2cf60ae1f75015cf08cd79a213fe3d0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -108,6 +110,45 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >STM32F4 PWM port implementation. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="ae8d96635479b4a134eb766d1293f7b02" name="ae8d96635479b4a134eb766d1293f7b02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8d96635479b4a134eb766d1293f7b02">&#9670;&#160;</a></span>clamp01()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static float clamp01 </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="stm32f4__pwm__port_8c_ae8d96635479b4a134eb766d1293f7b02_icgraph.png" border="0" usemap="#astm32f4__pwm__port_8c_ae8d96635479b4a134eb766d1293f7b02_icgraph" alt=""/></div>
+<map name="astm32f4__pwm__port_8c_ae8d96635479b4a134eb766d1293f7b02_icgraph" id="astm32f4__pwm__port_8c_ae8d96635479b4a134eb766d1293f7b02_icgraph">
+<area shape="rect" title=" " alt="" coords="556,81,627,107"/>
+<area shape="rect" href="stm32f4__pwm__port_8c.html#ab9ae2bfab02817eb06ac7737a570b1f8" title="Set the duty cycle for the PWM port." alt="" coords="365,81,508,107"/>
+<area shape="rect" href="hbridge__driver_8c.html#ab2d906b73c8227df013aac1f46d79c87" title="Hi&#45;Z stop." alt="" coords="200,5,303,31"/>
+<area shape="rect" href="hbridge__driver_8c.html#a4d832624d01ae95ecc3fd0ccec1d5b32" title="Set the output of the H&#45;bridge." alt="" coords="5,23,137,63"/>
+<area shape="rect" href="hbridge__driver_8c.html#ab1a8521a0c1076c55862c563b3eaad0a" title="Initialize the H&#45;bridge driver." alt="" coords="207,107,295,132"/>
+<area shape="rect" href="hbridge__driver_8c.html#ae6b1e78f137d3ef97e2e45c31baf93d0" title=" " alt="" coords="185,156,317,181"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a2cf60ae1f75015cf08cd79a213fe3d0e" name="a2cf60ae1f75015cf08cd79a213fe3d0e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2cf60ae1f75015cf08cd79a213fe3d0e">&#9670;&#160;</a></span>pwm_init()</h2>
 
@@ -181,14 +222,24 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="stm32f4__pwm__port_8c_ab9ae2bfab02817eb06ac7737a570b1f8_cgraph.png" border="0" usemap="#astm32f4__pwm__port_8c_ab9ae2bfab02817eb06ac7737a570b1f8_cgraph" alt=""/></div>
+<map name="astm32f4__pwm__port_8c_ab9ae2bfab02817eb06ac7737a570b1f8_cgraph" id="astm32f4__pwm__port_8c_ab9ae2bfab02817eb06ac7737a570b1f8_cgraph">
+<area shape="rect" title="Set the duty cycle for the PWM port." alt="" coords="5,5,148,31"/>
+<area shape="rect" href="stm32f4__pwm__port_8c.html#ae8d96635479b4a134eb766d1293f7b02" title=" " alt="" coords="196,5,267,31"/>
+</map>
+</div>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="stm32f4__pwm__port_8c_ab9ae2bfab02817eb06ac7737a570b1f8_icgraph.png" border="0" usemap="#astm32f4__pwm__port_8c_ab9ae2bfab02817eb06ac7737a570b1f8_icgraph" alt=""/></div>
 <map name="astm32f4__pwm__port_8c_ab9ae2bfab02817eb06ac7737a570b1f8_icgraph" id="astm32f4__pwm__port_8c_ab9ae2bfab02817eb06ac7737a570b1f8_icgraph">
-<area shape="rect" title="Set the duty cycle for the PWM port." alt="" coords="192,55,335,80"/>
-<area shape="rect" href="hbridge__driver_8c.html#ab1a8521a0c1076c55862c563b3eaad0a" title="Initialize the H&#45;bridge driver." alt="" coords="31,5,119,31"/>
-<area shape="rect" href="hbridge__driver_8c.html#ae6b1e78f137d3ef97e2e45c31baf93d0" title="Set the output of the H&#45;bridge." alt="" coords="9,55,141,80"/>
-<area shape="rect" href="hbridge__driver_8c.html#ae549cfe3fcd6d060d359bb7c2cf7f5c8" title="Apply a short brake to the H&#45;bridge." alt="" coords="5,104,144,129"/>
+<area shape="rect" title="Set the duty cycle for the PWM port." alt="" coords="365,81,508,107"/>
+<area shape="rect" href="hbridge__driver_8c.html#ab2d906b73c8227df013aac1f46d79c87" title="Hi&#45;Z stop." alt="" coords="200,5,303,31"/>
+<area shape="rect" href="hbridge__driver_8c.html#a4d832624d01ae95ecc3fd0ccec1d5b32" title="Set the output of the H&#45;bridge." alt="" coords="5,23,137,63"/>
+<area shape="rect" href="hbridge__driver_8c.html#ab1a8521a0c1076c55862c563b3eaad0a" title="Initialize the H&#45;bridge driver." alt="" coords="207,107,295,132"/>
+<area shape="rect" href="hbridge__driver_8c.html#ae6b1e78f137d3ef97e2e45c31baf93d0" title=" " alt="" coords="185,156,317,181"/>
 </map>
 </div>
 

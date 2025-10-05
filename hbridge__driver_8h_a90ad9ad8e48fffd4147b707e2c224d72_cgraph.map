@@ -1,0 +1,9 @@
+<map id="hbridge_set_output_signed" name="hbridge_set_output_signed">
+<area shape="rect" id="node1" title="Set the output of the H&#45;bridge." alt="" coords="5,73,137,113"/>
+<area shape="rect" id="node2" href="$hbridge__driver_8c.html#ab2d906b73c8227df013aac1f46d79c87" title="Hi&#45;Z stop." alt="" coords="189,104,292,129"/>
+<area shape="rect" id="node4" href="$stm32f4__pwm__port_8c.html#ab9ae2bfab02817eb06ac7737a570b1f8" title="Set the duty cycle for the PWM port." alt="" coords="344,129,487,155"/>
+<area shape="rect" id="node6" href="$hbridge__driver_8c.html#a5d106d37e245e39721adafb02f64675c" title=" " alt="" coords="185,5,296,31"/>
+<area shape="rect" id="node7" href="$hbridge__driver_8c.html#a85d58472842c9395961ca48fffce41a7" title=" " alt="" coords="185,55,296,80"/>
+<area shape="rect" id="node3" href="$stm32f4__gpio__port_8c.html#a6ba467811bcf0743e5e49d5080de8bd1" title="Writes a value to the GPIO pin." alt="" coords="375,55,456,80"/>
+<area shape="rect" id="node5" href="$stm32f4__pwm__port_8c.html#ae8d96635479b4a134eb766d1293f7b02" title=" " alt="" coords="535,129,605,155"/>
+</map>

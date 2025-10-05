@@ -1,4 +1,12 @@
 var searchData=
 [
-  ['timeout_0',['timeout',['../structak09916__t.html#ad63dcf5b92c3eb004d4754321497f28b',1,'ak09916_t::timeout()'],['../structicm20948__t.html#a466a656b6c29878a21d1fafc97c82f69',1,'icm20948_t::timeout()']]]
+  ['set_5fdir_5fforward_0',['set_dir_forward',['../hbridge__driver_8c.html#a5d106d37e245e39721adafb02f64675c',1,'hbridge_driver.c']]],
+  ['set_5fdir_5freverse_1',['set_dir_reverse',['../hbridge__driver_8c.html#a85d58472842c9395961ca48fffce41a7',1,'hbridge_driver.c']]],
+  ['stm32f4_5fgpio_5fport_2ec_2',['stm32f4_gpio_port.c',['../stm32f4__gpio__port_8c.html',1,'']]],
+  ['stm32f4_5fgpio_5fport_5fconfig_2eh_3',['stm32f4_gpio_port_config.h',['../stm32f4__gpio__port__config_8h.html',1,'']]],
+  ['stm32f4_5fgpio_5fport_5ft_4',['stm32f4_gpio_port_t',['../structstm32f4__gpio__port__t.html',1,'']]],
+  ['stm32f4_5fi2c_5fport_2ec_5',['stm32f4_i2c_port.c',['../stm32f4__i2c__port_8c.html',1,'']]],
+  ['stm32f4_5fpwm_5fport_2ec_6',['stm32f4_pwm_port.c',['../stm32f4__pwm__port_8c.html',1,'']]],
+  ['stm32f4_5fpwm_5fport_5fconfig_2eh_7',['stm32f4_pwm_port_config.h',['../stm32f4__pwm__port__config_8h.html',1,'']]],
+  ['stm32f4_5fpwm_5fport_5ft_8',['stm32f4_pwm_port_t',['../structstm32f4__pwm__port__t.html',1,'']]]
 ];

@@ -1,0 +1,4 @@
+<map id="hbridge_brake" name="hbridge_brake">
+<area shape="rect" id="node1" title="Apply a short brake to the H&#45;bridge." alt="" coords="5,5,108,31"/>
+<area shape="rect" id="node2" href="$stm32f4__gpio__port_8c.html#a6ba467811bcf0743e5e49d5080de8bd1" title="Writes a value to the GPIO pin." alt="" coords="156,5,237,31"/>
+</map>
